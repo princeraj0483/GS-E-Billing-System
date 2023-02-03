@@ -1,1 +1,44 @@
-<p>customer-login works!</p>
+<div id="wrapper">
+    <div id="header">
+         <button  mat-button [matMenuTriggerFor]="menu">Login</button>
+         <mat-menu #menu="matMenu">
+            <button mat-menu-item class="action_btn" [routerLink]="['/adminlogin']"  style="color: whitesmoke;">Admin</button>
+            <button mat-menu-item class="action_btn" [routerLink]="['/shoplogin']" style="color: whitesmoke;">Shop</button>
+            <button mat-menu-item class="action_btn" [routerLink]="['/customerlogin']" style="color: whitesmoke;">Customer</button> 
+         </mat-menu>
+        <h1>GS E-Billing</h1>
+    </div>
+
+    <div id="main"> 
+        <mat-card class="example-card">
+            <mat-card-header>
+                Customer Login
+            </mat-card-header>
+            <img src="assets/login.png" alt="login">
+            <mat-card-content>
+                <mat-icon class="icon_1">account_circle</mat-icon>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Name" class="password">
+                </mat-form-field>
+                <mat-icon class="icon_2">lock</mat-icon>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" class="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </mat-card-content>
+            <button mat-button class="action_login" mat-raised-button color="primary"
+                routerLink="/adminhome">Login</button>
+            <p>Forgot Password</p>
+        </mat-card>
+    </div>
+
+   <div id="footer">
+        <span>Developed By Green Soft</span>
+        <span>Version 1.0</span>
+   </div>
+</div>

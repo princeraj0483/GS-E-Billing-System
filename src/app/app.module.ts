@@ -28,6 +28,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ShopHomeComponent } from './shop/shop-home/shop-home.component';
+import { ShopSidebarComponent } from './shop/shop-sidebar/shop-sidebar.component';
+import { ShopDashboardComponent } from './shop/shop-dashboard/shop-dashboard.component';
+import { CustomerHomeComponent } from './customer/customer-home/customer-home.component';
+import { CustSidebarComponent } from './customer/cust-sidebar/cust-sidebar.component';
+import { CustDashboardComponent } from './customer/cust-dashboard/cust-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +48,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ShopComponent,
     AddEditShopComponent,
     CustomerLoginComponent,
+    ShopHomeComponent,
+    ShopSidebarComponent,
+    ShopDashboardComponent,
+    CustomerHomeComponent,
+    CustSidebarComponent,
+    CustDashboardComponent,
   
   ],
   imports: [

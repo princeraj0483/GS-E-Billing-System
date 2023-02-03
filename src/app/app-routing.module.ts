@@ -11,19 +11,19 @@ import { CustomerLoginComponent } from './customer/customer-login/customer-login
 import { AddEditShopComponent } from './admin/add-edit-shop/add-edit-shop.component';
 
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  {path: 'customerlogin', component: CustomerLoginComponent},
   { path: 'adminlogin', component: AdminLoginComponent},
   { path: 'shoplogin', component: ShopLoginComponent} ,
   {path: 'adminhome', component: AdminHomeComponent,
+  
   
     children: [
       { path: '', component: ViewportComponent },
       {path: 'dashboard', component: AdminDashboardComponent},
       {path: 'shop', component: ShopComponent},
-      {path: 'customer', component: CustomerLoginComponent},
       {path: 'addeditshop', component: AddEditShopComponent}
     ]
   }
