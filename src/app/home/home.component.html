@@ -1,0 +1,38 @@
+<div id="main_wrapper">
+    <div id="header">
+      <mat-toolbar color="warn">
+      <span>ADDBOX</span>
+      <span class="example-spacer"></span>
+  
+            <button  mat-raised-button color="accent" class="user-icon"  [matMenuTriggerFor]="menu">Login</button>
+            <mat-menu #menu="matMenu" class="myMenu" >
+                <button mat-menu-item routerLink="/admin_login">Admin </button>                                  
+               <button mat-menu-item  routerLink="/manager_login" >Manager</button>                                 
+                <button mat-menu-item  routerLink="/operator_login">operator</button>                                  
+               <button mat-menu-item  routerLink="/shop_login">Shop</button>                                   
+            </mat-menu>                     
+    </mat-toolbar>
+    </div>
+    <br><br><br>  
+      <div class="drop-main">
+          <div class="d">A</div>
+          <div class="r">D</div>
+          <div class="o">D</div>
+          <div class="p">B</div>
+          <div class="s">O</div>
+          <div class="x">X</div><br>
+          <div class="of" ><span  class="neon"><h3>हर रोज एक अलग OFFER</h3></span></div>
+      </div>
+      <div class="css-typing">
+        <p>
+          We are Advertising company..
+        </p>
+        <p>
+          you have to jion me
+        </p>
+        <p>
+          contact:-addbox@gmail.com
+        </p>
+      </div>  
+  <div id="footer" style=" color: #b4e7e7;">Developed By <span class="example-spacer"></span> <a href="https://greensoft.net.in/" style=" color: #00ffff;"> Green Soft</a></div>
+  </div>
