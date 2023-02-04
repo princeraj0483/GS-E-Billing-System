@@ -34,6 +34,12 @@ import { ShopDashboardComponent } from './shop/shop-dashboard/shop-dashboard.com
 import { CustomerHomeComponent } from './customer/customer-home/customer-home.component';
 import { CustSidebarComponent } from './customer/cust-sidebar/cust-sidebar.component';
 import { CustDashboardComponent } from './customer/cust-dashboard/cust-dashboard.component';
+import { CategoryComponent } from './admin/category/category.component';
+import { AddEditCategoryComponent } from './admin/add-edit-category/add-edit-category.component';
+import { UnitComponent } from './admin/unit/unit.component';
+import { AddEditUnitComponent } from './admin/add-edit-unit/add-edit-unit.component';
+import { WeightComponent } from './admin/weight/weight.component';
+import { AddEditWeightComponent } from './admin/add-edit-weight/add-edit-weight.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +60,12 @@ import { CustDashboardComponent } from './customer/cust-dashboard/cust-dashboard
     CustomerHomeComponent,
     CustSidebarComponent,
     CustDashboardComponent,
+    CategoryComponent,
+    AddEditCategoryComponent,
+    UnitComponent,
+    AddEditUnitComponent,
+    WeightComponent,
+    AddEditWeightComponent,
   
   ],
   imports: [

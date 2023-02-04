@@ -1,7 +1,7 @@
 #wrapper {
     width: 100%;
     height: 100vh;
-   
+
 }
 
 #header {
@@ -19,10 +19,10 @@
     float: right;
     margin: 10px;
     height: 40px;
-    background-color: #1c2034;  
+    background-color: #1c2034;
 }
 
-.action_btn:hover{
+.action_btn:hover {
     color: whitesmoke;
     background-color: #23283E;
 }
@@ -62,9 +62,10 @@ img {
 mat-card-content {
     color: white;
 }
-.password{
-     padding-left: 23px;
-     font-size: 12px;
+
+.password {
+    padding-left: 23px;
+    font-size: 12px;
 }
 
 mat-form-field {
@@ -72,7 +73,7 @@ mat-form-field {
     float: right;
     margin-top: 10px;
     cursor: pointer;
-} 
+}
 
 ::placeholder {
     color: #fff;
@@ -83,7 +84,8 @@ mat-form-field {
 mat-form-field mat-label {
     color: #ffff;
 }
-mat-label{
+
+mat-label {
     padding: 29px;
     font-size: 14px;
 }

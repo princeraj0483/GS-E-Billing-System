@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-add-edit-shop',
-  templateUrl: './add-edit-shop.component.html',
-  styleUrls: ['./add-edit-shop.component.css']
+  selector: 'app-add-edit-weight',
+  templateUrl: './add-edit-weight.component.html',
+  styleUrls: ['./add-edit-weight.component.css']
 })
-export class AddEditShopComponent implements OnInit {
+export class AddEditWeightComponent implements OnInit {
   hide = true;
   FromBuilder: any;
   ShopForm: any;
