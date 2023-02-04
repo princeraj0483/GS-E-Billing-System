@@ -38,11 +38,6 @@ body {
 }
 
 
-#add_course {
-    cursor: pointer;
-    font-size: 22px;
-}
-
 .count_area {
     height: 40px;
     width: 100%;

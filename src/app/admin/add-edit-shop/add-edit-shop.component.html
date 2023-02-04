@@ -1,1 +1,106 @@
-<div id="form_header"></div>
+<div class="add_head">
+  <span>Add Shop</span>
+  <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div class="add_box">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Shop name</mat-label>
+      <input matInput placeholder="Shop name" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Email Id</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Distric</mat-label>
+    <mat-select>
+      <mat-option value="one">Vaishali</mat-option>
+      <mat-option value="two">Chapra</mat-option>
+      <mat-option value="three">Sonepur</mat-option>
+      <mat-option value="four">Darbhanga</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <label for="inst_img">
+    <input type="file" id="inst_img" formControlName="shop_photo">
+  </label>
+</div>
+
+<div class="add_box">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Owner Name</mat-label>
+      <input matInput placeholder="Owner name" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Country</mat-label>
+    <mat-select>
+      <mat-option value="one">India</mat-option>
+      <mat-option value="two">Srilanka</mat-option>
+      <mat-option value="three">America</mat-option>
+      <mat-option value="four">Bhutan</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Address" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="desc">
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="add_box">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Mobile No.</mat-label>
+      <input matInput placeholder="Mobile No." [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>State</mat-label>
+    <mat-select>
+      <mat-option value="one">Bihar</mat-option>
+      <mat-option value="two">Jharkhand</mat-option>
+      <mat-option value="three">keral</mat-option>
+      <mat-option value="four">Mumbai</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <mat-select>
+      <mat-option value="one">Electric</mat-option>
+      <mat-option value="two">General Store</mat-option>
+      <mat-option value="three">stationary</mat-option>
+      <mat-option value="four">Maical Shop</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<span class="btn_box">
+  <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+  <button class="save_btn" mat-raised-button color="basic" type="save">Save</button>

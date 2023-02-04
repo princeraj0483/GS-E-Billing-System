@@ -14,14 +14,27 @@
     background-color: #3b4259;
   }
   
+  .search{
+   border-bottom: 1px solid black;
+    color: yellow;
+    height: 30px;
+    margin-top: -5px;
+  }
+
+ .search input{
+    padding: 5px;
+ }
+
   mat-icon {
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: 20px;
     font-size: 36px;
     float: right;
     margin: 20px;
+    font-size: 28px;
     color: whitesmoke;
-    margin-top: 36px;
+    margin-top: -4px;
+    cursor: pointer;
   }
   
   #box span {

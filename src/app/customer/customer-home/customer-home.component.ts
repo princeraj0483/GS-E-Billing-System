@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-customer-home',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-home.component.css']
 })
 export class CustomerHomeComponent implements OnInit {
-
-  constructor() { }
+  name: any;
+  opened:boolean= true
+  @ViewChild(MatSidenav)
+  sidenav!:MatSidenav;
+  constructor(
+    private observe:BreakpointObserver
+  ) { }
 
   ngOnInit(): void {
   }
