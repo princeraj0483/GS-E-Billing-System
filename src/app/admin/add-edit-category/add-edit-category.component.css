@@ -36,26 +36,12 @@
     float: left;
 }
 
-
-.mat-form-field {
+.add_box mat-form-field {
     width: 100%;
 }
 .desc{
     width: 445px;
     margin-top: -6px;
-}
-
-
-mat-form-field mat-icon {
-    color: rgb(244, 246, 247);
-}
-
-::placeholder {
-    color: rgb(49, 49, 49);
-}
-
-.mat-input-element {
-    color: rgb(63, 81, 181);
 }
 
 #inst_img {
@@ -74,14 +60,6 @@ mat-form-field mat-icon {
 #inst_img:hover {
     border-bottom: 2px solid rgb(20, 20, 23);
 
-}
-
-textarea {
-    height: 15px;
-}
-
-.margin_top {
-    margin-top: 21px;
 }
 
 .btn_box {

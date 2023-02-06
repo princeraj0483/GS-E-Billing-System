@@ -53,7 +53,7 @@ mat-form-field mat-icon {
 }
 
 .mat-input-element {
-    color: rgb(63, 81, 181);
+    color: black;
 }
 
 #inst_img {
@@ -102,66 +102,4 @@ textarea {
     margin-right: 18px;
     margin-top: 28px;
     width: 10%;
-}
-
-@media (min-width:520px) and (max-width:968px) {
-    ::ng-deep .mat-dialog-container {
-        height: 380px;
-        overflow: auto;
-    }
-
-    .add_box {
-        width: calc(100% - 51.5%);
-    }
-
-    .margin_top {
-        margin-top: 0px;
-    }
-
-    .add_btn {
-        width: 16%;
-    }
-
-    .reset_btn {
-        width: 16%;
-    }
-}
-
-@media (min-width:420px) and (max-width:520px) {
-    ::ng-deep .mat-dialog-container {
-        height: 380px;
-        overflow: auto;
-    }
-
-    .add_box {
-        width: 100%;
-    }
-
-    .add_btn {
-        width: 26%;
-    }
-
-    .reset_btn {
-        width: 26%;
-    }
-
-}
-
-@media screen and (max-width:420px) {
-    ::ng-deep .mat-dialog-container {
-        height: 380px;
-        overflow: auto;
-    }
-
-    .add_box {
-        width: 100%;
-    }
-
-    .add_btn {
-        width: 26%;
-    }
-
-    .reset_btn {
-        width: 26%;
-    }
 }

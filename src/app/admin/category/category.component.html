@@ -1,45 +1,50 @@
 <div class="head">
-    <span>Category</span>
-    <mat-icon (click)="add_shop()" >add_circle</mat-icon> 
-  </div>
+  <span>Category</span>
+  <mat-icon (click)="add_shop()">add_circle</mat-icon>
+</div>
 
-  <div class="count_area">
-    <span class="notice_text">Total : 10</span>
-    <div class="search">
-      <input type="text" placeholder="Search"  matInput (keyup)="applyFilter($event)" #input>
-    </div>
+<div class="count_area">
+  <span class="notice_text">Total : 10</span>
+  <div class="search">
+    <input type="text" placeholder="Search" matInput (keyup)="($event)" #input>
   </div>
-  
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" matSort>
-  
-      <ng-container matColumnDef="category_id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> S.N. </th>
-        <td mat-cell *matCellDef="let row; let i = index">{{(paginatorRef.pageIndex * paginatorRef.pageSize)+(i+1)}}</td>
-      </ng-container>
-  
-      <ng-container matColumnDef="category_name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Category Name</th>
-        <td mat-cell *matCellDef="let row"> {{row.category_name}}</td>
-      </ng-container>
-  
-      <ng-container matColumnDef="category_owner">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
-        <td mat-cell *matCellDef="let row"> {{row.category_owner}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="category_whatsapp">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
-        <td mat-cell *matCellDef="let row"> {{row.category_whatsapp}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns" id="tbl_hight"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" id="tbl_hight"></tr>
-  
-      <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="9" style="color:silver;">No record found"{{input.value}}"</td>
-      </tr>
-    </table>
-  
-    <mat-paginator #paginatorRef [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-  </div>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="category_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> S.N. </th>
+      <td mat-cell *matCellDef="let row; let i = index">{{(paginatorRef.pageIndex * paginatorRef.pageSize)+(i+1)}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="category_name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Category Name</th>
+      <td mat-cell *matCellDef="let row"> {{row.category_name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="category_des">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+      <td mat-cell *matCellDef="let row"> {{row.category_des}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="category_img">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
+      <td mat-cell *matCellDef="let row"> {{row.category_img}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+      <td mat-cell *matCellDef="let row"> {{row.action}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" id="tbl_hight"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" id="tbl_hight"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="9" style="color:silver;">No record found"{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator #paginatorRef [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>

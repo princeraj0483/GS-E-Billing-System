@@ -5,14 +5,20 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditWeightComponent } from '../add-edit-weight/add-edit-weight.component';
 
-export interface UserData {
-  category_id: number;
-  category_name: string;
-  category_description: string;
-  category_image: number
 
+export interface PeriodicElement {
+  weight_id: number;
+  weight: number;
+  weight_des: string;
+  action: string;
+  
 }
+const ELEMENT_DATA:PeriodicElement [] = [
+  {weight_id: 1, weight: 10, weight_des: 'has', action: 'bca'},
+  {weight_id: 2, weight: 12, weight_des: 'hahda', action: 'mca'},
+  {weight_id: 3, weight: 13, weight_des: 'ahsdb', action: 'mba'},
 
+];
 @Component({
   selector: 'app-weight',
   templateUrl: './weight.component.html',
@@ -20,29 +26,18 @@ export interface UserData {
 })
 export class WeightComponent implements OnInit {
 
-  displayedColumns: string[] = ['category_id', 'category_name', 'category_owner', ];
-  dataSource!: MatTableDataSource<UserData>;
+  displayedColumns: string[] = ['weight_id', 'weight', 'weight_des', 'action' ];
+  dataSource = ELEMENT_DATA;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
- 
   constructor(
     private matdialog:MatDialog
   ){
 
   }
-
   ngOnInit(): void {
    
   }
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
-
   add_shop(){
    this.matdialog.open(AddEditWeightComponent) 
   }

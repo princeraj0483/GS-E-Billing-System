@@ -47,31 +47,3 @@
     display: none ;
 }
 
-/* ===========================================media Query================================================== */
-
-@media(max-width:420px) {
-
-    img {
-        width: 50px;
-        height: 40px;
-    }
-
-    .title_text {
-        font-size: 15px;
-        margin-left:35px;
-    }
-
-    .menu-button {
-        font-size: 13px;
-        color: whitesmoke;
-    }
-
-    .menu-button span {
-        margin-left: 5px;
-    }
-
-    .menu-button mat-icon {
-        font-size: 16px;
-        margin-top: 6px;
-    }
-}

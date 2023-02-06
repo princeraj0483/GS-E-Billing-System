@@ -16,6 +16,14 @@ import { CategoryComponent } from './admin/category/category.component';
 import { AddEditCategoryComponent } from './admin/add-edit-category/add-edit-category.component';
 import { UnitComponent } from './admin/unit/unit.component';
 import { WeightComponent } from './admin/weight/weight.component';
+import { GstComponent } from './admin/gst/gst.component';
+import { ItemComponent } from './admin/item/item.component';
+import { EmployeComponent } from './admin/employe/employe.component';
+import { DiscountComponent } from './admin/discount/discount.component';
+import { ExpenceComponent } from './admin/expence/expence.component';
+import { CustDashboardComponent } from './customer/cust-dashboard/cust-dashboard.component';
+import { CustomerComponent } from './admin/customer/customer.component';
+import { ExpenceTypeComponent } from './admin/expence-type/expence-type.component';
 
 
 const routes: Routes = [
@@ -38,15 +46,30 @@ const routes: Routes = [
       { path: 'shopdashboard', component: ShopDashboardComponent },
       {path: 'category', component: CategoryComponent},
       {path: 'unit', component: UnitComponent},
-      {path: 'weight', component: WeightComponent}
+      {path: 'discount', component: DiscountComponent},
+      {path: 'weight', component: WeightComponent},
+      {path: 'gst', component: GstComponent},
+      {path: 'item', component: ItemComponent},
+      {path: 'employe', component: EmployeComponent},
+      {path: 'expence', component: ExpenceComponent},
+      {path:'customer',component:CustomerComponent},
+      {path: 'expence-type', component: ExpenceTypeComponent}
+
 
     ]
   },
+ 
+  { path: 'customerlogin', component: CustomerLoginComponent },
   {
     path: 'customerhome', component: CustomerHomeComponent,
-   
+    children: [
+      { path: '', component: CustDashboardComponent },
+      {path:'course', component:CustDashboardComponent},
 
+    
+    ]
   }
+
 
 
 ];
