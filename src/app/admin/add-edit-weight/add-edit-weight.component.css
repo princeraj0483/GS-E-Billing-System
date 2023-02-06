@@ -36,63 +36,19 @@
     float: left;
 }
 
-
-.mat-form-field {
+.add_box mat-form-field {
     width: 100%;
 }
+
 .desc{
     width: 268px;
     margin-top: -6px;
-}
-
-
-mat-form-field mat-icon {
-    color: rgb(244, 246, 247);
-}
-
-::placeholder {
-    color: rgb(49, 49, 49);
-}
-
-.mat-input-element {
-    color: rgb(63, 81, 181);
-}
-
-#inst_img {
-    width: 90%;
-    padding: 10px;
-    cursor: pointer;
-    height: 31px;
-    border-radius: 4px 4px 0px 0px;
-    margin-top: 0px;
-    line-height: 26px;
-    margin-bottom: 19px;
-    background: #eaeced;
-    border-bottom: 1px solid grey;
-}
-
-#inst_img:hover {
-    border-bottom: 2px solid rgb(20, 20, 23);
-
-}
-
-textarea {
-    height: 15px;
-}
-
-.margin_top {
-    margin-top: 21px;
 }
 
 .btn_box {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.add_btn {
-    margin-top: 28px;
-    width: 8%;
 }
 
 .reset_btn {

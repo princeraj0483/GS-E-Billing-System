@@ -25,11 +25,10 @@ body {
     margin-top: 15px;
 }
 
-/* for table  */
 .head {
     height: 40px;
     width: 100%;
-    background-color: #1d1f23;
+    background-color: #2f3547;
     color: whitesmoke;
     display: flex;
     justify-content: space-between;
@@ -52,10 +51,11 @@ body {
     border: none;
     border-bottom: 1px solid #1d1f23;
     outline: none;
-    padding: 5px;
+    padding: 4px;
     background-color: whitesmoke;
     position: relative;
     top: -2px;
+    margin-left: -2px;
 }
 
 table {
@@ -64,7 +64,7 @@ table {
 
 th.mat-header-cell {
     color: aliceblue;
-    background-color: #1d1f23;
+    background-color: #2f3547;
 }
 
 
@@ -78,7 +78,7 @@ tr:nth-child(odd) {
 }
 
 tr:hover {
-    background-color: #494949;
+    background-color: #2f3547;
     color: aliceblue;
 }
 
@@ -88,4 +88,5 @@ tr:hover {
 #tbl_hight {
     height: 40px;
 }
+
 

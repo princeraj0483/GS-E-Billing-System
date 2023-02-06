@@ -12,8 +12,8 @@ export class AddEditCategoryComponent implements OnInit {
   ShopForm: any;
   ngOnInit(): void {
     this.ShopForm = this.FromBuilder.group({
-    Shop_name: ['', Validators.required],
-    Shop_photo: [''],
+    Cate_name: ['', Validators.required],
+    Cate_photo: [''],
   
     })
     throw new Error('Method not implemented.');

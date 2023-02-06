@@ -1,0 +1,67 @@
+::ng-deep .mat-dialog-container {
+    width: 500px;
+    background-color: rgb(244, 246, 247);
+}
+
+.add_head {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.add_head span {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3B4259;
+}
+
+#close_btn {
+    width: 30px;
+    height: 30px;
+}
+
+#close_btn mat-icon {
+    position: relative;
+    bottom: 6px;
+    color: #3B4259;
+}
+
+.add_box {
+    width: calc(100% - 51%);
+    margin-left: 3px;
+    height: auto;
+    float: left;
+}
+
+.add_box mat-form-field {
+    width: 100%;
+}
+.text_area{
+    width: 447px;
+}
+
+.btn_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add_btn {
+    margin-top: 28px;
+    width: 8%;
+}
+
+.reset_btn {
+    margin-right: 14px;
+    margin-top: 20px;
+    width: 10%;
+    margin-left: -185px;
+}
+.save_btn{
+    margin-right: 18px;
+    margin-top: 20px;
+    width: 10%;
+}

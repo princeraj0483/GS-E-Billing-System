@@ -40,6 +40,21 @@ import { UnitComponent } from './admin/unit/unit.component';
 import { AddEditUnitComponent } from './admin/add-edit-unit/add-edit-unit.component';
 import { WeightComponent } from './admin/weight/weight.component';
 import { AddEditWeightComponent } from './admin/add-edit-weight/add-edit-weight.component';
+import { GstComponent } from './admin/gst/gst.component';
+import { AddEditGstComponent } from './admin/add-edit-gst/add-edit-gst.component';
+import { ItemComponent } from './admin/item/item.component';
+import { AddEditItemComponent } from './admin/add-edit-item/add-edit-item.component';
+import { EmployeComponent } from './admin/employe/employe.component';
+import { AddEditEmployeComponent } from './admin/add-edit-employe/add-edit-employe.component';
+import { DiscountComponent } from './admin/discount/discount.component';
+import { AddEditDiscountComponent } from './admin/add-edit-discount/add-edit-discount.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ExpenceComponent } from './admin/expence/expence.component';
+import { AddEditExpenceComponent } from './admin/add-edit-expence/add-edit-expence.component';
+import { CustomerComponent } from './admin/customer/customer.component';
+import { AddEditCustomerComponent } from './admin/add-edit-customer/add-edit-customer.component';
+import { ExpenceTypeComponent } from './admin/expence-type/expence-type.component';
+import { AddEditExpenceTypeComponent } from './admin/add-edit-expence-type/add-edit-expence-type.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +81,20 @@ import { AddEditWeightComponent } from './admin/add-edit-weight/add-edit-weight.
     AddEditUnitComponent,
     WeightComponent,
     AddEditWeightComponent,
+    GstComponent,
+    AddEditGstComponent,
+    ItemComponent,
+    AddEditItemComponent,
+    EmployeComponent,
+    AddEditEmployeComponent,
+    DiscountComponent,
+    AddEditDiscountComponent,
+    ExpenceComponent,
+    AddEditExpenceComponent,
+    CustomerComponent,
+    AddEditCustomerComponent,
+    ExpenceTypeComponent,
+    AddEditExpenceTypeComponent,
   
   ],
   imports: [
@@ -86,7 +115,8 @@ import { AddEditWeightComponent } from './admin/add-edit-weight/add-edit-weight.
     MatDialogModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule
    
   ],
   providers: [],

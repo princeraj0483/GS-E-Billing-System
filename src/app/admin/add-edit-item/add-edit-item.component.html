@@ -1,0 +1,58 @@
+<div class="add_head">
+    <span>Add Item</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div class="add_box">
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Category name</mat-label>
+            <input matInput placeholder="Category name" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Shop_name</mat-label>
+        <mat-select>
+            <mat-option value="one">First option</mat-option>
+            <mat-option value="two">Second option</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Item Name</mat-label>
+            <input matInput placeholder="Item" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="add_box">
+    <mat-form-field appearance="fill">
+        <mat-label>Active</mat-label>
+        <mat-select>
+            <mat-option value="one">First option</mat-option>
+            <mat-option value="two">Second option</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <label for="inst_img">
+     <input type="file" id="inst_img" formControlName="category_photo">
+    </label>
+
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Item Offer</mat-label>
+            <input matInput placeholder="Offer" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+
+<span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+    </span>

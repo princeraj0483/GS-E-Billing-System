@@ -1,0 +1,63 @@
+<div class="add_head">
+    <span>Add Discount</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="add_box">
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Shop Name</mat-label>
+            <input matInput placeholder="shop name" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Category Name</mat-label>
+            <input matInput placeholder="category name" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Item</mat-label>
+        <mat-select>
+            <mat-option value="one">Pen</mat-option>
+            <mat-option value="two">Milk</mat-option>
+            <mat-option value="two">Vegitable</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Category Name</mat-label>
+            <input matInput placeholder="category name" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="add_box">
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Offer Name</mat-label>
+            <input matInput placeholder="Offer Name" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Vailid Date</mat-label>
+        <input type="date" matInput formControlName="course_date" style="color: #495057;">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+</div>
+<span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+</span>
