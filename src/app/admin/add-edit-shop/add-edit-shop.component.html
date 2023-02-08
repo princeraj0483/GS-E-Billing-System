@@ -9,8 +9,7 @@
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>Shop name</mat-label>
-      <input matInput placeholder="Shop name" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      <input matInput placeholder="Shop name" >
     </mat-form-field>
   </div>
 
@@ -31,9 +30,13 @@
     </mat-select>
   </mat-form-field>
 
-  <label for="inst_img">
-    <input type="file" id="inst_img" formControlName="shop_photo">
-  </label>
+  <div class="desc">
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="Description">
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </div>
 </div>
 
 <div class="add_box">
@@ -45,15 +48,9 @@
     </mat-form-field>
   </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Country</mat-label>
-    <mat-select>
-      <mat-option value="one">India</mat-option>
-      <mat-option value="two">Srilanka</mat-option>
-      <mat-option value="three">America</mat-option>
-      <mat-option value="four">Bhutan</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <label for="inst_img">
+    <input type="file" id="inst_img" formControlName="shop_photo">
+  </label>
 
   <div class="example-container">
     <mat-form-field appearance="fill">
@@ -62,21 +59,13 @@
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
-
-  <div class="desc">
-    <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-  </div>
 </div>
 
 <div class="add_box">
   <div class="example-container">
     <mat-form-field appearance="fill">
-      <mat-label>Mobile No.</mat-label>
-      <input matInput placeholder="Mobile No." [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      <mat-label>Whatsapps No.</mat-label>
+      <input type="number" matInput placeholder="Mobile No."  required>
     </mat-form-field>
   </div>
 
@@ -104,4 +93,4 @@
 <span class="btn_box">
   <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
   <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
-  </span>
+</span>

@@ -7,15 +7,15 @@ import { AddEditUnitComponent } from '../add-edit-unit/add-edit-unit.component';
 
 export interface PeriodicElement {
   category_id: number;
-  unit_name: string;
+  Name: string;
   unit_des: string;
   action: string;
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {category_id: 1, unit_name: 'jsaja', unit_des: 'home', action: 'bca'},
-  {category_id: 2, unit_name: 'ggg', unit_des: 'home', action: 'mca'},
-  {category_id: 3, unit_name: 'hhhh', unit_des: 'home', action: 'mba'},
+  {category_id: 1, Name: 'Litter', unit_des: 'home', action: ''},
+  {category_id: 2, Name: 'Kg', unit_des: 'home', action: ''},
+  {category_id: 3, Name: 'inch', unit_des: 'home', action: ''},
 
 ];
 @Component({
@@ -24,7 +24,7 @@ const ELEMENT_DATA:PeriodicElement [] = [
   styleUrls: ['./unit.component.css']
 })
 export class UnitComponent implements OnInit {
-  displayedColumns: string[] = ['category_id', 'unit_name', 'unit_des', 'action'];
+  displayedColumns: string[] = ['category_id', 'Name', 'unit_des', 'action'];
   dataSource = ELEMENT_DATA;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

@@ -1,0 +1,67 @@
+<div class="add_head">
+    <span>Add Product</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="add_box">
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select>
+            <mat-option value="one">Electric</mat-option>
+            <mat-option value="two">Mobile Shop</mat-option>
+            <mat-option value="three">Grocerry</mat-option>
+            <mat-option value="four">Electronic Device</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Unit</mat-label>
+        <mat-select>
+            <mat-option value="one">Kg</mat-option>
+            <mat-option value="two">Litter</mat-option>
+            <mat-option value="three">Inch</mat-option>
+            <mat-option value="four">Packet</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Rate</mat-label>
+            <input matInput placeholder="Rate">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="add_box">
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Product Name</mat-label>
+            <input matInput placeholder="Product Name" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Quantity</mat-label>
+            <input matInput placeholder="Quantity">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+
+
+    <div class="desc">
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
+</div>
+
+<span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+</span>
