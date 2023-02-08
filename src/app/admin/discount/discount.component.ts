@@ -18,9 +18,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {dis_SL_No: 1,  shop_name: 'Munna', cat_name: 'munna', item: 'milk', offer: '10%', offer_name: 'diwali', vailid_date:  10, offer_condition: 'munna', action: 'munna'},
-  {dis_SL_No: 2, shop_name: 'Miacal',cat_name: 'maical', item: 'egg' , offer: '15%', offer_name: 'diwali',  vailid_date:  2, offer_condition: 'maical', action: 'maical'},
-  {dis_SL_No: 3, shop_name: 'Mukul', cat_name: 'mukul', item: 'orange', offer: '18%', offer_name: 'chath',  vailid_date:  3, offer_condition: 'muku', action: 'mukesh'},
+  {dis_SL_No: 1,  shop_name: 'Om Computer', cat_name: 'Electronic Device', item: 'computer', offer: '10%', offer_name: 'diwali', vailid_date:  16, offer_condition: 'munna', action: 'munna'},
+  {dis_SL_No: 2, shop_name: 'Aakash Automobiles',cat_name: 'Mobile', item: 'Mobile' , offer: '15%', offer_name: 'diwali',  vailid_date:  10, offer_condition: 'maical', action: 'maical'},
+  {dis_SL_No: 3, shop_name: 'Guddu General Store', cat_name: 'Nike', item: 'Shoes', offer: '18%', offer_name: 'chath',  vailid_date:  10, offer_condition: 'muku', action: 'mukesh'},
 
 ];
 

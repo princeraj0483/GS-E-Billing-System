@@ -17,9 +17,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {dis_SL_No: 1,  cust_name: 'Munna', cust_whats: 5655466, cust_add: 'hajipur', cust_email: '@bgggggf', cust_pass: 7867787678, Action: 'munna'},
-  {dis_SL_No: 2, cust_name: 'Miacal',cust_whats: 7776866, cust_add: 'hajipur' , cust_email: '@hjjkhhh', cust_pass: 677766776,  Action: 'maical'},
-  {dis_SL_No: 3, cust_name: 'Mukul', cust_whats: 8787889, cust_add: 'hajipur', cust_email: '@gghghgh', cust_pass: 7787776,   Action: 'mukesh'},
+  {dis_SL_No: 1,  cust_name: 'Mukesh jha', cust_whats: 7654980798, cust_add: 'hajipur', cust_email: '@bgggggf', cust_pass: 7867787678, Action: ''},
+  {dis_SL_No: 2, cust_name: 'Amit Rana',cust_whats: 7654980798, cust_add: 'hajipur' , cust_email: '@hjjkhhh', cust_pass: 677766776,  Action: ''},
+  {dis_SL_No: 3, cust_name: 'Kumar Ankush', cust_whats: 7654980798, cust_add: 'hajipur', cust_email: '@gghghgh', cust_pass: 7787776,   Action: ''},
 
 ];
 

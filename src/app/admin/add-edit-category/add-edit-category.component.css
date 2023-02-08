@@ -43,6 +43,9 @@
     width: 445px;
     margin-top: -6px;
 }
+textarea{
+    height: 14px;
+}
 
 #inst_img {
     width: 90%;

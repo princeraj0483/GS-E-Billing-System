@@ -89,4 +89,51 @@ tr:hover {
     height: 40px;
 }
 
+/* --------------------------------Media Query--------------------------- */
+@media(min-width:420px) and (max-width:1080px) {
+    .mat-elevation-z8 {
+        overflow-x: auto;
+    }
+
+    .course_text {
+        font-size: 14px;
+    }
+
+    .count_area .notice_text {
+        font-size: 14px;
+    }
+
+    table td {
+        font-size: 14px;
+    }
+
+    mat-paginator {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+@media (max-width:420px) {
+    .mat-elevation-z8 {
+        overflow-x: auto;
+    }
+
+    .course_text {
+        font-size: 10px;
+    }
+
+    .count_area .notice_text {
+        font-size: 10px;
+    }
+
+    td {
+        font-size: 11px;
+    }
+
+    mat-paginator {
+        position: absolute;
+        width: 100%;
+    }
+}
+
 

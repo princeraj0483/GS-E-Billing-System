@@ -24,6 +24,8 @@ import { ExpenceComponent } from './admin/expence/expence.component';
 import { CustDashboardComponent } from './customer/cust-dashboard/cust-dashboard.component';
 import { CustomerComponent } from './admin/customer/customer.component';
 import { ExpenceTypeComponent } from './admin/expence-type/expence-type.component';
+import { PartyComponent } from './admin/party/party.component';
+import { ProductComponent } from './admin/product/product.component';
 
 
 const routes: Routes = [
@@ -53,7 +55,9 @@ const routes: Routes = [
       {path: 'employe', component: EmployeComponent},
       {path: 'expence', component: ExpenceComponent},
       {path:'customer',component:CustomerComponent},
-      {path: 'expence-type', component: ExpenceTypeComponent}
+      {path: 'expence-type', component: ExpenceTypeComponent},
+      {path: 'party', component: PartyComponent},
+      {path: 'product', component: ProductComponent}
 
 
     ]

@@ -55,6 +55,10 @@ import { CustomerComponent } from './admin/customer/customer.component';
 import { AddEditCustomerComponent } from './admin/add-edit-customer/add-edit-customer.component';
 import { ExpenceTypeComponent } from './admin/expence-type/expence-type.component';
 import { AddEditExpenceTypeComponent } from './admin/add-edit-expence-type/add-edit-expence-type.component';
+import { PartyComponent } from './admin/party/party.component';
+import { AddEditPartyComponent } from './admin/add-edit-party/add-edit-party.component';
+import { ProductComponent } from './admin/product/product.component';
+import { AddEditProductComponent } from './admin/add-edit-product/add-edit-product.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +99,10 @@ import { AddEditExpenceTypeComponent } from './admin/add-edit-expence-type/add-e
     AddEditCustomerComponent,
     ExpenceTypeComponent,
     AddEditExpenceTypeComponent,
+    PartyComponent,
+    AddEditPartyComponent,
+    ProductComponent,
+    AddEditProductComponent,
   
   ],
   imports: [

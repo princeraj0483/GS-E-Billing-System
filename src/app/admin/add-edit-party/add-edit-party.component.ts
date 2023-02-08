@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-add-edit-expence-type',
-  templateUrl: './add-edit-expence-type.component.html',
-  styleUrls: ['./add-edit-expence-type.component.css']
+  selector: 'app-add-edit-party',
+  templateUrl: './add-edit-party.component.html',
+  styleUrls: ['./add-edit-party.component.css']
 })
-export class AddEditExpenceTypeComponent implements OnInit {
+export class AddEditPartyComponent implements OnInit {
   hide = true;
   FromBuilder: any;
   ShopForm: any;
   ngOnInit(): void {
     this.ShopForm = this.FromBuilder.group({
-    Cate_name: ['', Validators.required],
-    Cate_photo: [''],
+    Shop_name: ['', Validators.required],
+  
   
     })
     throw new Error('Method not implemented.');

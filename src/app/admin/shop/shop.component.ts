@@ -16,9 +16,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {shop_id: 1, shop_name: 'Hajipur', shop_owner: 'nsbaba', shop_number: 9508510028, shop_email: '@munna', shop_add: 'Hajipur', Action: 'bca'},
-  {shop_id: 2, shop_name: 'hagipur', shop_owner: 'hjsha', shop_number: 9508510028, shop_email: '@maical', shop_add: 'hajipur', Action: 'mca'},
-  {shop_id: 3, shop_name: 'ggggg', shop_owner: 'bjkhjhj', shop_number: 9508510028, shop_email: '@maical', shop_add: 'hajipur', Action: 'bca'},
+  {shop_id: 1, shop_name: 'Guddu General Store', shop_owner: 'Mukesh Jha', shop_number: 9508510028, shop_email: '@Mukesh Jha', shop_add: 'Hajipur', Action: ''},
+  {shop_id: 2, shop_name: 'Abhishek Corner Store', shop_owner: 'Rana Singh', shop_number: 9508510028, shop_email: '@Rana Singh', shop_add: 'Hajipur', Action: ''},
+  {shop_id: 3, shop_name: 'Sudha Center', shop_owner: 'Amit Singh', shop_number: 9508510028, shop_email: '@Amit Singh', shop_add: 'Hajipur', Action: ''},
 
 ];
 

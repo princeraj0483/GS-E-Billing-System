@@ -1,0 +1,93 @@
+<div class="add_head">
+    <span>Add Party</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  
+  <div class="add_box">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Email Id</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile No.</mat-label>
+          <input matInput placeholder="Mobile No." [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+  
+    <div class="desc">
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="Description">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  
+  <div class="add_box">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Contact Persion</mat-label>
+        <input matInput placeholder="Contact Persion">
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>GST No.</mat-label>
+          <input matInput placeholder="GST No" >
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+  
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>A/C Holder Name</mat-label>
+        <input matInput placeholder="Holder Name" >
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  
+  <div class="add_box">
+    <mat-form-field appearance="fill">
+        <mat-label>Whatsapp Number</mat-label>
+        <input matInput type="number" onkeypress="return this.value.length < 10;"
+            oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+    </mat-form-field>
+  
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>A/C Number</mat-label>
+          <input matInput placeholder="A/C Number">
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+  
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>IFSC</mat-label>
+          <input matInput placeholder="IFSC">
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+  </div>
+  
+  <span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+  </span>
