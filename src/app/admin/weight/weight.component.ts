@@ -14,9 +14,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {weight_id: 1, weight: 10, weight_des: 'has', action: 'bca'},
-  {weight_id: 2, weight: 12, weight_des: 'hahda', action: 'mca'},
-  {weight_id: 3, weight: 13, weight_des: 'ahsdb', action: 'mba'},
+  {weight_id: 1, weight: 10, weight_des: 'gold', action: 'bca'},
+  {weight_id: 2, weight: 12, weight_des: 'pen', action: 'mca'},
+  {weight_id: 3, weight: 13, weight_des: 'Rice', action: 'mba'},
 
 ];
 @Component({

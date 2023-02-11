@@ -7,7 +7,6 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./add-edit-employe.component.css']
 })
 export class AddEditEmployeComponent implements OnInit {
-
   hide = true;
   FromBuilder: any;
   ShopForm: any;

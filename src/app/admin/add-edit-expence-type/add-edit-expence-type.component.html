@@ -4,22 +4,25 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div class="add_box">
-    <mat-form-field appearance="fill">
-        <mat-label>Expence Type</mat-label>
-        <mat-select>
-            <mat-option value="one">rent</mat-option>
-            <mat-option value="two">Bijli bill</mat-option>
-            <mat-option value="two">food</mat-option>
-        </mat-select>
-    </mat-form-field>
 
-<div class="add_box">
-    <mat-form-field appearance="fill">
-        <mat-label>Description</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
+    <div class="add_box">
+        <mat-form-field appearance="fill">
+            <mat-label>Expence Type</mat-label>
+            <mat-select>
+                <mat-option value="one">rent</mat-option>
+                <mat-option value="two">Bijli bill</mat-option>
+                <mat-option value="two">food</mat-option>
+            </mat-select>
+        </mat-form-field>
 
+        <div class="add_box">
+            <div class="column_1">
+                <mat-form-field appearance="fill">
+                  <mat-label>Address</mat-label>
+                  <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
+                </mat-form-field>
+              </div>
+        </div>
     <span class="btn_box">
         <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
         <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>

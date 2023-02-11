@@ -1,5 +1,5 @@
 ::ng-deep .mat-dialog-container {
-    width: 400px;
+    width: 550px;
     background-color: rgb(244, 246, 247);
 }
 
@@ -52,19 +52,6 @@ mat-form-field mat-icon {
     color: black;
 }
 
-#inst_img {
-    width: 90%;
-    padding: 10px;
-    cursor: pointer;
-    height: 31px;
-    border-radius: 4px 4px 0px 0px;
-    margin-top: 0px;
-    line-height: 26px;
-    margin-bottom: 19px;
-    background: #eaeced;
-    border-bottom: 1px solid grey;
-}
-
 .btn_box {
     width: 100%;
     display: flex;
@@ -80,6 +67,7 @@ mat-form-field mat-icon {
     margin-right: 14px;
     margin-top: 28px;
     width: 10%;
+    margin-left: 26px;
 }
 .save_btn{
     margin-right: 18px;
@@ -88,4 +76,14 @@ mat-form-field mat-icon {
 }
 textarea{
     height: 86px;
+}
+
+/*------------------------------Media Query-------------------------- */
+@media(min-width: 350px) and (max-width: 520px){
+    .add_box {
+        width: calc(100% - 1%);
+    }
+    textarea{
+        height: 16px;
+    }
 }

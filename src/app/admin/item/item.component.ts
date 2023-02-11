@@ -16,9 +16,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {S_N_id: 1, Item_name: 'veg', Category: 'jdjadjka', Shop: 'mical', Item_image: 'jpg', Action: 'munna',},
-  {S_N_id: 2, Item_name: 'non veg', Category: 'hjhjhh', Shop: 'asdada', Item_image: 'jpg', Action: 'dasgh',},
-  {S_N_id: 3, Item_name: 'veg', Category: 'ghhhh', Shop: 'hhhh', Item_image: 'jpg', Action: 'gggf',},
+  {S_N_id: 1, Item_name: 'Laptop', Category: 'devices', Shop: 'Om Computer', Item_image: 'jpg', Action: 'munna',},
+  {S_N_id: 2, Item_name: 'Mobile', Category: 'devices', Shop: 'Mukesh Autombile', Item_image: 'jpg', Action: 'dasgh',},
+  {S_N_id: 3, Item_name: 'Compuetr', Category: 'devices', Shop: 'Rana Computer', Item_image: 'jpg', Action: 'gggf',},
 ];
 
 @Component({

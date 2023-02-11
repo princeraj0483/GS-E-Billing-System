@@ -5,6 +5,7 @@
     </button>
 </div>
 
+<div mat-dialog-content>
 <div class="add_box">
     <mat-form-field appearance="fill">
         <mat-label>Category</mat-label>
@@ -52,13 +53,13 @@
         </mat-form-field>
     </div>
 
-
-    <div class="desc">
-        <mat-form-field appearance="fill">
-          <mat-label>Description</mat-label>
-          <textarea matInput></textarea>
-        </mat-form-field>
-      </div>
+    <div class="column_1">
+        <mat-form-field appearance="fill" >
+            <mat-label>Address</mat-label>
+            <textarea formControlName="party_address" matInput placeholder="Address" ></textarea>
+        </mat-form-field>           
+    </div> 
+</div>
 </div>
 
 <span class="btn_box">

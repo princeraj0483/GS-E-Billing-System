@@ -39,10 +39,6 @@
 .add_box mat-form-field {
     width: 100%;
 }
-.desc{
-    width: 445px;
-    margin-top: -6px;
-}
 
 #inst_img {
     width: 90%;
@@ -81,4 +77,24 @@
     margin-right: 18px;
     margin-top: 20px;
     width: 10%;
+}
+
+/* ----------------------Media Query-------------------- */
+@media(min-width: 350px) and (max-width: 420px){
+    .add_box {
+        width: calc(100% - 1%);
+      
+    }
+    #inst_img{
+        width: 90%;
+    }
+}
+@media(min-width: 421px) and (max-width: 1499px){
+    .add_box {
+        width: calc(100% - 52%);
+     
+    } 
+    #inst_img{
+        width: 90%;
+    }
 }

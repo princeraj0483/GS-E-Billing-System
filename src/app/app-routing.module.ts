@@ -26,6 +26,8 @@ import { CustomerComponent } from './admin/customer/customer.component';
 import { ExpenceTypeComponent } from './admin/expence-type/expence-type.component';
 import { PartyComponent } from './admin/party/party.component';
 import { ProductComponent } from './admin/product/product.component';
+import { SaleComponent } from './admin/sale/sale.component';
+import { AddEditSaleComponent } from './admin/add-edit-sale/add-edit-sale.component';
 
 
 const routes: Routes = [
@@ -57,7 +59,9 @@ const routes: Routes = [
       {path:'customer',component:CustomerComponent},
       {path: 'expence-type', component: ExpenceTypeComponent},
       {path: 'party', component: PartyComponent},
-      {path: 'product', component: ProductComponent}
+      {path: 'product', component: ProductComponent},
+      {path: 'sale', component: SaleComponent},
+      {path: 'add-edit-sale', component: AddEditSaleComponent}
 
 
     ]

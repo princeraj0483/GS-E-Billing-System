@@ -14,9 +14,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {category_id: 1, category_name: 'Grocery', category_des: 'munna',  action: 'bca'},
-  {category_id: 2, category_name: 'Mobile shop', category_des: 'maical',  action: 'mca'},
-  {category_id: 3, category_name: 'Electronic', category_des: 'kgf',  action: 'mba'},
+  {category_id: 1, category_name: 'Grocery', category_des: 'Grocerry all electronic ',  action: 'bca'},
+  {category_id: 2, category_name: 'Mobile shop', category_des: 'Any mobile avilaible here',  action: 'mca'},
+  {category_id: 3, category_name: 'Electronic', category_des: 'Any electronic device',  action: 'mba'},
 
 ];
 

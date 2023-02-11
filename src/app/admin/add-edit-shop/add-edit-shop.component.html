@@ -5,20 +5,47 @@
   </button>
 </div>
 
-<div class="add_box">
+<div mat-dialog-content>
   <div class="example-container">
     <mat-form-field appearance="fill">
-      <mat-label>Shop name</mat-label>
-      <input matInput placeholder="Shop name" >
+      <mat-label>Shop Name</mat-label>
+      <input matInput placeholder="Shop Name" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
 
   <div class="example-container">
     <mat-form-field appearance="fill">
-      <mat-label>Email Id</mat-label>
-      <input matInput>
+      <mat-label>Owner Name</mat-label>
+      <input matInput placeholder="Owner Name" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Whatsapp Number</mat-label>
+    <input matInput type="number" onkeypress="return this.value.length < 10;"
+      oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+  </mat-form-field>
+
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Email Id</mat-label>
+      <input matInput placeholder="Email Id">
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>State</mat-label>
+    <mat-select>
+      <mat-option value="one">Jharkhand</mat-option>
+      <mat-option value="two">Mumbai</mat-option>
+      <mat-option value="three">Bihar</mat-option>
+      <mat-option value="four">Tamilnadu</mat-option>
+    </mat-select>
+  </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Distric</mat-label>
@@ -30,65 +57,35 @@
     </mat-select>
   </mat-form-field>
 
-  <div class="desc">
-    <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
-      <input matInput placeholder="Description">
-      <textarea matInput></textarea>
-    </mat-form-field>
-  </div>
-</div>
-
-<div class="add_box">
   <div class="example-container">
     <mat-form-field appearance="fill">
-      <mat-label>Owner Name</mat-label>
-      <input matInput placeholder="Owner name" [formControl]="email" required>
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Address" required>
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Shop Category</mat-label>
+    <mat-select>
+      <mat-option value="one">Grocerry</mat-option>
+      <mat-option value="two">Ashu Electronics</mat-option>
+      <mat-option value="three">Om Computer</mat-option>
+      <mat-option value="four">Ajad Mobile</mat-option>
+    </mat-select>
+  </mat-form-field>
+
 
   <label for="inst_img">
     <input type="file" id="inst_img" formControlName="shop_photo">
   </label>
 
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Address</mat-label>
-      <input matInput placeholder="Address" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+
+    <mat-form-field class="add_form" appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea formControlName="Description" matInput placeholder="Description"></textarea>
     </mat-form-field>
   </div>
-</div>
-
-<div class="add_box">
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Whatsapps No.</mat-label>
-      <input type="number" matInput placeholder="Mobile No."  required>
-    </mat-form-field>
-  </div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>State</mat-label>
-    <mat-select>
-      <mat-option value="one">Bihar</mat-option>
-      <mat-option value="two">Jharkhand</mat-option>
-      <mat-option value="three">keral</mat-option>
-      <mat-option value="four">Mumbai</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Category</mat-label>
-    <mat-select>
-      <mat-option value="one">Electric</mat-option>
-      <mat-option value="two">General Store</mat-option>
-      <mat-option value="three">stationary</mat-option>
-      <mat-option value="four">Maical Shop</mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
 
 <span class="btn_box">
   <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
