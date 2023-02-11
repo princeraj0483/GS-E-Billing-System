@@ -14,9 +14,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-{S_N_id: 1, Gst_name: 'haaa', Sgst: 'gahdb', Igst: 'ggggffg', action: 'bca'},
-{S_N_id: 2, Gst_name: 'hhg', Sgst: 'ggg', Igst: 'hhg', action: 'mca'},
-{S_N_id: 3, Gst_name: 'gggg', Sgst: 'ghg', Igst: 'hhgg', action: 'mba'},
+{S_N_id: 1, Gst_name: 'mobile', Sgst: '10%', Igst: 'ggggffg', action: 'bca'},
+{S_N_id: 2, Gst_name: 'sell', Sgst: '12%', Igst: 'hhg', action: 'mca'},
+{S_N_id: 3, Gst_name: 'Hardware', Sgst: '11%', Igst: 'hhgg', action: 'mba'},
 
 ];
 

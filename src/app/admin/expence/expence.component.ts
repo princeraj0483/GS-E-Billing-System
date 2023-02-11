@@ -17,9 +17,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {expence_id: 1, shop_name: 'munna', type_name: 'munna', exp_des: 676678, exp_amount: 888, exp_date: 22, action: 'bca'},
-  {expence_id: 2, shop_name: 'ggff', type_name: 'maical', exp_des: 7676, exp_amount: 777, exp_date: 5, action: 'mca'},
-  {expence_id: 3, shop_name: 'hhg', type_name: 'kgf',   exp_des:  786767 ,  exp_amount: 666, exp_date: 2, action: 'mba'},
+  {expence_id: 1, shop_name: 'munna', type_name: 'munna', exp_des: 9508510028, exp_amount: 888, exp_date: 22, action: 'bca'},
+  {expence_id: 2, shop_name: 'ggff', type_name: 'maical', exp_des: 9808510028, exp_amount: 777, exp_date: 5, action: 'mca'},
+  {expence_id: 3, shop_name: 'hhg', type_name: 'kgf',   exp_des:  9408510028 ,  exp_amount: 666, exp_date: 2, action: 'mba'},
 
 ];
 

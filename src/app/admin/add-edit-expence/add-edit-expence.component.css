@@ -39,9 +39,14 @@
 .add_box mat-form-field {
     width: 100%;
 }
-.text_area{
-    width: 447px;
-}
+
+.column_1 mat-form-field{
+    width: 100%;
+    margin-top: 0px;
+  }
+  textarea {
+    height: 17px;      
+  }  
 
 .btn_box {
     width: 100%;
@@ -58,10 +63,23 @@
     margin-right: 14px;
     margin-top: 20px;
     width: 10%;
-    margin-left: -185px;
+    margin-left: 18px;
 }
 .save_btn{
     margin-right: 18px;
     margin-top: 20px;
     width: 10%;
 }
+
+/* --------------------Media Query-------------------- */
+@media(min-width: 350px) and (max-width: 520px){
+    .add_box {
+        width: calc(100% - 1%);
+    }
+    textarea{
+        height: 16px;
+    }
+}
+
+
+
