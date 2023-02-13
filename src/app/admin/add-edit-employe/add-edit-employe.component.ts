@@ -17,8 +17,6 @@ export class AddEditEmployeComponent implements OnInit {
     Emp_Mob: ['', Validators.required],
     Emp_whatsapp: [''],
     Emp_Status:['']
-   
-    
   
     })
     throw new Error('Method not implemented.');

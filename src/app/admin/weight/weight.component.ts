@@ -5,7 +5,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditWeightComponent } from '../add-edit-weight/add-edit-weight.component';
 
-
 export interface PeriodicElement {
   weight_id: number;
   weight: number;

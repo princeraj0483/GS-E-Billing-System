@@ -38,12 +38,14 @@
             </mat-form-field>
         </div>
     </div>
+    
     <div class="add_box">
         <mat-form-field appearance="fill">
             <mat-label>Whatsapp Number</mat-label>
             <input matInput type="number" onkeypress="return this.value.length < 10;"
                 oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
         </mat-form-field>
+
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Password</mat-label>

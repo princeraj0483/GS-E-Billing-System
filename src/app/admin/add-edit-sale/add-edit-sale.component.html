@@ -1,0 +1,240 @@
+<div class="head">
+    <span>Add Sale Details</span>
+</div>
+
+<div id="box">
+    <nav ngbNav #nav="ngbNav" class="nav-tabs">
+        <ng-container ngbNavItem>
+            <a ngbNavLink
+                style="background-color: #232838; color: whitesmoke; border-radius: 5px; height: 40px; margin: 3px">Customer</a>
+            <ng-template ngbNavContent>
+             <div class="customer_box">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Customer</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Customer</mat-label>
+                    <mat-select>
+                        <mat-option value="one">Mukesh Singh</mat-option>
+                        <mat-option value="two">Akash Raz</mat-option>
+                        <mat-option value="two">Rana Singh</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Mobile Number</mat-label>
+                    <input matInput type="number" onkeypress="return this.value.length < 10;"
+                        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Email Id.</mat-label>
+                    <input matInput placeholder="Email Id">  
+                </mat-form-field><br>
+                
+                <mat-form-field appearance="fill" class="form">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput></textarea>
+                  </mat-form-field>
+
+                  <span class="btn_box">
+                    <button class="reset_btn" mat-raised-button color="warn" type="reset">Save</button>
+                  </span>
+             </div>
+            </ng-template>
+        </ng-container>
+
+
+        <ng-container ngbNavItem>
+            <a ngbNavLink
+                style="background-color: #232838; color: whitesmoke; border-radius: 5px; height: 40px; margin: 3px">Product</a>
+            <ng-template ngbNavContent>
+
+                <div class="product_box">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Customer</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Category</mat-label>
+                        <mat-select>
+                            <mat-option value="one">Gorcerry</mat-option>
+                            <mat-option value="two">Om Computer</mat-option>
+                            <mat-option value="two">Ashu Mobile</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Product</mat-label>
+                        <mat-select>
+                            <mat-option value="one">Phone</mat-option>
+                            <mat-option value="two">Computer</mat-option>
+                            <mat-option value="two">Hard Disk</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Size</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Weight</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Unit</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Page</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rate</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Avilaible (Pcs)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Avilaible (Kg)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Quantity (Pcs)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Quantity (Kg)</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total Amount</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <div class="add_btn">
+                        <mat-icon>add</mat-icon>
+                    </div>
+                </div>
+                
+
+                <div class="count_area">
+                    <span class="notice_text">Total : 10</span>
+                    <div class="search">
+                        <input type="text" placeholder="Search" matInput (keyup)="($event)" #input>
+                    </div>
+                </div>
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource" matSort>
+
+                        <ng-container matColumnDef="dis_SL_No">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>SL.No</th>
+                            <td mat-cell *matCellDef="let row"> {{row.dis_SL_No}}</td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="cust_name">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+                            <td mat-cell *matCellDef="let row"> {{row.cust_name}}</td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Product_name">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Name</th>
+                            <td mat-cell *matCellDef="let row"> {{row.Product_name}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Product_rate">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>Rate</th>
+                            <td mat-cell *matCellDef="let row"> {{row.Product_rate}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="product_pices">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity (Pcs)</th>
+                            <td mat-cell *matCellDef="let row"> {{row.product_pices}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Product_quan">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity (Kg)</th>
+                            <td mat-cell *matCellDef="let row"> {{row.Product_quan}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Action">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+                            <td mat-cell *matCellDef="let row"><mat-icon class="icon">visibility</mat-icon><mat-icon
+                                    class="icon">edit</mat-icon> </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns" id="tbl_hight"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;" id="tbl_hight"></tr>
+
+                        <tr class="mat-row" *matNoDataRow>
+                            <td class="mat-cell" colspan="9" style="color:silver;">No record found"{{input.value}}"</td>
+                        </tr>
+                    </table>
+
+                    <mat-paginator #paginatorRef [pageSizeOptions]="[10, 25, 100]"
+                     aria-label="Select page of users"></mat-paginator>
+                </div>
+            </ng-template>
+        </ng-container>
+
+
+        <ng-container ngbNavItem>
+            <a ngbNavLink
+                style="background-color: #232838; color: whitesmoke; border-radius: 5px; height: 40px; margin: 3px">Final Bill</a>
+            <ng-template ngbNavContent>
+                <div class="Final_box">
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Basic Amount</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0.00">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Discount (0%)</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>GST (%)</mat-label>
+                        <mat-select>
+                            <mat-option value="one">10%</mat-option>
+                            <mat-option value="two">15%</mat-option>
+                            <mat-option value="two">20%</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Paybill Amount</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0.00">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Paid</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Dues</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0.00">
+                    </mat-form-field>
+                     
+                </div>
+            </ng-template>
+        </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>
