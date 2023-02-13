@@ -62,10 +62,10 @@ mat-form-field mat-icon {
 }
 
 #inst_img {
-    width: 90%;
+    width: 99%;
     padding: 10px;
     cursor: pointer;
-    height: 31px;
+    height: 53px;
     border-radius: 4px 4px 0px 0px;
     margin-top: 0px;
     line-height: 26px;

@@ -60,8 +60,13 @@ const routes: Routes = [
       {path: 'expence-type', component: ExpenceTypeComponent},
       {path: 'party', component: PartyComponent},
       {path: 'product', component: ProductComponent},
-      {path: 'sale', component: SaleComponent},
-      {path: 'add-edit-sale', component: AddEditSaleComponent}
+      {path: 'sale', component: ViewportComponent,
+          children:[
+            {path: '', component: SaleComponent},
+            {path: 'addeditsale', component: AddEditSaleComponent}
+
+            ]
+      },
 
 
     ]

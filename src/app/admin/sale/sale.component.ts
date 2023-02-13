@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditSaleComponent } from '../add-edit-sale/add-edit-sale.component';
+import { Router } from '@angular/router';
 
 export interface PeriodicElement {
   dis_SL_No: number;
@@ -37,16 +38,15 @@ export class SaleComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private matdialog:MatDialog
-  ){
+    private router:Router
+      ){
 
   }
   ngOnInit(): void {
    
   }
   add_sale(){
-   this.matdialog.open(AddEditSaleComponent) 
-  }
+this.router.navigate(['adminhome/sale/addeditsale'])  }
  
 }
 

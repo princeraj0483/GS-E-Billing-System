@@ -61,6 +61,7 @@ import { ProductComponent } from './admin/product/product.component';
 import { AddEditProductComponent } from './admin/add-edit-product/add-edit-product.component';
 import { SaleComponent } from './admin/sale/sale.component';
 import { AddEditSaleComponent } from './admin/add-edit-sale/add-edit-sale.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -128,7 +129,8 @@ import { AddEditSaleComponent } from './admin/add-edit-sale/add-edit-sale.compon
     ReactiveFormsModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    NgbModule
    
   ],
   providers: [],

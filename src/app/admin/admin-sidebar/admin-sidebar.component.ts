@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-sidebar.component.css']
 })
 export class AdminSidebarComponent implements OnInit {
-
   setting: any
   action_icon1: boolean = false
   action_icon2: boolean = true
