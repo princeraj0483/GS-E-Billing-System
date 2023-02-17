@@ -62,6 +62,8 @@ import { AddEditProductComponent } from './admin/add-edit-product/add-edit-produ
 import { SaleComponent } from './admin/sale/sale.component';
 import { AddEditSaleComponent } from './admin/add-edit-sale/add-edit-sale.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PurchaseComponent } from './admin/purchase/purchase.component';
+import { AddEditPurchaseComponent } from './admin/add-edit-purchase/add-edit-purchase.component';
 
 @NgModule({
   declarations: [
@@ -108,6 +110,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AddEditProductComponent,
     SaleComponent,
     AddEditSaleComponent,
+    PurchaseComponent,
+    AddEditPurchaseComponent,
   
   ],
   imports: [

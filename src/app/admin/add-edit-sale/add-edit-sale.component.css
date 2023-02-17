@@ -70,13 +70,16 @@ mat-form-field mat-icon {
   
 }
   
-  
   /* -----------------------Media query----------------------- */
   @media(min-width: 350px) and (max-width: 520px){
     .product_box {
         width: 96%;
         margin-left: 2%; 
     }
+    .add_btn{
+        margin-right: 44%;
+    }
+
     mat-form-field{
         width: 100%;
     }
