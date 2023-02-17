@@ -1,5 +1,5 @@
 ::ng-deep .mat-dialog-container {
-    width: 400px;
+    width: 550px;
     background-color: rgb(244, 246, 247);
 }
 
@@ -52,14 +52,15 @@ mat-form-field mat-icon {
 .mat-input-element {
     color: black;
 }
+.column_1 mat-form-field{
+    width: 100%;
+    margin-top: -1px;
+  }
 
-textarea {
-    height: 7px;
-}
-.desc{
-    width: 173px;
-}
-
+  textarea {
+    height: 16px;      
+  } 
+  
 .margin_top {
     margin-top: 21px;
 }
@@ -84,4 +85,12 @@ textarea {
     margin-right: 18px;
     margin-top: 28px;
     width: 10%;
+}
+
+/* ----------------------Media Query------------------------- */
+@media(min-width: 350px) and (max-width: 420px){
+    .add_box {
+        width: calc(100% - 1%);
+      
+    }
 }

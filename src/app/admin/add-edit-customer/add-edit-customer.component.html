@@ -5,71 +5,73 @@
     </button>
 </div>
 
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Customer Name</mat-label>
-            <input matInput placeholder="Customer Name" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
+<div mat-dialog-content>
+    <div class="add_box">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Customer Name</mat-label>
+                <input matInput placeholder="Customer Name" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
 
-    <div class="example-container">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Email Id.</mat-label>
+                <input matInput placeholder="Email Id" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
         <mat-form-field appearance="fill">
-            <mat-label>Email Id.</mat-label>
-            <input matInput placeholder="Email Id" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-    <mat-form-field appearance="fill">
-        <mat-label>State</mat-label>
-        <mat-select disableRipple formControlName="State">
-            <mat-option value="1">Bihar</mat-option>
-            <mat-option value="2">Jharkhand</mat-option>
-            <mat-option value="3">Tamilnadu</mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <div class="desc">
-        <mat-form-field appearance="fill">
-            <mat-label>Address</mat-label>
-            <textarea matInput></textarea>
-        </mat-form-field>
-    </div>
-</div>
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Whatsapp No.</mat-label>
-            <input matInput placeholder="Whatsapp Number" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hide">
-                <mat-icon style="color: black">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill">
-            <mat-label>Distric</mat-label>
-            <mat-select disableRipple formControlName="Active Status">
-                <mat-option value="1">Sonepur</mat-option>
-                <mat-option value="2">Chapra</mat-option>
-                <mat-option value="3">Vaishali</mat-option>
+            <mat-label>State</mat-label>
+            <mat-select disableRipple formControlName="State">
+                <mat-option value="1">Bihar</mat-option>
+                <mat-option value="2">Jharkhand</mat-option>
+                <mat-option value="3">Tamilnadu</mat-option>
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
-            <mat-label>Description</mat-label>
-            <textarea matInput></textarea>
-        </mat-form-field>
+        <div class="desc">
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </div>
     </div>
+    
+    <div class="add_box">
+        <mat-form-field appearance="fill">
+            <mat-label>Whatsapp Number</mat-label>
+            <input matInput type="number" onkeypress="return this.value.length < 10;"
+                oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+        </mat-form-field>
 
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon style="color: black">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Distric</mat-label>
+                <mat-select disableRipple formControlName="Active Status">
+                    <mat-option value="1">Sonepur</mat-option>
+                    <mat-option value="2">Chapra</mat-option>
+                    <mat-option value="3">Vaishali</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    </div>
 
     <span class="btn_box">
         <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>

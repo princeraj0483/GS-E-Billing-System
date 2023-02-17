@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-add-edit-shop',
@@ -10,6 +11,8 @@ export class AddEditShopComponent implements OnInit {
   hide = true;
   FromBuilder: any;
   ShopForm: any;
+  itemForm: any;
+  image: any;
   ngOnInit(): void {
     this.ShopForm = this.FromBuilder.group({
     Shop_name: ['', Validators.required],
@@ -26,5 +29,4 @@ export class AddEditShopComponent implements OnInit {
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
-  
 }

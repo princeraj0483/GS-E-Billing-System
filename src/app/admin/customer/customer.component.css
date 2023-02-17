@@ -22,6 +22,21 @@
     cursor: pointer;
   }
   
+  .icon{
+    color: #1d1f23;
+    font-size: 25px;
+    margin: 12px;
+}
+
+  tr :hover{ 
+    color: white;
+    cursor: pointer;
+
+  }
+  tr:hover td mat-icon{
+    color: antiquewhite;
+  }
+  
 
   
  

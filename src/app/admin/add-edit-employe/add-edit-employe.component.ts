@@ -7,7 +7,6 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./add-edit-employe.component.css']
 })
 export class AddEditEmployeComponent implements OnInit {
-
   hide = true;
   FromBuilder: any;
   ShopForm: any;
@@ -18,8 +17,6 @@ export class AddEditEmployeComponent implements OnInit {
     Emp_Mob: ['', Validators.required],
     Emp_whatsapp: [''],
     Emp_Status:['']
-   
-    
   
     })
     throw new Error('Method not implemented.');

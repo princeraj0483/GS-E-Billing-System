@@ -15,9 +15,9 @@ export interface PeriodicElement {
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {emp_SL_No: 1,  emp_name: 'Munna', emp_mob: 9508510028, emp_add: 'Hajipur', emp_photo: 'image.jpg', emp_action: 'view',},
-  {emp_SL_No: 2, emp_name: 'Miacal',emp_mob: 9508512028, emp_add: 'Hajipur' , emp_photo: 'image.jpg', emp_action: 'view', },
-  {emp_SL_No: 3, emp_name: 'Mukul', emp_mob: 9508510028, emp_add:'Hajipur', emp_photo: 'image.jpg', emp_action: 'view',},
+  {emp_SL_No: 1,  emp_name: 'Rana Singh', emp_mob: 9508510028, emp_add: 'Hajipur', emp_photo: 'image.jpg', emp_action: 'view',},
+  {emp_SL_No: 2, emp_name: 'Mukesh Jha',emp_mob: 9508512028, emp_add: 'Hajipur' , emp_photo: 'image.jpg', emp_action: 'view', },
+  {emp_SL_No: 3, emp_name: 'Amit Raz', emp_mob: 9508510028, emp_add:'Hajipur', emp_photo: 'image.jpg', emp_action: 'view',},
 
 ];
 

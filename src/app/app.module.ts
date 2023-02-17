@@ -59,6 +59,11 @@ import { PartyComponent } from './admin/party/party.component';
 import { AddEditPartyComponent } from './admin/add-edit-party/add-edit-party.component';
 import { ProductComponent } from './admin/product/product.component';
 import { AddEditProductComponent } from './admin/add-edit-product/add-edit-product.component';
+import { SaleComponent } from './admin/sale/sale.component';
+import { AddEditSaleComponent } from './admin/add-edit-sale/add-edit-sale.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PurchaseComponent } from './admin/purchase/purchase.component';
+import { AddEditPurchaseComponent } from './admin/add-edit-purchase/add-edit-purchase.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +108,10 @@ import { AddEditProductComponent } from './admin/add-edit-product/add-edit-produ
     AddEditPartyComponent,
     ProductComponent,
     AddEditProductComponent,
+    SaleComponent,
+    AddEditSaleComponent,
+    PurchaseComponent,
+    AddEditPurchaseComponent,
   
   ],
   imports: [
@@ -124,7 +133,8 @@ import { AddEditProductComponent } from './admin/add-edit-product/add-edit-produ
     ReactiveFormsModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    NgbModule
    
   ],
   providers: [],

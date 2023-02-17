@@ -43,6 +43,10 @@
     display: none;
 }
 
+#dropdown_setting button{
+    margin-left: 19px;
+}
+
 #dropdown_report {
     display: none ;
 }

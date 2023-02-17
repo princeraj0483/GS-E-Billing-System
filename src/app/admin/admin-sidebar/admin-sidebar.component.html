@@ -13,8 +13,8 @@
             <button mat-button class="menu-button" (click)="setting_dropdown()" [routerLink]="['/#']">
                 <mat-icon>account_circle</mat-icon>
                 <span>Master Entry</span>
-                <mat-icon [hidden]="action_icon3">chevron_right</mat-icon>
                 <mat-icon [hidden]="action_icon4">expand_more</mat-icon>
+                
             </button>
 
             <div id="dropdown_setting">
@@ -71,6 +71,16 @@
                     <span>Item</span>
                 </button>
 
+                <button mat-button class="menu-button" [routerLink]="['sale']">
+                    <mat-icon>shopping_cart</mat-icon>
+                    <span>Sale</span>
+                </button>
+
+                <button mat-button class="menu-button" [routerLink]="['purchase']">
+                    <mat-icon>child_friendly</mat-icon>
+                    <span>Purchase</span>
+                </button>
+
                 <button mat-button class="menu-button" [routerLink]="['employe']">
                     <mat-icon>account_circle</mat-icon>
                     <span>Employe</span>
@@ -80,9 +90,9 @@
                     <mat-icon>casino</mat-icon>
                     <span>Expence Type</span>
                 </button>
-
             </div>
         </div>
+
         <button mat-button class="menu-button" [routerLink]="['expence']">
             <mat-icon>explore</mat-icon>
             <span>Expence</span>

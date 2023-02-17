@@ -12,8 +12,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    background-color: #525458;
+  width: 0px;
+  height: 5px;
 }
 
 .mat-menu-content:not(:empty) {
@@ -45,6 +45,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
     color: #1d1f23;
+  
 }
 
 .search_box {
@@ -79,15 +80,17 @@ tr:nth-child(odd) {
 
 tr:hover {
     background-color: #2f3547;
-    color: aliceblue;
+   
 }
 
-.mat-row:hover>.mat-cell {
-    color: white
+ .mat-row:hover>.mat-cell  {
+    color: rgb(245, 238, 238)
 }
 #tbl_hight {
     height: 40px;
 }
+
+
 
 /* --------------------------------Media Query--------------------------- */
 @media(min-width:420px) and (max-width:1080px) {
@@ -124,10 +127,6 @@ tr:hover {
 
     .count_area .notice_text {
         font-size: 10px;
-    }
-
-    td {
-        font-size: 11px;
     }
 
     mat-paginator {

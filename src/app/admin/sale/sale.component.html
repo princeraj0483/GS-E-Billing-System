@@ -1,0 +1,79 @@
+<div class="head">
+    <span>Sale</span>
+    <mat-icon (click)="add_sale()" >add_circle</mat-icon> 
+  </div>
+  <div class="count_area">
+    <span class="notice_text">Total : 10</span>
+    <div class="search">
+      <input type="text" placeholder="Search"  matInput (keyup)="($event)" #input> 
+    </div>
+  </div>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <ng-container matColumnDef="dis_SL_No">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SL.No</th>
+        <td mat-cell *matCellDef="let row"> {{row.dis_SL_No}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="cust_name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Customer</th>
+        <td mat-cell *matCellDef="let row"> {{row.cust_name}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="shop_biil">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bill Number</th>
+        <td mat-cell *matCellDef="let row"> {{row.shop_biil}} </td>
+      </ng-container>
+
+       <ng-container matColumnDef="basic_amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Basic Amount</th>
+        <td mat-cell *matCellDef="let row"> {{row.basic_amount}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sale_disc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Discount (%)</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_disc}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="sale_gst">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>GST (%)</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_gst}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sale_gross">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Gross Amount</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_gross}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sale_paid">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Paid</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_paid}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sale_dues">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Dues</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_dues}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sale_date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_date}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+        <td mat-cell *matCellDef="let row"><mat-icon class="icon">visibility</mat-icon><mat-icon class="icon">edit</mat-icon> </td>
+      </ng-container> 
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" id="tbl_hight"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" id="tbl_hight"></tr>
+  
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="9" style="color:silver;">No record found"{{input.value}}"</td> 
+      </tr>
+    </table>
+  
+    <mat-paginator #paginatorRef [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>

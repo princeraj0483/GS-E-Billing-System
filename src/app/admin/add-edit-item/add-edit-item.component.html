@@ -4,11 +4,13 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
+
+<div mat-dialog-content>
 <div class="add_box">
     <div class="example-container">
         <mat-form-field appearance="fill">
             <mat-label>Category name</mat-label>
-            <input matInput placeholder="Category name" [formControl]="email" required>
+            <input matInput placeholder="Category name"  required>
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
     </div>
@@ -16,15 +18,16 @@
     <mat-form-field appearance="fill">
         <mat-label>Shop_name</mat-label>
         <mat-select>
-            <mat-option value="one">First option</mat-option>
-            <mat-option value="two">Second option</mat-option>
+            <mat-option value="one">Om Computer</mat-option>
+            <mat-option value="two">Ashu Mobile</mat-option>
+            <mat-option value="two">Rana Automobiles</mat-option>
         </mat-select>
     </mat-form-field>
 
     <div class="example-container">
         <mat-form-field appearance="fill">
             <mat-label>Item Name</mat-label>
-            <input matInput placeholder="Item" [formControl]="email" required>
+            <input matInput placeholder="Item"  required>
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
     </div>
@@ -36,6 +39,7 @@
         <mat-select>
             <mat-option value="one">First option</mat-option>
             <mat-option value="two">Second option</mat-option>
+            
         </mat-select>
     </mat-form-field>
 
@@ -46,10 +50,11 @@
     <div class="example-container">
         <mat-form-field appearance="fill">
             <mat-label>Item Offer</mat-label>
-            <input matInput placeholder="Offer" [formControl]="email" required>
+            <input matInput placeholder="Offer" required>
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
     </div>
+</div>
 </div>
 
 <span class="btn_box">

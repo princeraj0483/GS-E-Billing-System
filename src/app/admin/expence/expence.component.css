@@ -13,6 +13,7 @@
     margin-left: 18px;
     background-color: #3b4259;
   }
+  
   .search{
    border-bottom: 1px solid black;
     color: yellow;
@@ -35,5 +36,20 @@
     color: whitesmoke;
     margin-top: -4px;
     cursor: pointer;
+  }
+
+  .icon{
+    color: #1d1f23;
+    font-size: 25px;
+    margin: 12px;
+}
+  
+  tr :hover{ 
+    color: white;
+    cursor: pointer;
+
+  }
+  tr:hover td mat-icon{
+    color: antiquewhite;
   }
   

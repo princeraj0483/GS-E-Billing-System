@@ -29,18 +29,21 @@
     color: #3B4259;
 }
 
-.add_box {
-    width: calc(100% - 67.7%);
-    margin-left: 3px;
-    height: auto;
+.mat-form-field {
+    width: 32.4%;
     float: left;
+    height: auto;
+    margin-left: 4px;
+    justify-items: center;
 }
 
-.mat-form-field {
+.column_1 mat-form-field {
     width: 100%;
+    margin-top: 0px;
 }
-.desc{
-    width: 637px;
+
+textarea {
+    height: 17px;
 }
 
 
@@ -57,10 +60,11 @@ mat-form-field mat-icon {
 }
 
 #inst_img {
-    width: 90%;
+    width: 30%;
+    height: 31px;
+    margin-left: 4px;
     padding: 10px;
     cursor: pointer;
-    height: 31px;
     border-radius: 4px 4px 0px 0px;
     margin-top: 0px;
     line-height: 26px;
@@ -72,10 +76,6 @@ mat-form-field mat-icon {
 #inst_img:hover {
     border-bottom: 2px solid rgb(20, 20, 23);
 
-}
-
-textarea {
-    height: 15px;
 }
 
 .margin_top {
@@ -98,8 +98,52 @@ textarea {
     margin-top: 28px;
     width: 10%;
 }
-.save_btn{
+
+.save_btn {
     margin-right: 18px;
     margin-top: 28px;
     width: 10%;
 }
+.add_form{
+    width: 100%;
+}
+
+/* ------------------------Media Query---------------------------- */
+
+@media(min-width: 350px) and (max-width: 420px) {
+    .mat-form-field {
+        width: 96%;
+    }
+    #inst_img {
+        width: 88%
+    }
+}
+
+@media(min-width: 421px) and (max-width: 520px) {
+    .mat-form-field {
+        width: 48%;
+    }
+    #inst_img {
+        width: 42%
+    }
+}
+@media(min-width: 521px) and (max-width: 620px){
+    .mat-form-field {
+        width: 48%;
+    }
+    #inst_img {
+        width: 43.1%
+    } 
+}
+
+@media(min-width: 621px) and (max-width: 721px){
+    #inst_img {
+        width: 27.9%
+    }
+   }
+
+   @media(min-width: 721px) and (max-width: 920px){
+    #inst_img {
+        width: 28.9%
+    }
+   }

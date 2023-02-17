@@ -8,7 +8,6 @@
       <input type="text" placeholder="Search"  matInput (keyup)="($event)" #input> 
     </div>
   </div>
-  
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
   
@@ -54,7 +53,7 @@
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
-        <td mat-cell *matCellDef="let row"><mat-icon style="color: black">visibility</mat-icon> </td>
+        <td mat-cell *matCellDef="let row"><mat-icon class="icon">visibility</mat-icon><mat-icon class="icon">edit</mat-icon> </td>
       </ng-container> 
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns" id="tbl_hight"></tr>

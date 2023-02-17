@@ -4,55 +4,59 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div class="add_box">
-    <mat-form-field appearance="fill">
-        <mat-label>Expence Type</mat-label>
-        <mat-select>
-            <mat-option value="one">rent</mat-option>
-            <mat-option value="two">Bijli bill</mat-option>
-            <mat-option value="two">food</mat-option>
-            
-        </mat-select>
-    </mat-form-field>
-    <div class="example-container">
+
+<div mat-dialog-content>
+    <div class="add_box">
         <mat-form-field appearance="fill">
-            <mat-label>Mobile Number</mat-label>
-            <input matInput placeholder="Mobile Number" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-label>Expence Type</mat-label>
+            <mat-select>
+                <mat-option value="one">rent</mat-option>
+                <mat-option value="two">Bijli bill</mat-option>
+                <mat-option value="two">food</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput placeholder="Mobile Number" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Vailid Date</mat-label>
+            <input type="date" matInput formControlName="course_date" style="color: #495057;">
         </mat-form-field>
     </div>
 
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Vailid Date</mat-label>
-        <input type="date" matInput formControlName="course_date" style="color: #495057;">
-    </mat-form-field>
+    <div class="add_box">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Pay To Pay</mat-label>
+                <input matInput placeholder="Pay To Pay "  required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Pay Amount</mat-label>
+                <input matInput placeholder="Pay Amount"  required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="column_1">
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
 </div>
 
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Pay To Pay</mat-label>
-            <input matInput placeholder="Pay To Pay " [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Pay Amount</mat-label>
-            <input matInput placeholder="Pay Amount" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-
-    <div class="example-container">
-        <mat-form-field hintLabel="" appearance="fill">
-            <mat-label>Description</mat-label>
-            <input matInput #input maxlength="200" placeholder="Description">
-        </mat-form-field>
-    </div>
-
-    <span class="btn_box">
-        <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
-        <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
-    </span>
+<span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+</span>
