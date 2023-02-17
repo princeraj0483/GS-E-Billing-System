@@ -33,6 +33,7 @@
     cursor: pointer;
 
   }
+  
   tr:hover td mat-icon{
     color: antiquewhite;
   }
