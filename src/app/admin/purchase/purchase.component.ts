@@ -31,6 +31,7 @@ const ELEMENT_DATA:PeriodicElement [] = [
   templateUrl: './purchase.component.html',
   styleUrls: ['./purchase.component.css']
 })
+
 export class PurchaseComponent implements OnInit {
   displayedColumns: string[] = ['dis_SL_No', 'cust_name', 'shop_biil', 'basic_amount', 'sale_disc', 'sale_gst', 'sale_gross' , 'sale_paid', 'sale_dues', 'sale_date', 'Action' ];
   dataSource = ELEMENT_DATA;
@@ -45,6 +46,6 @@ export class PurchaseComponent implements OnInit {
    
   }
   add_purchase(){
-this.router.navigate(['adminhome/purchase/addeditpurchase'])  }
+this.router.navigate(['/adminhome/purchase/editpurchase/'])  }
  
 }

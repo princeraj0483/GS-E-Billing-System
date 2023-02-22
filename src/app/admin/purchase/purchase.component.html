@@ -1,13 +1,14 @@
 <div class="head">
-    <span>Sale</span>
-    <mat-icon (click)="add_purchase()" >add_circle</mat-icon> 
+  <span>Purchase</span>
+  <mat-icon (click)="add_purchase()" >add_circle</mat-icon> 
+</div>
+
+<div class="count_area">
+  <span class="notice_text">Total : 10</span>
+  <div class="search">
+    <input type="text" placeholder="Search"  matInput (keyup)="($event)" #input> 
   </div>
-  <div class="count_area">
-    <span class="notice_text">Total : 10</span>
-    <div class="search">
-      <input type="text" placeholder="Search"  matInput (keyup)="($event)" #input> 
-    </div>
-  </div>
+</div>
   
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>

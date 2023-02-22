@@ -41,8 +41,4 @@ export class AddEditSaleComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  add_shop(){
-   this.matdialog.open(AddEditSaleComponent) 
-  }
- 
 }
