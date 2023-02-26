@@ -1,0 +1,31 @@
+
+<div class="add_head">
+    <span>Add Category</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div mat-dialog-content>
+<div class="add_box">
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Category name</mat-label>
+            <input matInput placeholder="Category name" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+</div>  
+<div class="add_box">
+    <div class="column_1">
+        <mat-form-field appearance="fill">
+          <mat-label>Address</mat-label>
+          <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
+        </mat-form-field>
+      </div>
+</div>
+</div>
+<span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+    </span>
+

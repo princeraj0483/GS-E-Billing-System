@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-add-edit-purchase',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-edit-purchase.component.css']
 })
 export class AddEditPurchaseComponent implements OnInit {
-
+	active = 1;
   constructor() { }
 
   ngOnInit(): void {

@@ -41,34 +41,35 @@ const routes: Routes = [
   {
     path: 'adminhome', component: AdminHomeComponent,
 
-
     children: [
       { path: '', component: ViewportComponent },
       { path: 'dashboard', component: AdminDashboardComponent },
       { path: 'shop', component: ShopComponent },
       { path: 'addeditshop', component: AddEditShopComponent },
-      {path: 'addeditcategory', component: AddEditCategoryComponent},
+      { path: 'addeditcategory', component: AddEditCategoryComponent},
       { path: 'shopdashboard', component: ShopDashboardComponent },
-      {path: 'category', component: CategoryComponent},
-      {path: 'unit', component: UnitComponent},
-      {path: 'discount', component: DiscountComponent},
-      {path: 'weight', component: WeightComponent},
-      {path: 'gst', component: GstComponent},
-      {path: 'item', component: ItemComponent},
-      {path: 'employe', component: EmployeComponent},
-      {path: 'expence', component: ExpenceComponent},
-      {path:'customer',component:CustomerComponent},
-      {path: 'expence-type', component: ExpenceTypeComponent},
-      {path: 'party', component: PartyComponent},
-      {path: 'product', component: ProductComponent},
-      {path: 'purchase', component: PurchaseComponent},
-      {path: 'sale', component: ViewportComponent,
-      
+      { path: 'category', component: CategoryComponent},
+      { path: 'unit', component: UnitComponent},
+      { path: 'discount', component: DiscountComponent},
+      { path: 'weight', component: WeightComponent},
+      { path: 'gst', component: GstComponent},
+      { path: 'item', component: ItemComponent},
+      { path: 'employe', component: EmployeComponent},
+      { path: 'expence', component: ExpenceComponent},
+      { path:'customer',component:CustomerComponent},
+      { path: 'expence-type', component: ExpenceTypeComponent},
+      { path: 'party', component: PartyComponent},
+      { path: 'product', component: ProductComponent},
+      { path: 'purchase', component: ViewportComponent,
+          children:[
+            {path: '', component: PurchaseComponent},
+            {path: 'editpurchase', component: AddEditPurchaseComponent},
+            ]
+      },
+      { path: 'sale', component: ViewportComponent,
           children:[
             {path: '', component: SaleComponent},
             {path: 'addeditsale', component: AddEditSaleComponent},
-            {path: 'addeditpurchase', component: AddEditPurchaseComponent}
-
             ]
       },
 

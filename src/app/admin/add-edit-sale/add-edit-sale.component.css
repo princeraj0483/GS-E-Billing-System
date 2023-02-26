@@ -51,10 +51,10 @@ mat-form-field mat-icon {
   textarea {
     height: 17px; 
   }
+  
   .form{
-    width: 80%;
+    width: 79.6%;
   }
-
   
 .btn_box {
     width: 100%;
@@ -68,6 +68,11 @@ mat-form-field mat-icon {
     width: 10%;
     background-color: #3b4259;
   
+}
+.save_btn{
+    width: 8%;
+    background-color: #3b4259; 
+    margin-left: 10px;
 }
   
   /* -----------------------Media query----------------------- */
@@ -83,6 +88,25 @@ mat-form-field mat-icon {
     mat-form-field{
         width: 100%;
     }
+    .Final_box{
+        margin-left: 5%;
+    }
+    .save_btn{
+        margin-left: 44%;
+        width: 25%;
+    }
+    .customer_box{
+        width: 96%;
+        margin-left: 2%;
+        margin-top: 1%;
+    }
+     
+  .form{
+    width: 100%;
+  }
+  .reset_btn{
+    margin-left: 97%;
+  }
 }
   
   @media(min-width: 521px) and (max-width: 1599px){
@@ -93,5 +117,6 @@ mat-form-field mat-icon {
         margin-left: 15px;
     }
   }
+
 
 

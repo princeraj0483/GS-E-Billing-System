@@ -1,0 +1,11 @@
+
+.box :last-child{
+    background-color: black;
+}
+
+.bill_btn{
+    position: absolute;
+    right: 5px;
+    top: 105px;
+    color: white;
+}
