@@ -38,22 +38,22 @@
   </div>
 
   <mat-form-field appearance="fill">
-    <mat-label>State</mat-label>
-    <mat-select>
-      <mat-option value="one">Jharkhand</mat-option>
-      <mat-option value="two">Mumbai</mat-option>
-      <mat-option value="three">Bihar</mat-option>
-      <mat-option value="four">Tamilnadu</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
     <mat-label>Distric</mat-label>
     <mat-select>
       <mat-option value="one">Vaishali</mat-option>
       <mat-option value="two">Chapra</mat-option>
       <mat-option value="three">Sonepur</mat-option>
       <mat-option value="four">Darbhanga</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>State</mat-label>
+    <mat-select>
+      <mat-option value="one">Jharkhand</mat-option>
+      <mat-option value="two">Mumbai</mat-option>
+      <mat-option value="three">Bihar</mat-option>
+      <mat-option value="four">Tamilnadu</mat-option>
     </mat-select>
   </mat-form-field>
 
@@ -75,9 +75,10 @@
     </mat-select>
   </mat-form-field>
 
-  <label for="inst_img">
-    <input type="file" id="inst_img" formControlName="shop_photo">
-  </label>
+  <div id="upload">
+    <h6>Upload Img</h6>
+    <input type="file">
+  </div>
 
 
     <mat-form-field class="add_form" appearance="fill">

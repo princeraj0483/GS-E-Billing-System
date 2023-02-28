@@ -30,6 +30,7 @@
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
+
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>Whatsapp</mat-label>
@@ -108,17 +109,18 @@
     </mat-form-field>
   </div>
 
-  <label for="inst_img">
-    <input type="file" id="inst_img" formControlName="shop_photo">
-  </label>
+	<div id="upload">
+					<h6>Upload Img</h6>
+					<input type="file">
+				</div>
 
   <mat-form-field appearance="fill">
     <mat-label>Description</mat-label>
     <textarea matInput></textarea>
   </mat-form-field>
+  
 </div>
 </div>
-
 
 <span class="btn_box">
   <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>

@@ -58,25 +58,21 @@ mat-form-field mat-icon {
 .mat-input-element {
     color: black;
 }
-
-#inst_img {
-    width: 30%;
-    height: 31px;
+#upload{
+    background-color: rgba(0,0,0,.04);
+    width: 32.5%;
     margin-left: 4px;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px 4px 0px 0px;
-    margin-top: 0px;
-    line-height: 26px;
-    margin-bottom: 19px;
-    background: #eaeced;
-    border-bottom: 1px solid grey;
+    height: 51px;
+    border-bottom: 1px solid rgb(41, 38, 38);
+    display: inline-block;
+}
+#upload h6{
+    margin: 0px;
+    color: black;
+    padding-left: 3px;
+    font-size: 11px;
 }
 
-#inst_img:hover {
-    border-bottom: 2px solid rgb(20, 20, 23);
-
-}
 
 .margin_top {
     margin-top: 21px;
@@ -110,40 +106,25 @@ mat-form-field mat-icon {
 
 /* ------------------------Media Query---------------------------- */
 
-@media(min-width: 350px) and (max-width: 420px) {
+@media(min-width: 350px) and (max-width: 520px) {
     .mat-form-field {
         width: 96%;
     }
-    #inst_img {
-        width: 88%
+    #upload{
+        width: 96%;
+        margin-bottom: 20px;
+    }
+    .btn_box{
+        margin-left: 15px;
     }
 }
 
-@media(min-width: 421px) and (max-width: 520px) {
+@media(min-width: 521px) and (max-width: 767px){
     .mat-form-field {
         width: 48%;
     }
-    #inst_img {
-        width: 42%
-    }
-}
-@media(min-width: 521px) and (max-width: 620px){
-    .mat-form-field {
+    #upload{
         width: 48%;
+        margin-bottom: 20px;
     }
-    #inst_img {
-        width: 43.1%
-    } 
 }
-
-@media(min-width: 621px) and (max-width: 721px){
-    #inst_img {
-        width: 27.9%
-    }
-   }
-
-   @media(min-width: 721px) and (max-width: 920px){
-    #inst_img {
-        width: 28.9%
-    }
-   }

@@ -10,25 +10,23 @@
                 <span>Dashboard</span>
             </button>
 
-            <button mat-button class="menu-button" (click)="setting_dropdown()" [routerLink]="['/#']">
-                <mat-icon>account_circle</mat-icon>
+            <button mat-button class="menu-button" (click)="Master_dropdown()" [routerLink]="['/#']">
+                <mat-icon>list_alt</mat-icon>
                 <span>Master Entry</span>
-                <mat-icon [hidden]="action_icon4">expand_more</mat-icon>
-                
+                <mat-icon [hidden]="action_icon1">chevron_right</mat-icon>
+                <mat-icon [hidden]="action_icon2">expand_more</mat-icon>
             </button>
 
-            <div id="dropdown_setting">
-                <button mat-button class="menu-button" [routerLink]="['/#']">
+
+            <div id="dropdown_report">
+                <button mat-button class="menu-button" [routerLink]="['party']">
+                    <mat-icon>account_circle</mat-icon>
+                    <span>Party</span>
                 </button>
 
                 <button mat-button class="menu-button" [routerLink]="['shop']">
                     <mat-icon>business</mat-icon>
                     <span>Shop</span>
-                </button>
-
-                <button mat-button class="menu-button" [routerLink]="['party']">
-                    <mat-icon>account_circle</mat-icon>
-                    <span>Party</span>
                 </button>
 
                 <button mat-button class="menu-button" [routerLink]="['category']">
@@ -71,15 +69,6 @@
                     <span>Item</span>
                 </button>
 
-                <button mat-button class="menu-button" [routerLink]="['sale']">
-                    <mat-icon>shopping_cart</mat-icon>
-                    <span>Sale</span>
-                </button>
-
-                <button mat-button class="menu-button" [routerLink]="['purchase']">
-                    <mat-icon>child_friendly</mat-icon>
-                    <span>Purchase</span>
-                </button>
 
                 <button mat-button class="menu-button" [routerLink]="['employe']">
                     <mat-icon>account_circle</mat-icon>
@@ -92,6 +81,26 @@
                 </button>
             </div>
         </div>
+        
+        <button mat-button class="menu-button" [routerLink]="['sale']">
+            <mat-icon>shopping_cart</mat-icon>
+            <span>Sale</span>
+        </button>
+
+        <button mat-button class="menu-button" [routerLink]="['purchase']">
+            <mat-icon>child_friendly</mat-icon>
+            <span>Purchase</span>
+        </button>
+
+        <button mat-button class="menu-button" [routerLink]="['account']">
+            <mat-icon> local_post_office</mat-icon>
+            <span>Account</span>
+        </button>
+
+        <button mat-button class="menu-button" [routerLink]="['profit']">
+            <mat-icon> map</mat-icon>
+            <span>Profit</span>
+        </button>
 
         <button mat-button class="menu-button" [routerLink]="['expence']">
             <mat-icon>explore</mat-icon>
