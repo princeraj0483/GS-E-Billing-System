@@ -30,7 +30,7 @@
 }
 
 .add_box {
-    width: calc(100% - 52%);
+    width: calc(100% - 51%);
     margin-left: 3px;
     height: auto;
     float: left;

@@ -76,6 +76,7 @@ textarea{
     width: 10%;
 }
 
+
 /* --------------------------Media Query------------------------- */
  @media(min-width: 350px) and (max-width: 520px){
     .mat-form-field{

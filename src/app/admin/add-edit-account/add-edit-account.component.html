@@ -1,0 +1,55 @@
+<div class="add_head">
+    <span>Add Account</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div mat-dialog-content>
+    <div class="add_box">
+				<mat-form-field appearance="fill" floatLabel="always">
+					<mat-label>Cash In Hand</mat-label>
+					<input matInput type="number" class="example-right-align" placeholder="0">
+				</mat-form-field>
+
+                <mat-form-field appearance="fill">
+					<mat-label>Today(Sale + Recived)</mat-label>
+					<input matInput>
+				</mat-form-field>
+
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Expense</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0">
+                </mat-form-field>
+                
+                <div class="example-container">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Address</mat-label>
+                      <input matInput placeholder="Address" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                  </div>
+        </div>
+    
+    <div class="add_box">
+        <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Deposit into Bank</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Closing Amount</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Vailid Date</mat-label>
+            <input type="date" matInput formControlName="course_date" style="color: #495057;">
+        </mat-form-field>
+        
+    </div>
+
+    <span class="btn_box">
+        <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+        <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+    </span>

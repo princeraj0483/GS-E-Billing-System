@@ -14,9 +14,12 @@
     background-color: #3b4259;
   }
   .search{
-   border-bottom: 1px solid black;
-    height: 30px;
-    margin-top: -5px;
+      border-bottom: 1px solid black;
+      height: 30px;
+      margin-top: -3px;
+      margin-right: -9px;
+      width: 163px;
+    
   }
  .search input{
     padding: 5px;

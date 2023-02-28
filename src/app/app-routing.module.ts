@@ -30,6 +30,8 @@ import { SaleComponent } from './admin/sale/sale.component';
 import { AddEditSaleComponent } from './admin/add-edit-sale/add-edit-sale.component';
 import { PurchaseComponent } from './admin/purchase/purchase.component';
 import { AddEditPurchaseComponent } from './admin/add-edit-purchase/add-edit-purchase.component';
+import { AccountComponent } from './admin/account/account.component';
+import { ProfitComponent } from './admin/profit/profit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -60,6 +62,8 @@ const routes: Routes = [
       { path: 'expence-type', component: ExpenceTypeComponent},
       { path: 'party', component: PartyComponent},
       { path: 'product', component: ProductComponent},
+      {path: 'account', component: AccountComponent},
+      {path: 'profit', component: ProfitComponent},
       { path: 'purchase', component: ViewportComponent,
           children:[
             {path: '', component: PurchaseComponent},
