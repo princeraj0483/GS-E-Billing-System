@@ -108,7 +108,7 @@ mat-form-field mat-icon {
 
 @media(min-width: 350px) and (max-width: 520px) {
     .mat-form-field {
-        width: 96%;
+        width: 97.7%;
     }
     #upload{
         width: 96%;

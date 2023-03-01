@@ -34,12 +34,6 @@ mat-dialog-content{
     color: #3B4259;
 }
 
-.add_box {
-    width: calc(100% - 67.7%);
-    margin-left: 3px;
-    height: auto;
-    float: left;
-}
 
 .mat-form-field {
     width: 100%;
@@ -99,19 +93,15 @@ textarea{
     height: 85px;
 }
 
-/* MediaQuery */
+
 @media(min-width: 350px) and (max-width: 520px){
-    .add_box{
-        width: 96%;
-    }
+   .mat-form-field{
+    width: 100%;
+   }
     textarea{
         height: 20px;
     }
 }
-@media(min-width: 521px) and (max-width: 767px){
-    .add_box{
-        width: 46%;
-    }
-}
+
 
 

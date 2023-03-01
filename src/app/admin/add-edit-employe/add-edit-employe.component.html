@@ -6,14 +6,13 @@
 </div>
 
 <div mat-dialog-content>
-<div class="add_box">
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
       <input matInput placeholder="Name" [formControl]="email" required>
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
-  </div>
+  
 
   <div class="example-container">
     <mat-form-field appearance="fill">
@@ -21,7 +20,7 @@
       <input matInput placeholder="Email Id" [formControl]="email" required>
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
-  </div>
+  
 
   <div class="example-container">
     <mat-form-field appearance="fill">
@@ -48,8 +47,6 @@
     </mat-select>
   </mat-form-field>
 
-</div>
-<div class="add_box">
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>AC Holder Name</mat-label>
@@ -92,7 +89,7 @@
   </div>
 </div>
 
-<div class="add_box">
+
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>AdharFront</mat-label>
