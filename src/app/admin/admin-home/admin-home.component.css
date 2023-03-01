@@ -1,12 +1,11 @@
 mat-sidenav {
     background-color: #232838;
     height: 100%;
-    width: 250px;
+    width: 255px;
 }
 
 mat-sidenav-content {
     height: 100vh;
-    background-color: whitesmoke;
 }
 
 .main {
@@ -53,4 +52,11 @@ a {
 a button {
     color: whitesmoke;
     text-align: center;
+}
+
+@media(min-width: 350px) and (max-width: 520px){
+    .main {
+        padding: 61px 2px 2px 2px;
+        position: fixed;
+    }
 }

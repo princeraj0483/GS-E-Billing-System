@@ -39,6 +39,12 @@
   tr:hover td mat-icon{
     color: antiquewhite;
   }
+  @media(min-width: 350px) and (max-width: 520px){
+    .main[_ngcontent-kuf-c126] {
+      padding: 61px 2px 0px 0px;
+  }
+  }
+
   
 
   
