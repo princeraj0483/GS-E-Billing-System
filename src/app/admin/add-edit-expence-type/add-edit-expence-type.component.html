@@ -5,7 +5,8 @@
     </button>
 </div>
 
-    <div class="add_box">
+    
+<form [formGroup]="Expence_Form">
         <mat-form-field appearance="fill">
             <mat-label>Expence Type</mat-label>
             <mat-select>
@@ -15,14 +16,14 @@
             </mat-select>
         </mat-form-field>
 
-        <div class="add_box">
             <div class="column_1">
                 <mat-form-field appearance="fill">
                   <mat-label>Address</mat-label>
                   <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
                 </mat-form-field>
               </div>
-        </div>
+        </form>
+        
     <span class="btn_box">
         <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
         <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>

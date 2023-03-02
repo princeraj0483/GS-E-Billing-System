@@ -5,20 +5,19 @@
   </button>
 </div>
 
+<form [formGroup]="Party_Form">
 <div mat-dialog-content>
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Name" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+       <input formControlName="Name" matInput placeholder="Name">
       </mat-form-field>
     </div>
     
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Contact Persion</mat-label>
-        <input matInput placeholder="Contact Persion">
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <input formControlName="Contact_persion" matInput placeholder="Name">
       </mat-form-field>
     </div>
 
@@ -34,34 +33,30 @@
         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field>
 
-      <div class="example-container">
+    <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Email Id</mat-label>
-        <input matInput>
+        <input matInput placeholder="Email Id">
       </mat-form-field>
     </div>
 
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>A/C Holder Name</mat-label>
-        <input matInput placeholder="A/C Holder Name">
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <input formControlName="A/C Holder Name" matInput placeholder="A/C Holder Name">
       </mat-form-field>
     </div>
 
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>A/C Number</mat-label>
-        <input matInput placeholder="A/C Number">
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-      </mat-form-field>
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Account Number</mat-label>
+      <input matInput type="number" onkeypress="return this.value.length < 16;"
+        oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
+    </mat-form-field><br>
 
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>IFSC</mat-label>
         <input matInput placeholder="IFSC">
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
     </div>
 
@@ -69,16 +64,15 @@
       <mat-form-field appearance="fill">
         <mat-label>GST No.</mat-label>
         <input matInput placeholder="GST No">
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
     </div> 
 
     <mat-form-field class="add_form" appearance="fill">
       <mat-label>Address</mat-label>
-      <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
+      <input formControlName="Address" matInput placeholder="Address">
     </mat-form-field>
   </div>
-
+</form>
 
 <span class="btn_box">
   <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>

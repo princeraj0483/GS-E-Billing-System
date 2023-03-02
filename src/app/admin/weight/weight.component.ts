@@ -40,5 +40,9 @@ export class WeightComponent implements OnInit {
   add_shop(){
    this.matdialog.open(AddEditWeightComponent) 
   }
+
+  edit_weight(){
+    this.matdialog.open(AddEditWeightComponent)
+  }
  
 }

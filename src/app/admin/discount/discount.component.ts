@@ -46,5 +46,9 @@ export class DiscountComponent implements OnInit {
   add_shop(){
    this.matdialog.open(AddEditDiscountComponent) 
   }
+
+  edit_discount(){
+    this.matdialog.open(AddEditDiscountComponent)
+  }
  
 }

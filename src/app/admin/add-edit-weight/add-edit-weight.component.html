@@ -4,24 +4,25 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Weight (kg)</mat-label>
-            <input matInput placeholder="Weight" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-</div>
 
-<div class="add_box">
+<form [formGroup]="Expence_Form">
+    <div mat-dialog-content>
+        <div class="examplcontainere">
+          <mat-form-field appearance="fill">
+            <mat-label>Weight (Kg)</mat-label>
+           <input formControlName="Name" matInput placeholder="Name">
+          </mat-form-field>
+        </div>
+
     <div class="column_1">
         <mat-form-field appearance="fill">
           <mat-label>Address</mat-label>
           <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
         </mat-form-field>
       </div>
-</div>
+      </div>
+      </form>
+
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>

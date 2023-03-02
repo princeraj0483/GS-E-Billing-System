@@ -39,5 +39,9 @@ export class UnitComponent implements OnInit {
   add_shop(){
    this.matdialog.open(AddEditUnitComponent) 
   }
+  
+  edit_unit(){
+    this.matdialog.open(AddEditUnitComponent)
+  }
  
 }

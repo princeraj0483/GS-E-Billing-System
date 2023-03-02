@@ -45,5 +45,8 @@ export class PartyComponent implements OnInit {
   add_shop(){
    this.matdialog.open(AddEditPartyComponent) 
   }
+  edit_party(){
+    this.matdialog.open(AddEditPartyComponent)
+  }
  
 }

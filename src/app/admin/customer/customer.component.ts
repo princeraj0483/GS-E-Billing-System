@@ -45,5 +45,9 @@ export class CustomerComponent implements OnInit {
   add_shop(){
    this.matdialog.open(AddEditCustomerComponent) 
   }
+
+  edit_customer(){
+    this.matdialog.open(AddEditCustomerComponent)
+  }
  
 }

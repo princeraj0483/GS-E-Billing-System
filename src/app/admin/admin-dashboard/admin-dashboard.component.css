@@ -5,7 +5,7 @@
   
   #box {
     width: calc(25% - 21px);
-    height: 114px;
+    height: 116px;
     border-left: 5px solid#1d1f23;
     border-radius: 5px;
     float: left;
