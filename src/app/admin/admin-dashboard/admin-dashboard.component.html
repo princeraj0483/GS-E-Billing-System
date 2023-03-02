@@ -1,51 +1,60 @@
 <div class="main_area">
-    
-    <div id="box">
-        <mat-icon>dashboard</mat-icon><br>
-        <span><b>1</b></span><br><br>
-        <span>Dashboard</span>
-    </div>
 
+
+    <a [routerLink]="['../party']">
     <div id="box" class="color2">
-        <mat-icon>shopping_basket</mat-icon><br>
+        <mat-icon>account_circle</mat-icon><br>
         <span><b>2</b></span><br><br>
-        <span>Admin</span>
+        <span>Party</span>
     </div>
+</a>
 
-    <div id="box" class="color3" [routerLink]="['shop']">
-        <mat-icon>assignment</mat-icon><br>
+    <div id="box" class="color3" [routerLink]="['../unit']">
+        <mat-icon>ac_unit</mat-icon><br>
         <span><b>3</b></span><br><br>
-        <span>Shop</span>
+        <span>Unit</span>
     </div>
 
-    <div id="box" class="color4">
-        <mat-icon>shopping_cart</mat-icon><br>
+    <div id="box" class="color4"  [routerLink]="['../weight']">
+        <mat-icon>line_weight</mat-icon><br>
         <span><b>4</b></span><br><br>
+        <span>Weight</span>
+    </div>
+
+    <div id="box" class="color5" [routerLink]="['../discount']">
+        <mat-icon> attach_money</mat-icon><br>
+        <span><b>5</b></span><br><br>
+        <span>Discount</span>
+    </div>
+
+    <div id="box" class="color7" [routerLink]="['../gst']">
+        <mat-icon>money_off</mat-icon><br>
+        <span><b>6</b></span><br><br>
+        <span>Gst</span>
+    </div>
+
+    <div id="box" class="color8" [routerLink]="['../category']">
+        <mat-icon>child_friendly</mat-icon><br>
+        <span><b>7</b></span><br><br>
+        <span>Category</span>
+    </div>
+
+    <div id="box" class="color9" [routerLink]="['../shop']">
+        <mat-icon>business</mat-icon><br>
+        <span><b>8</b></span><br><br>
         <span>Shop</span>
     </div>
 
-    <div id="box" class="color5">
-        <mat-icon> chat</mat-icon><br>
-        <span><b>5</b></span><br><br>
-        <span>Viewport</span>
-    </div>
-
-    <div id="box" class="color7">
-        <mat-icon>payment</mat-icon><br>
-        <span><b>6</b></span><br><br>
-        <span>Payment</span>
-    </div>
-
-    <div id="box" class="color8">
-        <mat-icon>receipt</mat-icon><br>
-        <span><b>7</b></span><br><br>
-        <span>Dues</span>
-    </div>
-
-    <div id="box" class="color9">
-        <mat-icon>settings</mat-icon><br>
+    <div id="box" class="color9"  [routerLink]="['../product']">
+        <mat-icon>shopping_basket</mat-icon><br>
         <span><b>8</b></span><br><br>
-        <span>Settings</span>
+        <span>Product</span>
     </div>
+
+    <div id="box" class="color9" [routerLink]="['../expence-type']">
+        <mat-icon>casino</mat-icon><br>
+        <span><b>8</b></span><br><br>
+        <span>Expence Type</span>
+    </div>       
 
 </div>

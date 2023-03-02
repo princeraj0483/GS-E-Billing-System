@@ -17,7 +17,6 @@ import { AddEditCategoryComponent } from './admin/add-edit-category/add-edit-cat
 import { UnitComponent } from './admin/unit/unit.component';
 import { WeightComponent } from './admin/weight/weight.component';
 import { GstComponent } from './admin/gst/gst.component';
-import { ItemComponent } from './admin/item/item.component';
 import { EmployeComponent } from './admin/employe/employe.component';
 import { DiscountComponent } from './admin/discount/discount.component';
 import { ExpenceComponent } from './admin/expence/expence.component';
@@ -34,7 +33,7 @@ import { AccountComponent } from './admin/account/account.component';
 import { ProfitComponent } from './admin/profit/profit.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: AdminDashboardComponent },
   { path: 'home', component: HomeComponent },
   { path: 'customerlogin', component: CustomerLoginComponent },
   { path: 'adminlogin', component: AdminLoginComponent },
@@ -55,7 +54,6 @@ const routes: Routes = [
       { path: 'discount', component: DiscountComponent},
       { path: 'weight', component: WeightComponent},
       { path: 'gst', component: GstComponent},
-      { path: 'item', component: ItemComponent},
       { path: 'employe', component: EmployeComponent},
       { path: 'expence', component: ExpenceComponent},
       { path:'customer',component:CustomerComponent},

@@ -12,9 +12,9 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
   height: 5px;
-  color: red;
+ 
 }
 
 .mat-menu-content:not(:empty) {

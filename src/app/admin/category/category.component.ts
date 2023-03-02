@@ -38,8 +38,12 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  add_shop(){
+  add_category(){
    this.matdialog.open(AddEditCategoryComponent) 
+  }
+
+  edit_category(){
+    this.matdialog.open(AddEditCategoryComponent)
   }
  
 }
