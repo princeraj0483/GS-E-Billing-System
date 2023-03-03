@@ -23,13 +23,13 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Whatsapp Number</mat-label>
-      <input matInput type="number" onkeypress="return this.value.length < 10;"
+      <input formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field><br>
       
     <mat-form-field appearance="fill">
       <mat-label>Mobile Number</mat-label>
-      <input matInput type="number" onkeypress="return this.value.length < 10;"
+      <input formControlName="mobile_number" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field>
 
@@ -43,13 +43,13 @@
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>A/C Holder Name</mat-label>
-        <input formControlName="A/C Holder Name" matInput placeholder="A/C Holder Name">
+        <input placeholder="A/C Holder Name" matInput placeholder="A/C Holder Name">
       </mat-form-field>
     </div>
 
     <mat-form-field appearance="fill">
       <mat-label>Account Number</mat-label>
-      <input matInput type="number" onkeypress="return this.value.length < 16;"
+      <input matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
         oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
     </mat-form-field><br>
 

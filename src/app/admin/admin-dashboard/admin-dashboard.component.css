@@ -12,6 +12,7 @@
     margin-top: 18px;
     margin-left: 18px;
     background-color: #3b4259;
+    cursor: pointer;
   }
   
   mat-icon {
