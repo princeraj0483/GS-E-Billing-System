@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
+
 @Component({
   selector: 'app-add-edit-weight',
   templateUrl: './add-edit-weight.component.html',
@@ -11,18 +12,17 @@ export class AddEditWeightComponent implements OnInit {
   FromBuilder: any;
   Weight_Form: any;
   private _Form: any;
-  Expence_Form: any;
   constructor(
     private fb:FormBuilder
   ){
 
   }
   ngOnInit(): void {
-    this.Expence_Form = this.fb.group({
-     
+    this.Weight_Form = this.fb.group({
+      Weight:['',Validators.required],
+      Description:[],
         
     })
-    throw new Error('Method not implemented.');
   }
   
 }

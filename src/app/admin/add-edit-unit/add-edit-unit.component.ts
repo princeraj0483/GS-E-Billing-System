@@ -17,7 +17,8 @@ export class AddEditUnitComponent implements OnInit {
   }
   ngOnInit(): void {
     this.Unit_Form = this.fb.group({
-      Description:['',Validators.required]
+      Name:['',Validators.required],
+      Description:[''],
         
     })
   }

@@ -54,6 +54,8 @@
     margin-top: 20px;
     width: 10%;
 }
- mat-dialog-content{
-    background-color: red;
+.mat-form-field{
+    width: 100%;
 }
+ 
+

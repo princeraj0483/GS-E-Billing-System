@@ -91,8 +91,6 @@ tr:hover {
     height: 40px;
 }
 
-
-
 /* --------------------------------Media Query--------------------------- */
 @media(min-width:420px) and (max-width:1080px) {
     .mat-elevation-z8 {

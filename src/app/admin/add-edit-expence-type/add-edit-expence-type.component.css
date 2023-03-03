@@ -29,16 +29,6 @@
     color: #3B4259;
 }
 
-.add_box {
-    width: calc(100% - 1%);
-    margin-left: 2px;
-    height: auto;
-    float: left;
-}
-
-.add_box mat-form-field {
-    width: 100%;
-}
 
 .btn_box {
     width: 100%;

@@ -15,18 +15,12 @@ export class AdminHomeComponent implements OnInit {
   constructor(
     private observe:BreakpointObserver
   ) { }
-
   ngOnInit(): void {
-    this.observe.observe(['(max-width:768px)']).subscribe((res) => {
-      if (res.matches) {
-        this.sidenav.mode = 'over';
-        this.sidenav.close();
-      }
-      else {
-        this.sidenav.mode = 'side';
-        this.sidenav.close();
-      }
-    })
+   
+    
   }
+
+
+  
 
 }

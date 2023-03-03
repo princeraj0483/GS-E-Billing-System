@@ -20,7 +20,9 @@ export class AddEditPartyComponent implements OnInit {
       Name:['',Validators.required],
       Contact_persion:['',Validators.required],
       number:['', Validators.required],
-      Address:['', Validators.required]
+      Address:['', Validators.required],
+      Whatsapp:['', Validators.required],
+      mobile_number:['', Validators.required]
         
     })
     throw new Error('Method not implemented.');

@@ -3,33 +3,24 @@
     <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
         <mat-icon>close</mat-icon>
     </button>
-</div>
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Gst</mat-label>
-            <input matInput placeholder="Gst" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-</div>
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Sgst</mat-label>
-            <input matInput placeholder="Sgst" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
 
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Igst</mat-label>
-            <input matInput placeholder="Igst" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-    </div>
-</div>
+</div><form [formGroup]="Gst_Form">
+    <div mat-dialog-content>
+        <div class="examplcontainere">
+          <mat-form-field appearance="fill">
+            <mat-label>Gst</mat-label>
+           <input formControlName="Gst" matInput placeholder="Gst">
+          </mat-form-field>
+        </div>
+
+        <div mat-dialog-content>
+            <div class="examplcontainere">
+              <mat-form-field appearance="fill">
+                <mat-label>Sgst</mat-label>
+               <input formControlName="Sgst" matInput placeholder="Sgst">
+              </mat-form-field>
+            </div>   
+
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>

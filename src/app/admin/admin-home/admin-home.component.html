@@ -9,8 +9,9 @@
                     <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
                     <div class="user">
                         <h3>Login as: Saddam Husain</h3>
-                        <mat-icon class="user-icon">account_circle</mat-icon>
-                        <mat-menu #menu="matMenu" class="myMenu">
+                        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon><br></button>
+                        <mat-menu #menu="matMenu">
+                          <button mat-menu-item style="color: white">Log Out</button>
                         </mat-menu>
                     </div>
                 </mat-toolbar>
