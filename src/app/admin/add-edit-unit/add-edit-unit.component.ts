@@ -20,7 +20,6 @@ export class AddEditUnitComponent implements OnInit {
       Description:['',Validators.required]
         
     })
-    throw new Error('Method not implemented.');
   }
   
 }

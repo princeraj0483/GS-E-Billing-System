@@ -33,14 +33,13 @@ import { AccountComponent } from './admin/account/account.component';
 import { ProfitComponent } from './admin/profit/profit.component';
 
 const routes: Routes = [
-  { path: '', component: AdminDashboardComponent },
-  { path: 'home', component: HomeComponent },
+  // { path: '', component: AdminDashboardComponent },
+  { path: '', component: HomeComponent },
   { path: 'customerlogin', component: CustomerLoginComponent },
   { path: 'adminlogin', component: AdminLoginComponent },
   { path: 'shoplogin', component: ShopLoginComponent },
   { path: 'shophome', component: ShopHomeComponent },
-  {
-    path: 'adminhome', component: AdminHomeComponent,
+  {path: 'adminhome', component: AdminHomeComponent,
 
     children: [
       { path: '', component: ViewportComponent },
