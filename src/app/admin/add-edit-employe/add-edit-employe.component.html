@@ -1,125 +1,107 @@
-<div class="add_head">
-  <span>Add Employe</span>
-  <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
-    <mat-icon>close</mat-icon>
-  </button>
-</div>
 
-<div mat-dialog-content>
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Name" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+  <div class="add_head">
+    <span>Add Employee</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
   
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Email Id</mat-label>
-      <input matInput placeholder="Email Id" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+  <form [formGroup]="Employee_Form">
+  <div mat-dialog-content>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+         <input formControlName="Name" matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+      
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Email Id</mat-label>
+          <input formControlName="Email_Id" matInput placeholder="Email id">
+        </mat-form-field>
+      </div>
   
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Mobile No.</mat-label>
-      <input matInput placeholder="Mobile No." [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Whatsapp</mat-label>
-      <input matInput placeholder="Whatsapp">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Role</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>AC Holder Name</mat-label>
-      <input matInput placeholder="AC Holder Name">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>AC Number</mat-label>
-      <input matInput placeholder="Account Number">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>AC IFSC Code</mat-label>
-      <input matInput placeholder="AC IFSC Code">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Active Status</mat-label>
-    <mat-select disableRipple formControlName="Active Status">
-      <mat-option value="1">Aadhar</mat-option>
-      <mat-option value="2">Pan Card</mat-option>
-      <mat-option value="3">Driving Licence</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-</div>
+      <mat-form-field appearance="fill">
+        <mat-label>Mobile Number</mat-label>
+        <input formControlName="Mobile" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
+          oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+      </mat-form-field><br>
+        
+      <mat-form-field appearance="fill">
+        <mat-label>Whatsapp Number</mat-label>
+        <input formControlName="Whatsapp_number" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
+          oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+      </mat-form-field>
 
 
+      <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>A/C Holder Name</mat-label>
+          <input placeholder="A/C_Holder_Name" matInput placeholder="A/C Holder Name">
+        </mat-form-field>
+      </div>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Account Number</mat-label>
+        <input matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
+          oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
+      </mat-form-field><br>
+  
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>IFSC</mat-label>
+          <input matInput placeholder="IFSC">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Active Status</mat-label>
+        <mat-select disableRipple formControlName="Active Status">
+          <mat-option value="1">Aadhar</mat-option>
+          <mat-option value="2">Pan Card</mat-option>
+          <mat-option value="3">Driving Licence</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" >
+        </mat-form-field>
+      </div> 
+      
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>AdharFront</mat-label>
       <input matInput placeholder="AdharFront">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
-  </div>
-
+  </div> 
+  
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>AdharBack</mat-label>
       <input matInput placeholder="AdharBack">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
 
-	<div id="upload">
-					<h6>Upload Img</h6>
-					<input type="file">
-				</div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Description</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
-  
-</div>
-</div>
+  <div class="column_1">
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea formControlName="Description" matInput placeholder="Description"></textarea>
+    </mat-form-field>
+  </div>
 
 <span class="btn_box">
-  <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
-  <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
   </span>

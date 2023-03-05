@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -30,14 +30,21 @@ export class AddEditPurchaseComponent implements OnInit {
 	active = 1;
   displayedColumns: string[] = ['dis_SL_No', 'cust_name', 'Product_name', 'Product_rate', 'Product_quan',  'Action' ];
   dataSource = ELEMENT_DATA;
+  Party_Form:any;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private matdialog:MatDialog
+    private fb:FormBuilder
   ){
 
   }
   ngOnInit(): void {
+    this.Party_Form = this.fb.group({
+      Party:['',Validators.required],
+      Mobile:['',Validators.required],
+    
+        
+    })
    
   }
 }

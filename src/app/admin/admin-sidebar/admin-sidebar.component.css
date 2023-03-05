@@ -36,7 +36,7 @@
     background-color: #525458;
 }
  .menu-button:focus{
-    background-color: #35373d;
+    background-color: #2d4078;
 }
 
 #dropdown_setting {
@@ -48,6 +48,11 @@
 }
 
 #dropdown_report {
+    display: none ;
+    margin-left: 15px;
+}
+
+#dropdowns_report {
     display: none ;
     margin-left: 15px;
 }

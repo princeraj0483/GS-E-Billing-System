@@ -31,14 +31,16 @@ import { PurchaseComponent } from './admin/purchase/purchase.component';
 import { AddEditPurchaseComponent } from './admin/add-edit-purchase/add-edit-purchase.component';
 import { AccountComponent } from './admin/account/account.component';
 import { ProfitComponent } from './admin/profit/profit.component';
+import { LedgerComponent } from './ledger/ledger.component';
+import { LossComponent } from './loss/loss.component';
 
 const routes: Routes = [
-  // { path: '', component: AdminDashboardComponent },
   { path: '', component: HomeComponent },
+  { path: 'homepage', component: HomeComponent },
   { path: 'customerlogin', component: CustomerLoginComponent },
-  { path: 'adminlogin', component: AdminLoginComponent },
   { path: 'shoplogin', component: ShopLoginComponent },
   { path: 'shophome', component: ShopHomeComponent },
+  { path: 'adminlogin', component: AdminLoginComponent },
   {path: 'adminhome', component: AdminHomeComponent,
 
     children: [
@@ -61,6 +63,11 @@ const routes: Routes = [
       { path: 'product', component: ProductComponent},
       {path: 'account', component: AccountComponent},
       {path: 'profit', component: ProfitComponent},
+      {path: 'ledger', component: LedgerComponent},
+      {path: 'profit', component: ProfitComponent},
+      {path: 'loss', component: LossComponent},
+      
+
       { path: 'purchase', component: ViewportComponent,
           children:[
             {path: '', component: PurchaseComponent},

@@ -5,24 +5,23 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div mat-dialog-content>
-<div class="add_box">
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-            <mat-label>Category name</mat-label>
-            <input matInput placeholder="Category name">
-        </mat-form-field>
-    </div>
-</div>  
-<div class="add_box">
+<form [formGroup]="Category_Form">
+    <div mat-dialog-content>
+        <div class="examplcontainere">
+          <mat-form-field appearance="fill">
+            <mat-label>Category Name</mat-label>
+           <input formControlName="Category" matInput placeholder="Category">
+          </mat-form-field>
+        </div>
+
     <div class="column_1">
         <mat-form-field appearance="fill">
-          <mat-label>Address</mat-label>
-          <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
+          <mat-label>Description</mat-label>
+          <textarea formControlName="Description" matInput placeholder="Description"></textarea>
         </mat-form-field>
       </div>
-</div>
-</div>
+      </div>
+      </form>
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>

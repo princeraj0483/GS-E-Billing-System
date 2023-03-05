@@ -25,6 +25,5 @@ export class AddEditPartyComponent implements OnInit {
       mobile_number:['', Validators.required]
         
     })
-    throw new Error('Method not implemented.');
   }
 }

@@ -1,4 +1,4 @@
-::ng-deep .mat-dialog-container {
+/* ::ng-deep .mat-dialog-container {
     width: 680px;
     background-color: rgb(244, 246, 247);
 }
@@ -104,4 +104,112 @@ textarea{
 }
 
 
+ */
+
+
+ ::ng-deep .mat-dialog-container {
+    width: 700px;
+    background-color: rgb(244, 246, 247);
+}
+
+.add_head {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.add_head span {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3B4259;
+}
+
+#close_btn {
+    width: 30px;
+    height: 30px;
+}
+
+#close_btn mat-icon {
+    position: relative;
+    bottom: 6px;
+    color: #3B4259;
+}
+
+.mat-form-field {
+    width: 32.5%;
+    float: left;
+    margin-left: 3px;
+}
+
+.column_1 mat-form-field{
+    width: 100%;
+    margin-top: -1px;
+  }
+
+  textarea {
+    height: 16px;      
+  } 
+  mat-form-field{
+    width: 100%;
+  }
+
+mat-form-field mat-icon {
+    color: rgb(244, 246, 247);
+}
+
+::placeholder {
+    color: rgb(49, 49, 49);
+}
+
+.mat-input-element {
+    color: black;
+}
+
+.margin_top {
+    margin-top: 21px;
+}
+
+.btn_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add_btn {
+    margin-top: 28px;
+    width: 8%;
+}
+
+.reset_btn {
+    margin-right: 14px;
+    margin-top: 28px;
+    width: 10%;
+}
+.save_btn{
+    margin-right: 18px;
+    margin-top: 28px;
+    width: 10%;
+}
+
+/* --------------------------Media Query------------------------- */
+ @media(min-width: 350px) and (max-width: 520px){
+    .mat-form-field{
+        width: 100%;
+    }
+ }
+ @media(min-width: 521px) and (max-width: 767px){
+    .mat-form-field{
+        width: 48.8%;
+    }
+ }
+ @media(min-width: 768px) and (max-width: 1699px){
+    .add_form{
+        width: 99%;
+    }
+ }
+  
+ 
 

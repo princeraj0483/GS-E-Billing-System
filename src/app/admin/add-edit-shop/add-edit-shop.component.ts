@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 
 @Component({
@@ -10,23 +10,22 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet'
 export class AddEditShopComponent implements OnInit {
   hide = true;
   FromBuilder: any;
-  ShopForm: any;
-  itemForm: any;
-  image: any;
-  ngOnInit(): void {
-    this.ShopForm = this.FromBuilder.group({
-    Shop_name: ['', Validators.required],
-    Shop_photo: [''],
-  
-    })
-    throw new Error('Method not implemented.');
-  }
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  Shop_Form: any;
+  constructor(
+    private fb:FormBuilder
+  ){
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+  ngOnInit(): void {
+    this.Shop_Form = this.fb.group({
+      Shop_Name:['',Validators.required],
+      Owner_name:['',Validators.required],
+      Email_Id:['',],
+      Address:['', Validators.required],
+      Whatsapp:['', Validators.required],
+      mobile_number:['', Validators.required]
+        
+    })
+   
   }
 }

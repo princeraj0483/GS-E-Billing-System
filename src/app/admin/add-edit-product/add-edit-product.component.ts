@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-product',
@@ -9,22 +9,21 @@ import {FormControl, Validators} from '@angular/forms';
 export class AddEditProductComponent implements OnInit {
   hide = true;
   FromBuilder: any;
-  ShopForm: any;
-  ngOnInit(): void {
-    this.ShopForm = this.FromBuilder.group({
-    Shop_name: ['', Validators.required],
-    Shop_photo: [''],
-  
-    })
-    throw new Error('Method not implemented.');
-  }
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  Product_Form: any;
+  constructor(
+    private fb:FormBuilder
+  ){
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
+  ngOnInit(): void {
+    this.Product_Form = this.fb.group({
+      Unit:['',Validators.required],
+      Quantity:['',Validators.required],
+      address:['', Validators.required],
+      Description:['', Validators.required],
   
+        
+    })
+   
+  }
 }

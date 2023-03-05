@@ -68,6 +68,10 @@ import { AccountComponent } from './admin/account/account.component';
 import { AddEditAccountComponent } from './admin/add-edit-account/add-edit-account.component';
 import { ProfitComponent } from './admin/profit/profit.component';
 import { AddEditProfitComponent } from './admin/add-edit-profit/add-edit-profit.component';
+import { LedgerComponent } from './ledger/ledger.component';
+import { AddEditLedgerComponent } from './admin/add-edit-ledger/add-edit-ledger.component';
+import { LossComponent } from './loss/loss.component';
+import { AddEditLossComponent } from './admin/add-edit-loss/add-edit-loss.component';
 
 @NgModule({
   declarations: [
@@ -116,10 +120,14 @@ import { AddEditProfitComponent } from './admin/add-edit-profit/add-edit-profit.
     AddEditSaleComponent,
     PurchaseComponent,
     AddEditPurchaseComponent,
-    AccountComponent,
+  
     AddEditAccountComponent,
     ProfitComponent,
     AddEditProfitComponent,
+    LedgerComponent,
+    AddEditLedgerComponent,
+    LossComponent,
+    AddEditLossComponent,
   
   ],
   imports: [

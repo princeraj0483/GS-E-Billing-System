@@ -17,19 +17,19 @@
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Contact Persion</mat-label>
-        <input formControlName="Contact_persion" matInput placeholder="Name">
+        <input formControlName="Contact_persion" matInput placeholder="Contact Persion">
       </mat-form-field>
     </div>
 
     <mat-form-field appearance="fill">
       <mat-label>Whatsapp Number</mat-label>
-      <input formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
+      <input type="number" formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field><br>
       
     <mat-form-field appearance="fill">
       <mat-label>Mobile Number</mat-label>
-      <input formControlName="mobile_number" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
+      <input type="number" formControlName="mobile_number" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field>
 
@@ -49,7 +49,7 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Account Number</mat-label>
-      <input matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
+      <input type="number" matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
         oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
     </mat-form-field><br>
 

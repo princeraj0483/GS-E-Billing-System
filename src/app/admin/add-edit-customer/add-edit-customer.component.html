@@ -5,21 +5,20 @@
     </button>
 </div>
 
+<form [formGroup]="Customer_Form">
 <div mat-dialog-content>
-    <div class="add_box">
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Customer Name</mat-label>
-                <input matInput placeholder="Customer Name" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <input placeholder="Customer_Name" matInput placeholder="Customer Name">
             </mat-form-field>
         </div>
 
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Email Id.</mat-label>
-                <input matInput placeholder="Email Id" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <input matInput placeholder="Email Id">
+              
             </mat-form-field>
         </div>
         <mat-form-field appearance="fill">
@@ -31,18 +30,27 @@
             </mat-select>
         </mat-form-field>
 
+        <mat-form-field appearance="fill">
+            <mat-label>Distric</mat-label>
+            <mat-select disableRipple formControlName="Active Status">
+                <mat-option value="1">Sonepur</mat-option>
+                <mat-option value="2">Chapra</mat-option>
+                <mat-option value="3">Vaishali</mat-option>
+            </mat-select>
+        </mat-form-field>
+
         <div class="desc">
             <mat-form-field appearance="fill">
                 <mat-label>Address</mat-label>
-                <textarea matInput></textarea>
+                <input matInput placeholder="Address">
             </mat-form-field>
         </div>
-    </div>
+   
     
     <div class="add_box">
         <mat-form-field appearance="fill">
             <mat-label>Whatsapp Number</mat-label>
-            <input matInput type="number" onkeypress="return this.value.length < 10;"
+            <input type="number" matInput type="number" placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
                 oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
         </mat-form-field>
 
@@ -56,21 +64,13 @@
                 </button>
             </mat-form-field>
 
-            <mat-form-field appearance="fill">
-                <mat-label>Distric</mat-label>
-                <mat-select disableRipple formControlName="Active Status">
-                    <mat-option value="1">Sonepur</mat-option>
-                    <mat-option value="2">Chapra</mat-option>
-                    <mat-option value="3">Vaishali</mat-option>
-                </mat-select>
-            </mat-form-field>
+         
 
             <mat-form-field appearance="fill">
                 <mat-label>Description</mat-label>
                 <textarea matInput></textarea>
             </mat-form-field>
         </div>
-    </div>
     </div>
 
     <span class="btn_box">

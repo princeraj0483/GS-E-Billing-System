@@ -18,10 +18,10 @@ export class AddEditExpenceTypeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.Expence_Form = this.fb.group({
-      party_address:['',Validators.required]
+      Description:['',Validators.required]
         
     })
-    throw new Error('Method not implemented.');
+ 
   }
 
 }
