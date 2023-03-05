@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-customer',
@@ -9,20 +9,24 @@ import {FormControl, Validators} from '@angular/forms';
 export class AddEditCustomerComponent implements OnInit {
   hide = true;
   FromBuilder: any;
-  ShopForm: any;
-  ngOnInit(): void {
-    this.ShopForm = this.FromBuilder.group({
-  
-    })
-    throw new Error('Method not implemented.');
-  }
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  Customer_Form: any;
+  constructor(
+    private fb:FormBuilder
+  ){
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
-  
+  ngOnInit(): void {
+    this.Customer_Form = this.fb.group({
+      Customer_Name:['',Validators.required],
+      Email_Id:['', Validators.required],
+      State:['', Validators.required],
+      Active_Status:['',Validators.required],
+      number:['', Validators.required],
+      Address:['', Validators.required],
+      Whatsapp:['', Validators.required],
+      mobile_number:['',Validators.required],
+      Password:['', Validators.required]
+        
+    })
+  }
 }

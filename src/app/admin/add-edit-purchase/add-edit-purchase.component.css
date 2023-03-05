@@ -8,7 +8,7 @@
     padding-left: 13px;
     margin-top: 3px;
     text-align: center;
-    border-radius: 4px;  
+    border-radius: 4px;
 }
 .Item_btn{
     width: 60px;
@@ -140,7 +140,7 @@ mat-form-field mat-icon {
     }
 
     mat-form-field{
-        width: 100%;
+        width: 98%;
     }
     .Final_box{
         width: 96%;
@@ -160,7 +160,7 @@ mat-form-field mat-icon {
     }
      
   .form{
-    width: 100%;
+    width: 98%;
   }
   .reset_btn{
     display: block;

@@ -1,3 +1,4 @@
+
 <div class="add_head">
   <span>Add Shop</span>
   <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
@@ -5,65 +6,66 @@
   </button>
 </div>
 
+<form [formGroup]="Shop_Form">
 <div mat-dialog-content>
-  <div class="example-container">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label> Shop Name</mat-label>
+       <input formControlName="Shop_Name" matInput placeholder=" Shop Name">
+      </mat-form-field>
+    </div>
+    
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Owner Name</mat-label>
+        <input formControlName="Owner_name" matInput placeholder="Owner Name">
+      </mat-form-field>
+    </div>
+
     <mat-form-field appearance="fill">
-      <mat-label>Shop Name</mat-label>
-      <input matInput placeholder="Shop Name" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
+      <mat-label>Whatsapp Number</mat-label>
+      <input type="number" formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
+        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+    </mat-form-field><br>
 
-  <div class="example-container">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Email Id</mat-label>
+        <input matInput placeholder="Email_Id">
+      </mat-form-field>
+    </div>
+
     <mat-form-field appearance="fill">
-      <mat-label>Owner Name</mat-label>
-      <input matInput placeholder="Owner Name" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      <mat-label>State</mat-label>
+      <mat-select>
+        <mat-option value="one">Jharkhand</mat-option>
+        <mat-option value="two">Mumbai</mat-option>
+        <mat-option value="three">Bihar</mat-option>
+        <mat-option value="four">Tamilnadu</mat-option>
+      </mat-select>
     </mat-form-field>
-  </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Whatsapp Number</mat-label>
-    <input matInput type="number" onkeypress="return this.value.length < 10;"
-      oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
-  </mat-form-field>
-
-
-  <div class="example-container">
     <mat-form-field appearance="fill">
-      <mat-label>Email Id</mat-label>
-      <input matInput placeholder="Email Id">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      <mat-label>Distric</mat-label>
+      <mat-select>
+        <mat-option value="one">Vaishali</mat-option>
+        <mat-option value="two">Chapra</mat-option>
+        <mat-option value="three">Sonepur</mat-option>
+        <mat-option value="four">Darbhanga</mat-option>
+      </mat-select>
     </mat-form-field>
-  </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>State</mat-label>
-    <mat-select>
-      <mat-option value="one">Jharkhand</mat-option>
-      <mat-option value="two">Mumbai</mat-option>
-      <mat-option value="three">Bihar</mat-option>
-      <mat-option value="four">Tamilnadu</mat-option>
-    </mat-select>
-  </mat-form-field>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input formControlName="Address" matInput placeholder="Address">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Distric</mat-label>
-    <mat-select>
-      <mat-option value="one">Vaishali</mat-option>
-      <mat-option value="two">Chapra</mat-option>
-      <mat-option value="three">Sonepur</mat-option>
-      <mat-option value="four">Darbhanga</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Address</mat-label>
-      <input matInput placeholder="Address" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
+    <div id="upload">
+      <h6>Upload Img</h6>
+      <input type="file">
+    </div>
 
   <mat-form-field appearance="fill">
     <mat-label>Shop Category</mat-label>
@@ -75,17 +77,12 @@
     </mat-select>
   </mat-form-field>
 
-  <div id="upload">
-    <h6>Upload Img</h6>
-    <input type="file">
-  </div>
-
-
     <mat-form-field class="add_form" appearance="fill">
       <mat-label>Description</mat-label>
-      <textarea formControlName="Description" matInput placeholder="Description"></textarea>
+      <input formControlName="Description" matInput placeholder="Description">
     </mat-form-field>
   </div>
+</form>
 
 <span class="btn_box">
   <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>

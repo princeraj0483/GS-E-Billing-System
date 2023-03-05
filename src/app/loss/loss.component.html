@@ -1,0 +1,68 @@
+<div class="head">
+    <span>Loss</span>
+    <mat-icon (click)="add_loss()" >add_circle</mat-icon> 
+  </div>
+  <div class="count_area">
+    <span class="notice_text">Total : 10</span>
+    <div class="search">
+      <input type="text" placeholder="Search"  matInput (keyup)="($event)" #input> 
+    </div>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <ng-container matColumnDef="dis_SL_No">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SL.No</th>
+        <td mat-cell *matCellDef="let row"> {{row.dis_SL_No}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Bill_no">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bill No</th>
+        <td mat-cell *matCellDef="let row"> {{row.Bill_no}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Customer">
+        <th mat-header-cell *matHeaderCellDef mat-sot-header>Customer</th>
+        <td mat-cell *matCellDef="let row"> {{row.Customer}} </td>
+      </ng-container>
+
+       <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
+        <td mat-cell *matCellDef="let row"> {{row.Address}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Product">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Product</th>
+        <td mat-cell *matCellDef="let row"> {{row.Product}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="offer_name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Amount</th>
+        <td mat-cell *matCellDef="let row"> {{row.offer_name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sale_amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Sale Amount</th>
+        <td mat-cell *matCellDef="let row"> {{row.sale_amount}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="loss_amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Loss Amount</th>
+        <td mat-cell *matCellDef="let row"> {{row.loss_amount}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+        <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" id="tbl_hight"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" id="tbl_hight"></tr>
+  
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="9" style="color:silver;">No record found"{{input.value}}"</td> 
+      </tr>
+    </table>
+  
+    <mat-paginator #paginatorRef [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>

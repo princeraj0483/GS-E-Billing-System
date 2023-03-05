@@ -1,5 +1,5 @@
 ::ng-deep .mat-dialog-container {
-    width: 550px;
+    width: 450px;
     background-color: rgb(244, 246, 247);
 }
 
@@ -29,17 +29,11 @@
     color: #3B4259;
 }
 
-.add_box {
-    width: calc(100% - 51%);
-    margin-left: 3px;
-    height: auto;
-    float: left;
-}
-
 .mat-form-field {
-    width: 100%;
+    width: 48.9%;
+    float: left;
+    margin-left: 3px;
 }
-
 
 mat-form-field mat-icon {
     color: rgb(244, 246, 247);
@@ -52,15 +46,10 @@ mat-form-field mat-icon {
 .mat-input-element {
     color: black;
 }
-.column_1 mat-form-field{
-    width: 100%;
-    margin-top: -1px;
-  }
+textarea{
+    height: 15px;
+}
 
-  textarea {
-    height: 16px;      
-  } 
-  
 .margin_top {
     margin-top: 21px;
 }
@@ -70,6 +59,7 @@ mat-form-field mat-icon {
     display: flex;
     justify-content: center;
 }
+
 
 .add_btn {
     margin-top: 28px;
@@ -86,11 +76,34 @@ mat-form-field mat-icon {
     margin-top: 28px;
     width: 10%;
 }
+.column_1 mat-form-field{
+    width: 100%;
+    margin-top: 0px;
+  }
+  textarea {
+    height: 17px;      
+  } 
+ 
+  mat-form-field{
+    width: 100%;
+  }
 
-/* ----------------------Media Query------------------------- */
-@media(min-width: 350px) and (max-width: 420px){
-    .add_box {
-        width: calc(100% - 1%);
-      
+
+/* --------------------------Media Query------------------------- */
+ @media(min-width: 350px) and (max-width: 520px){
+    .mat-form-field{
+        width: 100%;
     }
-}
+ }
+ @media(min-width: 521px) and (max-width: 767px){
+    .mat-form-field{
+        width: 48.8%;
+    }
+ }
+ @media(min-width: 768px) and (max-width: 1699px){
+    .add_form{
+        width: 99%;
+    }
+ }
+  
+ 

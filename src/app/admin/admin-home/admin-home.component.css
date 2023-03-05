@@ -65,4 +65,7 @@ button{
     .main {
         padding: 61px 2px 2px 2px;
     }
+    button{
+        margin-right: -18px;
+    }
 }

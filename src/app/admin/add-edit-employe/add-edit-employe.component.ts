@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-employe',
@@ -9,25 +9,23 @@ import {FormControl, Validators} from '@angular/forms';
 export class AddEditEmployeComponent implements OnInit {
   hide = true;
   FromBuilder: any;
-  ShopForm: any;
-  ngOnInit(): void {
-    this.ShopForm = this.FromBuilder.group({
-    Emp_name: ['', Validators.required],
-    Emp_Id: ['', Validators.required],
-    Emp_Mob: ['', Validators.required],
-    Emp_whatsapp: [''],
-    Emp_Status:['']
-  
-    })
-    throw new Error('Method not implemented.');
-  }
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  Employee_Form: any;
+  constructor(
+    private fb:FormBuilder
+  ){
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
-  
+  ngOnInit(): void {
+    this.Employee_Form = this.fb.group({
+      Name:['',Validators.required],
+      Email_Id:['',Validators.required],
+      Mobile:['', Validators.required],
+      Whatsapp_number:['', Validators.required],
+      Whatsapp:['', Validators.required],
+      mobile_number:['', Validators.required],
+      Description:['', Validators.required]
+    
+        
+    })
+  }
 }

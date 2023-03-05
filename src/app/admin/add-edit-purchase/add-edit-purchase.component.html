@@ -5,12 +5,12 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
 	<li [ngbNavItem]="1">
 		<a ngbNavLink style="background-color: #3B4259; color: whitesmoke;" class="party_btn">Party</a>
-		<ng-template ngbNavContent>
-			<div class="customer_box">
-
+		<ng-template ngbNavContent style="background-color: red;">
+			
+			<form [formGroup]="Party_Form">
                 <mat-form-field appearance="fill">
                     <mat-label>Party Id</mat-label>
-                    <input matInput>
+					<input formControlName="Party" matInput placeholder="Party Id">
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
@@ -24,7 +24,7 @@
 
                 <mat-form-field appearance="fill">
                     <mat-label>Mobile Number</mat-label>
-                    <input matInput type="number" onkeypress="return this.value.length < 10;"
+                    <input formControlName="Mobile" matInput placeholder="Mobile Number" matInput type="number" onkeypress="return this.value.length < 10;"
                         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
                 </mat-form-field>
 
@@ -41,14 +41,15 @@
                   <span class="btn_box">
                     <button class="reset_btn" mat-raised-button color="warn" type="reset">Save</button>
                   </span>
-             </div>
+				</form>
             </ng-template>
+	
 	</li>
 	
 	<li [ngbNavItem]="4">
 		<a ngbNavLink  style="background-color: #3B4259; color: whitesmoke;" class="Item_btn">Item</a>
 		<ng-template ngbNavContent>
-			<div class="product_box">
+			
 
 				<mat-form-field appearance="fill">
 					<mat-label>Party Name</mat-label>
@@ -106,7 +107,7 @@
 				<div class="add_btn">
 					<mat-icon>add</mat-icon>
 				</div>
-			</div>
+			
 			
 
 			<div class="count_area">

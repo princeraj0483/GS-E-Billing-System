@@ -46,6 +46,36 @@ export class AdminSidebarComponent implements OnInit {
       this.action_icon4 = true
     }
   }
+
+  
+  Account_dropdown(){
+   
+    this.setting = document.getElementById("dropdowns_report")
+    if (this.setting.style.display != "block") {
+      this.setting.style.display = "block";
+      this.action_icon1 = true
+      this.action_icon2 = false
+
+    } else {
+      this.setting.style.display = "none";
+      this.action_icon1 = false
+      this.action_icon2 = true
+    }
+  }
+
+  dropdowns_report(){
+    this.setting = document.getElementById("report_dropdowns")
+    if (this.setting.style.display != "block") {
+      this.setting.style.display = "block";
+      this.action_icon3 = true
+      this.action_icon4 = false
+
+    } else {
+      this.setting.style.display = "none";
+      this.action_icon3 = false
+      this.action_icon4 = true
+    }
+  }
   changepassword(){
     // this.dailog.open(StdChnangePwdComponent,{
     //   disableClose: true

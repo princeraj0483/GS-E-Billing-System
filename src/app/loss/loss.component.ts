@@ -3,8 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { AddEditProfitComponent } from '../add-edit-profit/add-edit-profit.component';
-
+import { AddEditLossComponent } from '../admin/add-edit-loss/add-edit-loss.component';
 
 
 
@@ -26,12 +25,13 @@ const ELEMENT_DATA:PeriodicElement [] = [
   {dis_SL_No: 3, Bill_no: 'SAl4303311', Customer: 'Gaurav', Address: 'Chapra', Product: 'Ring', offer_name: 'chath', sale_amount: '1200', loss_amount: '1500',    date: '3/4/2023'},
 
 ];
+
 @Component({
-  selector: 'app-profit',
-  templateUrl: './profit.component.html',
-  styleUrls: ['./profit.component.css']
+  selector: 'app-loss',
+  templateUrl: './loss.component.html',
+  styleUrls: ['./loss.component.css']
 })
-export class ProfitComponent implements OnInit {
+export class LossComponent implements OnInit {
 
   displayedColumns: string[] = ['dis_SL_No', 'Bill_no', 'Customer', 'Address', 'Product', 'offer_name', 'sale_amount', 'loss_amount',  'date' ];
   dataSource = ELEMENT_DATA;
@@ -45,9 +45,8 @@ export class ProfitComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  add_profit(){
-   this.matdialog.open(AddEditProfitComponent) 
+  add_loss(){
+   this.matdialog.open(AddEditLossComponent) 
   }
  
-
 }

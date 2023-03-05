@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-category',
@@ -9,22 +9,18 @@ import {FormControl, Validators} from '@angular/forms';
 export class AddEditCategoryComponent implements OnInit {
   hide = true;
   FromBuilder: any;
-  ShopForm: any;
-  ngOnInit(): void {
-    this.ShopForm = this.FromBuilder.group({
-    Cate_name: ['', Validators.required],
-    Cate_photo: [''],
-  
-    })
-    throw new Error('Method not implemented.');
-  }
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  Category_Form: any;
+  constructor(
+    private fb:FormBuilder
+  ){
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+  ngOnInit(): void {
+    this.Category_Form = this.fb.group({
+      Category:['',Validators.required],
+      Description:[],
+        
+    })
   }
   
 }
