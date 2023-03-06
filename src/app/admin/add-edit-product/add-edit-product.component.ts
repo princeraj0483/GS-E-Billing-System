@@ -21,9 +21,12 @@ export class AddEditProductComponent implements OnInit {
       Quantity:['',Validators.required],
       address:['', Validators.required],
       Description:['', Validators.required],
-  
+      Gst_No:['',]
         
     })
    
+  }
+  product_form_rese(){
+    this.Product_Form.reset()
   }
 }

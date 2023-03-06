@@ -24,5 +24,7 @@ export class AddEditWeightComponent implements OnInit {
         
     })
   }
-  
+  weight_data_reset(){
+    this.Weight_Form.reset()
+  }
 }

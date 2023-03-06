@@ -5,7 +5,7 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
 	<li [ngbNavItem]="1">
 		<a ngbNavLink style="background-color: #3B4259; color: whitesmoke;" class="party_btn">Party</a>
-		<ng-template ngbNavContent style="background-color: red;">
+		<ng-template ngbNavContent>
 			
 			<form [formGroup]="Party_Form">
                 <mat-form-field appearance="fill">
@@ -42,15 +42,14 @@
                     <button class="reset_btn" mat-raised-button color="warn" type="reset">Save</button>
                   </span>
 				</form>
-            </ng-template>
-	
+        </ng-template>
 	</li>
 	
 	<li [ngbNavItem]="4">
 		<a ngbNavLink  style="background-color: #3B4259; color: whitesmoke;" class="Item_btn">Item</a>
 		<ng-template ngbNavContent>
 			
-
+			<form [formGroup]="Party_Form">
 				<mat-form-field appearance="fill">
 					<mat-label>Party Name</mat-label>
 					<input matInput>
@@ -107,8 +106,7 @@
 				<div class="add_btn">
 					<mat-icon>add</mat-icon>
 				</div>
-			
-			
+			</form>
 
 			<div class="count_area">
 				<span class="notice_text">Total : 10</span>

@@ -20,10 +20,18 @@ export class AddEditPartyComponent implements OnInit {
       Name:['',Validators.required],
       Contact_persion:['',Validators.required],
       number:['', Validators.required],
+      Email_Id:['',],
+      Ac_holder_name:['',],
+      Account_number:['',],
+      IFSC:['',],
+      Gst_No:['',],
       Address:['', Validators.required],
       Whatsapp:['', Validators.required],
       mobile_number:['', Validators.required]
         
     })
+  }
+  party_data_reset(){
+    this.Party_Form.reset()
   }
 }

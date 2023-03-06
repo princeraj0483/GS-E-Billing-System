@@ -59,12 +59,20 @@ button{
     margin-top: 5px;
  
 }
-
+.action_btn:hover{
+    background-color: #242f64;
+}
 
 @media(min-width: 350px) and (max-width: 520px){
     .main {
         padding: 61px 2px 2px 2px;
     }
+    button{
+        margin-right: -18px;
+    }
+}
+
+@media(min-width: 521px) and (max-width: 1240px){
     button{
         margin-right: -18px;
     }

@@ -1,1 +1,50 @@
-<p>add-edit-ledger works!</p>
+    <div class="add_head">
+    <span>Add Ledger</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  
+  <form [formGroup]="Ledger_Form">
+	<mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Cash In Hand</mat-label>
+        <input formControlName="Cash_in_hand" matInput type="number" class="example-right-align" placeholder="0">
+    </mat-form-field>
+      
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Deposit into Bank</mat-label>
+        <input formControlName="Deposit_bank" matInput type="number" class="example-right-align" placeholder="0">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Today(Sale + Recived)</mat-label>
+        <input formControlName="Today_Recived" matInput>
+    </mat-form-field>          
+  
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Closing Amount</mat-label>
+        <input formControlName="Closing_amount" matInput type="number" class="example-right-align" placeholder="0">
+    </mat-form-field>
+      
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Expense</mat-label>
+        <input formControlName="Expense" matInput type="number" class="example-right-align" placeholder="0">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Vailid Date</mat-label>
+        <input type="date" matInput formControlName="course_date" style="color: #495057;">
+    </mat-form-field>    
+  
+    <div class="column_1">
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea formControlName="Description" matInput placeholder="Description"></textarea>
+        </mat-form-field>
+      </div>
+  </form>
+  
+  <span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="product_form_rese()">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+  </span>

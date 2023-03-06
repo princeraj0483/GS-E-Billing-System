@@ -23,5 +23,8 @@ export class AddEditExpenceTypeComponent implements OnInit {
     })
  
   }
+  expence_reset_form(){
+    this.Expence_Form.reset()
+  }
 
 }

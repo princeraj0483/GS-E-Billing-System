@@ -23,9 +23,17 @@ export class AddEditEmployeComponent implements OnInit {
       Whatsapp_number:['', Validators.required],
       Whatsapp:['', Validators.required],
       mobile_number:['', Validators.required],
-      Description:['', Validators.required]
-    
+      Account_holder_name:['',],
+      Account_number:['',],
+      Ifsc:['',],
+      Email_id:['',],
+      Adharfront:['',],
+      AdharBack:['',],
+      Description:['', Validators.required] 
         
     })
+  }
+  employee_form_reset(){
+    this.Employee_Form.reset()
   }
 }

@@ -24,13 +24,13 @@
   
       <mat-form-field appearance="fill">
         <mat-label>Mobile Number</mat-label>
-        <input formControlName="Mobile" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
+        <input type="number" formControlName="Mobile" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
           oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
       </mat-form-field><br>
         
       <mat-form-field appearance="fill">
         <mat-label>Whatsapp Number</mat-label>
-        <input formControlName="Whatsapp_number" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
+        <input type="number" formControlName="Whatsapp_number" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
           oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
       </mat-form-field>
 
@@ -47,20 +47,20 @@
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>A/C Holder Name</mat-label>
-          <input placeholder="A/C_Holder_Name" matInput placeholder="A/C Holder Name">
+          <input formControlName="Account_holder_name" matInput placeholder="A/C Holder Name">
         </mat-form-field>
       </div>
   
       <mat-form-field appearance="fill">
         <mat-label>Account Number</mat-label>
-        <input matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
+        <input type="number" formControlName="Account_number" matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
           oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
       </mat-form-field><br>
   
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>IFSC</mat-label>
-          <input matInput placeholder="IFSC">
+          <input formControlName="Ifsc" matInput placeholder="IFSC">
         </mat-form-field>
       </div>
 
@@ -76,21 +76,21 @@
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>Enter your email</mat-label>
-          <input matInput placeholder="pat@example.com" >
+          <input formControlName="Email_id" matInput placeholder="Email Id" >
         </mat-form-field>
       </div> 
       
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>AdharFront</mat-label>
-      <input matInput placeholder="AdharFront">
+      <input formControlName="Adharfront" matInput placeholder="AdharFront">
     </mat-form-field>
   </div> 
   
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>AdharBack</mat-label>
-      <input matInput placeholder="AdharBack">
+      <input formControlName="AdharBack" matInput placeholder="AdharBack">
     </mat-form-field>
   </div>
 
@@ -102,6 +102,6 @@
   </div>
 
 <span class="btn_box">
-    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="employee_form_reset()">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
   </span>

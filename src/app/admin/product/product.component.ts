@@ -44,5 +44,13 @@ export class ProductComponent implements OnInit {
   add_shop(){
    this.matdialog.open(AddEditProductComponent) 
   }
+
+  add_product(){
+    this.matdialog.open(AddEditProductComponent) 
+   }
+ 
+   edit_product(){
+     this.matdialog.open(AddEditProductComponent)
+   }
  
 }

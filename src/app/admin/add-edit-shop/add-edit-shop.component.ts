@@ -21,11 +21,16 @@ export class AddEditShopComponent implements OnInit {
       Shop_Name:['',Validators.required],
       Owner_name:['',Validators.required],
       Email_Id:['',],
+      state:['',],
       Address:['', Validators.required],
       Whatsapp:['', Validators.required],
-      mobile_number:['', Validators.required]
+      mobile_number:['', Validators.required],
+      Description:['', Validators.required]
         
     })
    
+  }
+  Shop_Form_reset(){
+    this.Shop_Form.reset()
   }
 }
