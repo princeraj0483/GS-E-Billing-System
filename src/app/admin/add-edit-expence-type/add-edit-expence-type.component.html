@@ -4,8 +4,7 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
-
-    
+   
 <form [formGroup]="Expence_Form">
         <mat-form-field appearance="fill">
             <mat-label>Expence Type</mat-label>
@@ -25,6 +24,6 @@
         </form>
         
     <span class="btn_box">
-        <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+        <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="expence_reset_form()">Reset</button>
         <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
     </span>

@@ -17,16 +17,17 @@ export class AddEditCustomerComponent implements OnInit {
   }
   ngOnInit(): void {
     this.Customer_Form = this.fb.group({
-      Customer_Name:['',Validators.required],
-      Email_Id:['', Validators.required],
+      Customer_name:['', Validators.required],
       State:['', Validators.required],
-      Active_Status:['',Validators.required],
-      number:['', Validators.required],
-      Address:['', Validators.required],
-      Whatsapp:['', Validators.required],
-      mobile_number:['',Validators.required],
-      Password:['', Validators.required]
+      Whatsapp_No:['', Validators.required],
+      Email_Id:['',],
+      Address:['',],
+      Description:['',]
+  
         
     })
+  }
+  Category_Form_reset(){
+    this.Customer_Form.reset()
   }
 }

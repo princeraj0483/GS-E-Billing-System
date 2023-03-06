@@ -14,15 +14,15 @@ export interface PeriodicElement {
   Expense: string;
   Deposit: string;
   offer_name: string;
-  vailid_date: number;
+  vailid_date: string;
   offer_condition: string;
   action: string;
   
 }
 const ELEMENT_DATA:PeriodicElement [] = [
-  {dis_SL_No: 1,  cash: 'Om Computer', Sale: 'Electronic Device', Expense: 'computer', Deposit: '10%', offer_name: 'diwali', vailid_date:  16, offer_condition: 'munna', action: 'munna'},
-  {dis_SL_No: 2, cash: 'Aakash Automobiles',Sale: 'Mobile', Expense: 'Mobile' , Deposit: '15%', offer_name: 'diwali',  vailid_date:  10, offer_condition: 'maical', action: 'maical'},
-  {dis_SL_No: 3, cash: 'Guddu General Store', Sale: 'Nike', Expense: 'Shoes', Deposit: '18%', offer_name: 'chath',  vailid_date:  10, offer_condition: 'muku', action: 'mukesh'},
+  {dis_SL_No: 1,  cash: 'Om Computer', Sale: 'Electronic Device', Expense: 'computer', Deposit: '10%', offer_name: 'diwali', vailid_date:  '5/4/2023', offer_condition: 'munna', action: 'munna'},
+  {dis_SL_No: 2, cash: 'Aakash Automobiles',Sale: 'Mobile', Expense: 'Mobile' , Deposit: '15%', offer_name: 'diwali',  vailid_date:  '5/4/2023', offer_condition: 'maical', action: 'maical'},
+  {dis_SL_No: 3, cash: 'Guddu General Store', Sale: 'Nike', Expense: 'Shoes', Deposit: '18%', offer_name: 'chath',  vailid_date:  '5/4/2023', offer_condition: 'muku', action: 'mukesh'},
 
 ];
 
@@ -49,4 +49,11 @@ export class LedgerComponent implements OnInit {
   add_ledger(){
    this.matdialog.open(AddEditLedgerComponent) 
   }
+  edit_ledger(){
+    this.matdialog.open(AddEditLedgerComponent) 
+   }
+   edit_ledge(){
+    this.matdialog.open(AddEditLedgerComponent) 
+   }
+
 }

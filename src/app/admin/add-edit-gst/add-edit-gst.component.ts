@@ -22,4 +22,7 @@ export class AddEditGstComponent implements OnInit {
         
     })
   }
+  gst_form(){
+    this.Gst_Form.reset()
+  }
 }

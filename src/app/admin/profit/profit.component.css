@@ -8,4 +8,22 @@
   .search input{
     padding: 5px;
  }
+ mat-icon {
+  width: 10px;
+  height: 20px;
+  font-size: 36px;
+  float: left;
+  margin-left: 10px;
+  margin: 20px;
+  font-size: 28px;
+  color: whitesmoke;
+  margin-top: -4px;
+  cursor: pointer;
+}
+
+.icon{
+  color: #1d1f23;
+  font-size: 25px;
+  margin: 12px;
+}
 

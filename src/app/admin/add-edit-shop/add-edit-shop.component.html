@@ -31,7 +31,7 @@
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Email Id</mat-label>
-        <input matInput placeholder="Email_Id">
+        <input formControlName="Email_Id" matInput placeholder="Email Id">
       </mat-form-field>
     </div>
 
@@ -85,6 +85,6 @@
 </form>
 
 <span class="btn_box">
-  <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+  <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="Shop_Form_reset()">Reset</button>
   <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
 </span>

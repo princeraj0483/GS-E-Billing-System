@@ -38,8 +38,16 @@ export class ExpenceTypeComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  add_shop(){
+  add_expence(){
    this.matdialog.open(AddEditExpenceTypeComponent) 
   }
+ 
+  edit_expence_type(){
+    this.matdialog.open(AddEditExpenceTypeComponent) 
+   }
+ 
+   edit_expence_typ(){
+     this.matdialog.open(AddEditExpenceTypeComponent)
+   }
  
 }

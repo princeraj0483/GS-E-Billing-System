@@ -23,5 +23,7 @@ export class AddEditDiscountComponent implements OnInit {
         
     })
   }
-  
+  discount_form(){
+    this.Discount_Form.reset()
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-ledger',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-edit-ledger.component.css']
 })
 export class AddEditLedgerComponent implements OnInit {
+  hide = true;
+  FromBuilder: any;
+  Ledger_Form: any;
+  constructor(
+    private fb:FormBuilder
+  ){
 
-  constructor() { }
-
-  ngOnInit(): void {
   }
-
+  ngOnInit(): void {
+    this.Ledger_Form = this.fb.group({
+      Cash_in_hand:['',Validators.required],
+      Deposit_bank:['',Validators.required],
+      Closing_amount:['', Validators.required],
+      Description:['', Validators.required],
+      Gst_No:['',],
+      Expense:['',],
+      Today_Recived:['',],
+      course_date:['',],
+        
+    })
+   
+  }
+  product_form_rese(){
+    this.Ledger_Form.reset()
+  }
 }

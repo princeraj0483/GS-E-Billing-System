@@ -39,8 +39,16 @@ export class EmployeComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  add_shop(){
+  add_employee(){
    this.matdialog.open(AddEditEmployeComponent) 
   }
  
+  edit_employe(){
+    this.matdialog.open(AddEditEmployeComponent) 
+   }
+   edit_employ(){
+     this.matdialog.open(AddEditEmployeComponent)
+   }
+  
+
 }

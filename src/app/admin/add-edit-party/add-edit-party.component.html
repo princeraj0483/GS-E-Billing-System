@@ -36,34 +36,34 @@
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Email Id</mat-label>
-        <input matInput placeholder="Email Id">
+        <input formControlName="Email_Id" matInput placeholder="Email Id">
       </mat-form-field>
     </div>
 
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>A/C Holder Name</mat-label>
-        <input placeholder="A/C Holder Name" matInput placeholder="A/C Holder Name">
+        <input formControlName="Ac_holder_name"  matInput placeholder="A/C Holder Name">
       </mat-form-field>
     </div>
 
     <mat-form-field appearance="fill">
       <mat-label>Account Number</mat-label>
-      <input type="number" matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
+      <input formControlName="Account_number" type="number" matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
         oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
     </mat-form-field><br>
 
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>IFSC</mat-label>
-        <input matInput placeholder="IFSC">
+        <input formControlName="IFSC" type="number" matInput placeholder="IFSC" >
       </mat-form-field>
     </div>
 
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>GST No.</mat-label>
-        <input matInput placeholder="GST No">
+        <input formControlName="Gst_No" type="number" matInput placeholder="GST No." >
       </mat-form-field>
     </div> 
 
@@ -75,6 +75,6 @@
 </form>
 
 <span class="btn_box">
-  <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+  <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="party_data_reset()">Reset</button>
   <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
 </span>

@@ -21,6 +21,8 @@ export class AddEditUnitComponent implements OnInit {
       Description:[''],
         
     })
-  }
-  
+  } 
+  unit_form(){
+    this.Unit_Form.reset()
+  } 
 }

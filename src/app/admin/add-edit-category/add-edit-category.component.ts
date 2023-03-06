@@ -22,5 +22,8 @@ export class AddEditCategoryComponent implements OnInit {
         
     })
   }
+  category_form(){
+    this.Category_Form.reset()
+  }
   
 }

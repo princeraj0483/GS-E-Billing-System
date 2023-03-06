@@ -32,10 +32,9 @@
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>GST No.</mat-label>
-          <input matInput placeholder="GST No">
+          <input formControlName="Gst_No" matInput placeholder="GST No">
         </mat-form-field>
       </div>
-      
   
       <div class="column_1">
         <mat-form-field appearance="fill">
@@ -46,6 +45,6 @@
   </form>
   
   <span class="btn_box">
-    <button class="reset_btn" mat-raised-button color="warn" type="reset">Reset</button>
+    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="product_form_rese()">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
   </span>
