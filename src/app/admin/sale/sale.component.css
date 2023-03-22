@@ -1,48 +1,51 @@
 .main_area {
-    padding-right: 12px;
-    padding-top: 0px;
-  }
-  
-  .search{
-    border-bottom: 1px solid black;
-    height: 30px;
-    margin-top: -3px;
-    margin-right: -9px;
-    width: 163px;
-  }
-  .search input{
-    padding: 5px;
- }
- 
-  mat-icon {
-    width: 10px;
-    height: 20px;
-    font-size: 36px;
-    float: left;
-    margin-left: 10px;
-    margin: 20px;
-    font-size: 28px;
-    color: whitesmoke;
-    margin-top: -4px;
-    cursor: pointer;
-  }
-  
-  .icon{
-    color: #1d1f23;
-    font-size: 25px;
-    margin: 12px;
+  padding-right: 12px;
+  padding-top: 0px;
 }
 
-  
-  tr :hover{ 
-    color: white;
-    cursor: pointer;
+.search{
+  border-bottom: 1px solid black;
+  height: 30px;
+  margin-top: -3px;
+  margin-right: -9px;
+  width: 163px;
+}
+.search input{
+  padding: 0px;
+}
 
-  }
-  tr:hover td mat-icon{
-    color: antiquewhite;
-  }
-  
+mat-icon {
+  width: 10px;
+  height: 20px;
+  font-size: 36px;
+  float: left;
+  margin: 20px;
+  font-size: 28px;
+  color: whitesmoke;
+  margin-top: -4px;
+  cursor: pointer;
+}
 
-  
- 
+.icon{
+  color: #1d1f23;
+  font-size: 25px;
+  margin: 12px;
+}
+tr :hover{ 
+  color: white;
+  cursor: pointer;
+
+}
+tr:hover td mat-icon{
+  color: antiquewhite;
+}
+
+@media(min-width: 350px) and (max-width: 520px){
+  .main[_ngcontent-kuf-c126] {
+    padding: 61px 2px 0px 0px;
+}
+}
+
+
+
+

@@ -72,7 +72,7 @@ import { LedgerComponent } from './ledger/ledger.component';
 import { AddEditLedgerComponent } from './admin/add-edit-ledger/add-edit-ledger.component';
 import { LossComponent } from './loss/loss.component';
 import { AddEditLossComponent } from './admin/add-edit-loss/add-edit-loss.component';
-
+import { NgxUiLoaderHttpModule,NgxUiLoaderModule,NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -120,7 +120,6 @@ import { AddEditLossComponent } from './admin/add-edit-loss/add-edit-loss.compon
     AddEditSaleComponent,
     PurchaseComponent,
     AddEditPurchaseComponent,
-  
     AddEditAccountComponent,
     ProfitComponent,
     AddEditProfitComponent,
@@ -150,8 +149,12 @@ import { AddEditLossComponent } from './admin/add-edit-loss/add-edit-loss.compon
     MatSelectModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    NgbModule
-   
+    NgbModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderRouterModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

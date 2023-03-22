@@ -62,18 +62,17 @@
                     [attr.aria-pressed]="hide">
                     <mat-icon style="color: black">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
-            </mat-form-field>
+            </mat-form-field>     
 
-         
-
-            <mat-form-field appearance="fill">
+            <mat-form-field class="add_form" appearance="fill">
                 <mat-label>Description</mat-label>
-                <textarea formControlName="Description" matInput placeholder="Description" matInput></textarea> 
-            </mat-form-field>
+                <input formControlName="Description" matInput placeholder="Description">
+              </mat-form-field>
+            </div>
         </div>
     </div>
 
     <span class="btn_box">
         <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="Category_Form_reset()">Reset</button>
-        <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
+        <button class="save_btn" mat-raised-button color="primary" type="save" (click)="onsubmit()">Save</button>
     </span>

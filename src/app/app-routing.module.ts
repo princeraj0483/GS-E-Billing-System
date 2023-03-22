@@ -44,7 +44,8 @@ const routes: Routes = [
   {path: 'adminhome', component: AdminHomeComponent,
 
     children: [
-      { path: '', component: ViewportComponent },
+      // { path: '', component: ViewportComponent },
+      { path: '', component: AdminDashboardComponent },
       { path: 'dashboard', component: AdminDashboardComponent },
       { path: 'shop', component: ShopComponent },
       { path: 'addeditshop', component: AddEditShopComponent },

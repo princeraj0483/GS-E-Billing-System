@@ -23,7 +23,14 @@ export class AddEditDiscountComponent implements OnInit {
         
     })
   }
-  discount_form(){
-    this.Discount_Form.reset()
+  
+  onsubmit(){
+    console.log(this.Discount_Form.value)
   }
+
+  discount_form_reset(){
+    this.Discount_Form.controls['Discount'].reset()
+    this.Discount_Form.controls['Description'].reset()
+  }
+ 
 }

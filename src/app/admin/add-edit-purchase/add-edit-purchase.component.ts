@@ -28,6 +28,8 @@ const ELEMENT_DATA:PeriodicElement [] = [
 })
 export class AddEditPurchaseComponent implements OnInit {
 	active = 1;
+  Purchase_Form: any;
+  item_Form: any;
   displayedColumns: string[] = ['dis_SL_No', 'cust_name', 'Product_name', 'Product_rate', 'Product_quan',  'Action' ];
   dataSource = ELEMENT_DATA;
   Party_Form:any;
@@ -42,7 +44,6 @@ export class AddEditPurchaseComponent implements OnInit {
     this.Party_Form = this.fb.group({
       Party:['',Validators.required],
       Mobile:['',Validators.required],
-    
         
     })
    

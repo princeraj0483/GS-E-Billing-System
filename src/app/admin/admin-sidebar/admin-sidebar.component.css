@@ -25,18 +25,19 @@
     border-bottom: 0.2px solid #525458;
     transition: 0.5s;
 }
-.menu-button:hover {
+
+ .menu-button:hover {
     padding-left: 25px;
 }
 
-.menu-button span {
-    margin-left: 10px;
-}
+ .menu-button span {
+    margin-left: 5px;
+} 
 .menu-button:hover{
-    background-color: #525458;
+    background-color: #25189b;
 }
  .menu-button:focus{
-    background-color: #2d4078;
+    background-color: #25189b;
 }
 
 #dropdown_setting {
@@ -47,13 +48,12 @@
     margin-left: 19px;
 }
 
-#dropdown_report {
-    display: none ;
-    margin-left: 15px;
-}
-
 #dropdowns_report {
     display: none ;
-    margin-left: 15px;
+   margin-left: 10px;
+  
+}
+#dropdown_report{
+margin-left: 10px;
 }
 

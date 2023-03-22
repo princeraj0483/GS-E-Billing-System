@@ -8,11 +8,16 @@
                 <mat-toolbar>
                     <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
                     <div class="user">
-                        <h3>Login as: Saddam Husain</h3>
-                        <button class="login_head" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
-                        <mat-menu #menu="matMenu" >
-                          <button mat-menu-item class="action_btn" [routerLink]="['/homepage']" style="color: whitesmoke;">Log Out</button>
-                        </mat-menu>                     
+                        <span>Login as: &nbsp; Saddam Husain</span>
+                        <button mat-button [matMenuTriggerFor]="menu" class="icon"><img src="assets/login.png"></button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item class="action_btn" [routerLink]="['/homepage']"
+                                style="color: whitesmoke;">Update Profile</button>
+
+                            <button mat-menu-item class="action_btn" [routerLink]="['/homepage']"
+                                style="color: whitesmoke;">LogOut</button>
+
+                        </mat-menu>
                     </div>
                 </mat-toolbar>
             </div>

@@ -5,9 +5,11 @@
     margin-right: -9px;
     width: 163px;
   }
+
   .search input{
-    padding: 5px;
+    padding: 0px;
  }
+
  mat-icon {
   width: 10px;
   height: 20px;

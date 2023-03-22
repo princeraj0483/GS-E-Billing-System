@@ -22,7 +22,12 @@ export class AddEditUnitComponent implements OnInit {
         
     })
   } 
-  unit_form(){
-    this.Unit_Form.reset()
+  onsubmit(){
+    console.log(this.Unit_Form.value)
+  }
+  unit_form_reset(){
+    this.Unit_Form.controls['Name'].reset()
+    this.Unit_Form.controls['Description'].reset()
+    
   } 
 }

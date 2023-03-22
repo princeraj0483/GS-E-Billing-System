@@ -10,7 +10,7 @@ mat-sidenav-content {
 
 .main {
     padding: 61px 2px 2px 2px;
-}
+}   
 
 mat-toolbar {
     background-color: #3B4259;
@@ -32,10 +32,16 @@ mat-icon {
     right: 16px;
     top: 20px;
 }
-
-.user h3{
+.icon{
     position: fixed;
-    right: 50px;
+    right: -14.3%;
+    top: 10px;
+}
+
+
+.user span{
+    position: fixed;
+    right: 78px;
     top: 18px;
     color: whitesmoke;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -54,10 +60,15 @@ a button {
     text-align: center;
 }
 button{
-    margin-right: 241px;
+    margin-right: 244px;
     word-spacing: 4px;
     margin-top: 5px;
  
+}
+
+button img{
+    width: 54px;
+    height: 39px;
 }
 .action_btn:hover{
     background-color: #242f64;
@@ -68,12 +79,22 @@ button{
         padding: 61px 2px 2px 2px;
     }
     button{
-        margin-right: -18px;
+        margin-right: 6px;
+    }
+    .icon{
+        position: fixed;
+        right: -2%;
+        top: 10px;
     }
 }
 
 @media(min-width: 521px) and (max-width: 1240px){
     button{
-        margin-right: -18px;
+        margin-right: 10px;
+    }
+    .icon{
+        position: fixed;
+        right: -1%;
+        top: 10px;
     }
 }

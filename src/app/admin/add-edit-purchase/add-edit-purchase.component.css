@@ -1,9 +1,8 @@
 .nav-tabs{
     height: 45px; 
 }
-form{
-    width: 90%;
-    margin-left: 5%;
+.form{
+    width: 93%;
 }
 .party_btn{
     width: 60px;
@@ -25,7 +24,7 @@ form{
     border-radius: 4px; 
 }
 .Final_btn{
-    width: 86px;
+    width: 87px;
     color: whitesmoke;
     height: 38px;
     margin-left: 3px;
@@ -33,22 +32,29 @@ form{
     text-align: center;
     border-radius: 4px;
 }
-.customer_box{
-    width: 80%;
-    overflow-y: auto;
-    margin-left: 15%;
-    margin-top: 20px;
-}
-.product_box{
+.item_box{
     width: 90%;
     overflow-y: auto;
     margin-left: 9%;
-    
+    margin-top: 15px;
+}
+.party_box{
+    width: 90%;
+    overflow-y: auto;
+    margin-left: 9%;
+    margin-top: 15px;    
 }
 .Final_box{
-    width: 95%;
+    width: 90%;
     overflow-y: auto;
-    margin-left: 3%; 
+    margin-left: 9%;
+    margin-top: 15px; 
+}
+.Final_bill{
+    width: 90%;
+    overflow-y: auto;
+    margin-left: 9%;
+    margin-top: 15px;   
 }
 
 .bill_btn{
@@ -60,7 +66,7 @@ form{
 }
 #upload{
     background-color: rgba(0,0,0,.04);
-    width: 98.8%;
+    width: 92.8%;
     margin-left: 4px;
     height: 51px;
     border-bottom: 1px solid black;
@@ -74,7 +80,8 @@ form{
 }
 
 mat-form-field{
-    margin-left: 5px;
+    margin-left: 4px;
+    width: 23%;
 }
 .add_btn{
     width: 42px;
@@ -123,15 +130,15 @@ mat-form-field mat-icon {
 .reset_btn{
     width: 8%;
     background-color: #3b4259;  
-    margin-right: 20%;
+    margin-left: 10%;
     margin-top: 28px;
   
 }
 .save_btn{
     width: 8%;
-    background-color: #3b4259; 
-    margin-left: 46%;
-    margin-top: 28px;
+    background-color: #3b4259;
+    margin-left: 43%;
+    margin-top: 45px;
 }
   
   /* -----------------------Media query----------------------- */

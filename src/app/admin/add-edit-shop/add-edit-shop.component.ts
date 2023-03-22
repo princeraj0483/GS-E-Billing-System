@@ -21,7 +21,9 @@ export class AddEditShopComponent implements OnInit {
       Shop_Name:['',Validators.required],
       Owner_name:['',Validators.required],
       Email_Id:['',],
-      state:['',],
+      State:['',],
+      Distric:['',],
+      Shop_category:['',],
       Address:['', Validators.required],
       Whatsapp:['', Validators.required],
       mobile_number:['', Validators.required],
@@ -30,7 +32,18 @@ export class AddEditShopComponent implements OnInit {
     })
    
   }
+  onsubmit(){
+    console.log(this.Shop_Form.value)
+  }
   Shop_Form_reset(){
-    this.Shop_Form.reset()
+    this.Shop_Form.controls['Shop_Name'].reset()
+    this.Shop_Form.controls['Owner_name'].reset()
+    this.Shop_Form.controls['Email_Id'].reset()
+    this.Shop_Form.controls['state'].reset()
+    this.Shop_Form.controls['Address'].reset()
+    this.Shop_Form.controls['Whatsapp'].reset()
+    this.Shop_Form.controls['mobile_number'].reset()
+    this.Shop_Form.controls['Description'].reset()
+    
   }
 }
