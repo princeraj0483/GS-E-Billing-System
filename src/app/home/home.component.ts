@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  ActionDisp:boolean = true;
+   innerWidth: any;
   constructor() { }
 
   ngOnInit(): void {

@@ -23,8 +23,11 @@ export class AddEditExpenceTypeComponent implements OnInit {
     })
  
   }
+  onsubmit(){
+    console.log(this.Expence_Form.value)
+  }
   expence_reset_form(){
-    this.Expence_Form.reset()
+    this.Expence_Form.controls['Description'].reset()
   }
 
 }

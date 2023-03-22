@@ -76,10 +76,6 @@ export class AdminSidebarComponent implements OnInit {
       this.action_icon4 = true
     }
   }
-  changepassword(){
-    // this.dailog.open(StdChnangePwdComponent,{
-    //   disableClose: true
-    // });
-  }
+ 
 
 }

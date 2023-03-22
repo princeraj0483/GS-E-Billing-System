@@ -22,7 +22,11 @@ export class AddEditGstComponent implements OnInit {
         
     })
   }
-  gst_form(){
-    this.Gst_Form.reset()
+  onsubmit(){
+    console.log(this.Gst_Form.value)
+  }
+  gst_form_reset(){
+    this.Gst_Form.controls['Gst'].reset()
+    this.Gst_Form.controls['Sgst'].reset()
   }
 }

@@ -8,8 +8,7 @@
             <button mat-button class="menu-button" [routerLink]="['dashboard']">
                 <mat-icon>dashboard</mat-icon>
                 <span>Dashboard</span>
-            </button>
-        
+            </button>    
 
             <button mat-button class="menu-button" (click)="Master_dropdown()" [routerLink]="['/#']">
                 <mat-icon>list_alt</mat-icon>
@@ -17,7 +16,6 @@
                 <mat-icon [hidden]="action_icon1">chevron_right</mat-icon>
                 <mat-icon [hidden]="action_icon2">expand_more</mat-icon>
             </button>
-
 
             <div id="dropdown_report">
                 <button mat-button class="menu-button" [routerLink]="['party']">
@@ -80,8 +78,8 @@
         <button mat-button class="menu-button" (click)="Account_dropdown()" [routerLink]="['#']">
             <mat-icon>account_balance</mat-icon>
             <span>Account</span>
-            <mat-icon [hidden]="action_icon1">chevron_right</mat-icon>
-            <mat-icon [hidden]="action_icon2">expand_more</mat-icon>
+            <mat-icon [hidden]="action_icon3">chevron_right</mat-icon>
+            <mat-icon [hidden]="action_icon4">expand_more</mat-icon>
         </button>
 
         <div id="dropdowns_report">
@@ -98,8 +96,7 @@
             <button mat-button class="menu-button" [routerLink]="['loss']">
                 <mat-icon>store</mat-icon>
                 <span>Loss</span>
-            </button> 
-            
+            </button>     
         </div>
     </div>
         

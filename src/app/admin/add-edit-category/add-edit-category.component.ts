@@ -22,8 +22,12 @@ export class AddEditCategoryComponent implements OnInit {
         
     })
   }
-  category_form(){
-    this.Category_Form.reset()
+  onsubmit(){
+    console.log(this.Category_Form.value)
+  }
+  category_form_reset(){
+    this.Category_Form.controls['Category'].reset()
+    this.Category_Form.controls['Description'].reset()
   }
   
 }

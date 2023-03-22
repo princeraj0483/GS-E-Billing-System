@@ -24,7 +24,12 @@ export class AddEditWeightComponent implements OnInit {
         
     })
   }
+  onsubmit(){
+    console.log(this.Weight_Form.value)
+  }
   weight_data_reset(){
-    this.Weight_Form.reset()
+    // this.Weight_Form.reset()
+    this.Weight_Form.controls['Weight'].reset()
+    this.Weight_Form.controls['Description'].reset()
   }
 }

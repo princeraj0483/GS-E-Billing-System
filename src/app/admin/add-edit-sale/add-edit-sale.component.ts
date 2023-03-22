@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -30,16 +30,35 @@ const ELEMENT_DATA:PeriodicElement [] = [
 })
 export class AddEditSaleComponent implements OnInit {
 	active = 1;
+  Customer_Form: any;
+  Product_Form: any;
   displayedColumns: string[] = ['dis_SL_No', 'cust_name', 'Product_name', 'Product_rate', 'Product_quan',  'Action' ];
   dataSource = ELEMENT_DATA;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private matdialog:MatDialog
+    private fb:FormBuilder
   ){
 
   }
   ngOnInit(): void {
-   
+    this.Customer_Form = this.fb.group({
+      Party_Id:['',Validators.required],
+      mobile_number:['',Validators.required],
+      party_address:['', Validators.required],
+      party_name:['',Validators.required],
+      party_category:['', Validators.required],
+      weight:['', Validators.required],
+      size:['', Validators.required],
+      unit:['',Validators.required],
+      Rate:['', Validators.required],
+      Total_amount:['', Validators.required],
+      Basic_amount:['', Validators.required]
+     
+        
+    })
+  }
+  onsubmit(){
+    console.log(this.Customer_Form.value)
   }
 }

@@ -2,15 +2,15 @@
     <span>Add Sale Details</span>
 </div>
 
+<form [formGroup]="Customer_Form">
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
 	<li [ngbNavItem]="1">
 		<a ngbNavLink style="background-color: #3B4259; color: whitesmoke;" class="party_btn">Customer</a>
 		<ng-template ngbNavContent>
 			<div class="customer_box">
-
-                <mat-form-field appearance="fill">
+				<mat-form-field appearance="fill">
                     <mat-label>Party Id</mat-label>
-                    <input matInput>
+                    <input formControlName="Party_Id" matInput placeholder="Party Id">  
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
@@ -24,7 +24,7 @@
 
                 <mat-form-field appearance="fill">
                     <mat-label>Mobile Number</mat-label>
-                    <input matInput type="number" onkeypress="return this.value.length < 10;"
+                    <input formControlName="mobile_number" matInput type="number" onkeypress="return this.value.length < 10;"
                         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
                 </mat-form-field>
 
@@ -32,27 +32,29 @@
                     <mat-label>Email Id.</mat-label>
                     <input matInput placeholder="Email Id">  
                 </mat-form-field><br>
-                
+        
+				
                 <mat-form-field appearance="fill" class="form">
                     <mat-label>Address</mat-label>
-                    <textarea matInput></textarea>
+                    <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
                   </mat-form-field>
 
                   <span class="btn_box">
-                    <button class="reset_btn" mat-raised-button color="warn" type="reset">Save</button>
+                    <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="onsubmit()">Save</button>
                   </span>
              </div>
             </ng-template>
+	
 	</li>
+	
 	
 	<li [ngbNavItem]="4">
 		<a ngbNavLink  style="background-color: #3B4259; color: whitesmoke;" class="Item_btn">Product</a>
 		<ng-template ngbNavContent>
 			<div class="product_box">
-
 				<mat-form-field appearance="fill">
 					<mat-label>Party Name</mat-label>
-					<input matInput>
+					<input matInput formControlName="party_name" placeholder="Party Name">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
@@ -75,32 +77,32 @@
 
 				<mat-form-field appearance="fill">
 					<mat-label>Size</mat-label>
-					<input matInput>
+					<input formControlName="size" matInput placeholder="Size">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Weight</mat-label>
-					<input matInput>
+					<input formControlName="weight" matInput placeholder="Weight">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Unit</mat-label>
-					<input matInput>
+					<input formControlName="unit" matInput placeholder="Unit">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Rate</mat-label>
-					<input matInput>
+					<input formControlName="Rate" matInput placeholder="Rate">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Quantity (Pcs)</mat-label>
-					<input matInput>
+					<input matInput placeholder="Quantity (Pcs)">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Total Amount</mat-label>
-					<input matInput>
+					<input formControlName="Total_amount" matInput placeholder="Total Amount">
 				</mat-form-field>
 
 				<div class="add_btn">
@@ -173,7 +175,7 @@
 			<div class="Final_box">
 				<mat-form-field appearance="fill" floatLabel="always">
 					<mat-label>Basic Amount</mat-label>
-					<input matInput type="number" class="example-right-align" placeholder="0.00">
+					<input formControlName="Basic_amount" matInput type="number" class="example-right-align" placeholder="0.00">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill" floatLabel="always">

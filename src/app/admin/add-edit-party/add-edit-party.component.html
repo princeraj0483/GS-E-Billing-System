@@ -1,80 +1,83 @@
-<div class="add_head">
-  <span>Add Party</span>
-  <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
-    <mat-icon>close</mat-icon>
-  </button>
-</div>
-
-<form [formGroup]="Party_Form">
-<div mat-dialog-content>
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-       <input formControlName="Name" matInput placeholder="Name">
-      </mat-form-field>
-    </div>
-    
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Contact Persion</mat-label>
-        <input formControlName="Contact_persion" matInput placeholder="Contact Persion">
-      </mat-form-field>
-    </div>
-
-    <mat-form-field appearance="fill">
-      <mat-label>Whatsapp Number</mat-label>
-      <input type="number" formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
-        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
-    </mat-form-field><br>
-      
-    <mat-form-field appearance="fill">
-      <mat-label>Mobile Number</mat-label>
-      <input type="number" formControlName="mobile_number" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
-        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
-    </mat-form-field>
-
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Email Id</mat-label>
-        <input formControlName="Email_Id" matInput placeholder="Email Id">
-      </mat-form-field>
-    </div>
-
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>A/C Holder Name</mat-label>
-        <input formControlName="Ac_holder_name"  matInput placeholder="A/C Holder Name">
-      </mat-form-field>
-    </div>
-
-    <mat-form-field appearance="fill">
-      <mat-label>Account Number</mat-label>
-      <input formControlName="Account_number" type="number" matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
-        oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
-    </mat-form-field><br>
-
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>IFSC</mat-label>
-        <input formControlName="IFSC" type="number" matInput placeholder="IFSC" >
-      </mat-form-field>
-    </div>
-
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>GST No.</mat-label>
-        <input formControlName="Gst_No" type="number" matInput placeholder="GST No." >
-      </mat-form-field>
-    </div> 
-
-    <mat-form-field class="add_form" appearance="fill">
-      <mat-label>Address</mat-label>
-      <input formControlName="Address" matInput placeholder="Address">
-    </mat-form-field>
+  <div class="add_head">
+    <span>Add Party</span>
+    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
-</form>
 
-<span class="btn_box">
-  <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="party_data_reset()">Reset</button>
-  <button class="save_btn" mat-raised-button color="primary" type="save">Save</button>
-</span>
+  <form [formGroup]="Party_Form">
+    <div mat-dialog-content>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input formControlName="Name" matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Contact Persion</mat-label>
+          <input formControlName="Contact_persion" matInput placeholder="Contact Persion">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Whatsapp Number</mat-label>
+        <input type="number" formControlName="Whatsapp" matInput placeholder="Whatsapp Number"
+          onkeypress="return this.value.length < 10;"
+          oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Mobile Number</mat-label>
+        <input type="number" formControlName="mobile_number" matInput placeholder="Mobile Number"
+          onkeypress="return this.value.length < 10;"
+          oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+      </mat-form-field>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Email Id</mat-label>
+          <input formControlName="Email_Id" matInput placeholder="Email Id">
+        </mat-form-field>
+      </div>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>A/C Holder Name</mat-label>
+          <input formControlName="Ac_holder_name" matInput placeholder="A/C Holder Name">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Account Number</mat-label>
+        <input formControlName="Account_number" type="number" matInput placeholder="Account Number"
+          onkeypress="return this.value.length < 16;"
+          oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
+      </mat-form-field><br>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>IFSC</mat-label>
+          <input formControlName="IFSC" type="number" matInput placeholder="IFSC">
+        </mat-form-field>
+      </div>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>GST No.</mat-label>
+          <input formControlName="Gst_No" type="number" matInput placeholder="GST No.">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="add_form" appearance="fill">
+        <mat-label>Address</mat-label>
+        <input formControlName="Address" matInput placeholder="Address">
+      </mat-form-field>
+    </div>
+  </form>
+  
+  <span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="party_data_reset()">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary"type="save" (click)="onsubmit()">Save</button>
+  </span>

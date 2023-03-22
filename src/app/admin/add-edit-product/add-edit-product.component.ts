@@ -26,7 +26,15 @@ export class AddEditProductComponent implements OnInit {
     })
    
   }
+  onsubmit(){
+   console.log(this.Product_Form.value)
+  }
   product_form_rese(){
-    this.Product_Form.reset()
+    this.Product_Form.controls['Unit'].reset()
+    this.Product_Form.controls['Quantity'].reset()
+    this.Product_Form.controls['address'].reset()
+    this.Product_Form.controls['Description'].reset()
+    this.Product_Form.controls['Gst_No'].reset()
+
   }
 }

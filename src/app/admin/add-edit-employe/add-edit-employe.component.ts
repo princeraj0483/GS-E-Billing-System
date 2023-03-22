@@ -33,7 +33,10 @@ export class AddEditEmployeComponent implements OnInit {
         
     })
   }
+  onsubmit(){
+    console.log(this.Employee_Form. value)
+  }
   employee_form_reset(){
-    this.Employee_Form.reset()
+    this.Employee_Form.controls['Name'].reset()
   }
 }

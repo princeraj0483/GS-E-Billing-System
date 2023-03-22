@@ -29,7 +29,17 @@ export class AddEditLedgerComponent implements OnInit {
     })
    
   }
+  onsubmit(){
+    console.log(this.Ledger_Form.value)
+  }
   product_form_rese(){
-    this.Ledger_Form.reset()
+    this.Ledger_Form.controls['Cash_in_hand'].reset()
+    this.Ledger_Form.controls['Deposit_bank'].reset()
+    this.Ledger_Form.controls['Closing_amount'].reset()
+    this.Ledger_Form.controls['Description'].reset()
+    this.Ledger_Form.controls['Gst_No'].reset()
+    this.Ledger_Form.controls['Expense'].reset()
+    this.Ledger_Form.controls['Today_Recived'].reset()
+    this.Ledger_Form.controls['course_date'].reset()
   }
 }

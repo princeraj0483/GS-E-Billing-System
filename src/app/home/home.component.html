@@ -1,21 +1,16 @@
 <div id="wrapper">
   <div id="header">
-    <h1>E-Billing System</h1>
-    <button class="login_head" mat-button [matMenuTriggerFor]="menu">Login</button>
+    <img src="assets/logo.png">
+    <button mat-raised-button [matMenuTriggerFor]="menu">Login</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item class="action_btn" [routerLink]="['/adminlogin']">Admin</button>
       <button mat-menu-item class="action_btn" [routerLink]="['/shoplogin']">Shop</button>
       <button mat-menu-item class="action_btn" [routerLink]="['/customerlogin']">Customer</button>
     </mat-menu>
   </div>
-
-  <div id="main">
-    <h3 class="welcome_text">Welcome To E-Billing System</h3>
+  <div class="main_area">
+    <div class="text_area">hhkhk</div>
+    <div class="image_area"></div>
   </div>
-
-  <div id="footer">
-    <span>Developed By Green Soft</span>
-    <span>Version 1.0</span>
-  </div>
-  
+  <div class="footer"></div>
 </div>

@@ -1,16 +1,17 @@
 #wrapper {
   width: 100%;
   height: 100vh;
-  background-color: #232838 ;
+  background-color: #fff;
 }
 
 #header {
-  height: 60px;
+  height: 80px;
   width: 100%;
-  background-color: #3b4259;
+  background-color: #fff;
   color: #ffff;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  z-index: 500px;
+  box-shadow: 1px 1px 15px rgb(26, 26, 26);
 }
 
 #header h1 {
@@ -18,9 +19,36 @@
   display: inline-block;
 }
 
+#header img{
+  width: 20%;
+  height: 100%;
+  margin-top: -21px;
+  overflow: hidden;
+  margin-left: 150px;
+}
+
+#header button{
+  margin-left: 50%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 27px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 1px 1px 1px -2px;
+}
+
+#header button:hover{
+  background-color: #5a74ad;
+  border-radius: 20px;
+  transition: .5s;
+  color: white;
+}
+
 .login_head {
   margin: 10px;
   height: 40px;
+  float: left;
   background-color: #5a74ad;
 }
 
@@ -32,46 +60,19 @@
   background-color: #5a74ad;
 }
 
-#main {
+.main_area{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100% - 105px);
+  margin-top: 10px;
+  height: 800px;
+  background-color: red;
 }
-
-#main .welcome_text {
-  color: whitesmoke;
-  font-size: 3rem;
-  word-spacing: 4px;
+.text_area{
+  background-color: yellow;
+  width: 50%;
+  height: 100%;
 }
-
-#footer {
+.footer{
   width: 100%;
-  height: 45px;
-  color: #ffff;
-  line-height: 45px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #3b4259;
-}
-
-span {
-  margin: 0px 10px;
-}
-
-@media(min-width:920px)and (max-width:1199px) {}
-
-@media(min-width:768px)and (max-width:860px) { }
-
-@media(min-width:420px)and (max-width:768px) {
-  #main .welcome_text {
-      font-size: 2.5rem;
-  }
-}
-
-@media(max-width:420px) {
-  #main .welcome_text {
-      font-size: 1.5rem;
-  }
+  height: 40px;
+  background-color: green;
 }
