@@ -73,6 +73,9 @@ import { AddEditLedgerComponent } from './admin/add-edit-ledger/add-edit-ledger.
 import { LossComponent } from './loss/loss.component';
 import { AddEditLossComponent } from './admin/add-edit-loss/add-edit-loss.component';
 import { NgxUiLoaderHttpModule,NgxUiLoaderModule,NgxUiLoaderRouterModule } from 'ngx-ui-loader';
+import { HttpClientModule } from '@angular/common/http';
+import { SizeComponent } from './size/size.component';
+import { AddEditSizeComponent } from './home/add-edit-size/add-edit-size.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -127,6 +130,8 @@ import { NgxUiLoaderHttpModule,NgxUiLoaderModule,NgxUiLoaderRouterModule } from 
     AddEditLedgerComponent,
     LossComponent,
     AddEditLossComponent,
+    SizeComponent,
+    AddEditSizeComponent,
   
   ],
   imports: [
@@ -152,10 +157,14 @@ import { NgxUiLoaderHttpModule,NgxUiLoaderModule,NgxUiLoaderRouterModule } from 
     NgbModule,
     NgxUiLoaderModule,
     NgxUiLoaderRouterModule,
+    HttpClientModule,
     NgxUiLoaderHttpModule.forRoot({
       showForeground:true,
+      
     })
+    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

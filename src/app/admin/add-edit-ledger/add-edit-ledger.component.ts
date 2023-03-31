@@ -30,7 +30,14 @@ export class AddEditLedgerComponent implements OnInit {
    
   }
   onsubmit(){
-    console.log(this.Ledger_Form.value)
+    console.log(this.Ledger_Form.get('Cash_in_hand')?.value)
+    console.log(this.Ledger_Form.get('Deposit_bank')?.value)
+    console.log(this.Ledger_Form.get('Closing_amount')?.value)
+    console.log(this.Ledger_Form.get('Description')?.value)
+    console.log(this.Ledger_Form.get('Gst_No')?.value)
+    console.log(this.Ledger_Form.get('Expense')?.value)
+    console.log(this.Ledger_Form.get('Today_Recived')?.value)
+    console.log(this.Ledger_Form.get('course_date')?.value)
   }
   product_form_rese(){
     this.Ledger_Form.controls['Cash_in_hand'].reset()

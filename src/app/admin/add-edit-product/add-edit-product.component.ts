@@ -27,7 +27,11 @@ export class AddEditProductComponent implements OnInit {
    
   }
   onsubmit(){
-   console.log(this.Product_Form.value)
+    console.log(this.Product_Form.get('Unit')?.value)
+    console.log(this.Product_Form.get('Quantity')?.value)
+    console.log(this.Product_Form.get('address')?.value)
+    console.log(this.Product_Form.get('Description')?.value)
+    console.log(this.Product_Form.get('Gst_No')?.value)
   }
   product_form_rese(){
     this.Product_Form.controls['Unit'].reset()

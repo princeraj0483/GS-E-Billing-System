@@ -1,57 +1,62 @@
 <div class="head">
-    <span>Add Sale Details</span>
+	<span>Add Sale Details</span>
 </div>
 
-<form [formGroup]="Customer_Form">
+
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
 	<li [ngbNavItem]="1">
 		<a ngbNavLink style="background-color: #3B4259; color: whitesmoke;" class="party_btn">Customer</a>
 		<ng-template ngbNavContent>
 			<div class="customer_box">
-				<mat-form-field appearance="fill">
-                    <mat-label>Party Id</mat-label>
-                    <input formControlName="Party_Id" matInput placeholder="Party Id">  
-                </mat-form-field>
+				<form [formGroup]="customer_form">
+					<mat-form-field appearance="fill">
+						<mat-label>Party Id</mat-label>
+						<input formControlName="Party_Id" matInput placeholder="Party Id">
+					</mat-form-field>
 
-                <mat-form-field appearance="fill">
-                    <mat-label>Party Name</mat-label>
-                    <mat-select>
-                        <mat-option value="one">Mukesh Singh</mat-option>
-                        <mat-option value="two">Akash Raz</mat-option>
-                        <mat-option value="two">Rana Singh</mat-option>
-                    </mat-select>
-                </mat-form-field>
+					<mat-form-field appearance="fill">
+						<mat-label>Party Name</mat-label>
+						<mat-select>
+							<mat-option value="one">Mukesh Singh</mat-option>
+							<mat-option value="two">Akash Raz</mat-option>
+							<mat-option value="two">Rana Singh</mat-option>
+						</mat-select>
+					</mat-form-field>
 
-                <mat-form-field appearance="fill">
-                    <mat-label>Mobile Number</mat-label>
-                    <input formControlName="mobile_number" matInput type="number" onkeypress="return this.value.length < 10;"
-                        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
-                </mat-form-field>
+					<mat-form-field appearance="fill">
+						<mat-label>Mobile Number</mat-label>
+						<input  matInput type="number"
+							onkeypress="return this.value.length < 10;"
+							oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+					</mat-form-field>
 
-                <mat-form-field appearance="fill">
-                    <mat-label>Email Id.</mat-label>
-                    <input matInput placeholder="Email Id">  
-                </mat-form-field><br>
-        
-				
-                <mat-form-field appearance="fill" class="form">
-                    <mat-label>Address</mat-label>
-                    <textarea formControlName="party_address" matInput placeholder="Address"></textarea>
-                  </mat-form-field>
+					<mat-form-field appearance="fill">
+						<mat-label>Email Id.</mat-label>
+						<input matInput placeholder="Email Id">
+					</mat-form-field><br>
 
-                  <span class="btn_box">
-                    <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="onsubmit()">Save</button>
-                  </span>
-             </div>
-            </ng-template>
-	
+
+					<mat-form-field appearance="fill" class="form">
+						<mat-label>Address</mat-label>
+						<textarea  matInput placeholder="Address"></textarea>
+					</mat-form-field>
+
+					<span class="btn_box">
+						<button class="reset_btn" mat-raised-button color="warn" type="reset"
+							(click)="onsubmit()">Save</button>
+					</span>
+				</form>
+			</div>
+		</ng-template>
+
 	</li>
-	
-	
+
+
 	<li [ngbNavItem]="4">
-		<a ngbNavLink  style="background-color: #3B4259; color: whitesmoke;" class="Item_btn">Product</a>
+		<a ngbNavLink style="background-color: #3B4259; color: whitesmoke;" class="Item_btn">Product</a>
 		<ng-template ngbNavContent>
 			<div class="product_box">
+				<form [formGroup]="product_form">
 				<mat-form-field appearance="fill">
 					<mat-label>Party Name</mat-label>
 					<input matInput formControlName="party_name" placeholder="Party Name">
@@ -77,22 +82,22 @@
 
 				<mat-form-field appearance="fill">
 					<mat-label>Size</mat-label>
-					<input formControlName="size" matInput placeholder="Size">
+					<input  matInput placeholder="Size">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Weight</mat-label>
-					<input formControlName="weight" matInput placeholder="Weight">
+					<input  matInput placeholder="Weight">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Unit</mat-label>
-					<input formControlName="unit" matInput placeholder="Unit">
+					<input  matInput placeholder="Unit">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
 					<mat-label>Rate</mat-label>
-					<input formControlName="Rate" matInput placeholder="Rate">
+					<input matInput placeholder="Rate">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill">
@@ -102,14 +107,15 @@
 
 				<mat-form-field appearance="fill">
 					<mat-label>Total Amount</mat-label>
-					<input formControlName="Total_amount" matInput placeholder="Total Amount">
+					<input  matInput placeholder="Total Amount">
 				</mat-form-field>
 
 				<div class="add_btn">
-					<mat-icon>add</mat-icon>
+					<mat-icon (click)="onsubmit()">add</mat-icon>
 				</div>
+			</form>
 			</div>
-			
+
 
 			<div class="count_area">
 				<span class="notice_text">Total : 10</span>
@@ -165,17 +171,18 @@
 				</table>
 
 				<mat-paginator #paginatorRef [pageSizeOptions]="[10, 25, 100]"
-				 aria-label="Select page of users"></mat-paginator>
+					aria-label="Select page of users"></mat-paginator>
 			</div>
 		</ng-template>
 	</li>
 	<li [ngbNavItem]="2">
-		<a ngbNavLink  style="background-color: #3B4259; color: whitesmoke;" class="Final_btn">Final Bill</a>
+		<a ngbNavLink style="background-color: #3B4259; color: whitesmoke;" class="Final_btn">Final Bill</a>
 		<ng-template ngbNavContent>
 			<div class="Final_box">
 				<mat-form-field appearance="fill" floatLabel="always">
 					<mat-label>Basic Amount</mat-label>
-					<input formControlName="Basic_amount" matInput type="number" class="example-right-align" placeholder="0.00">
+					<input matInput type="number" class="example-right-align"
+						placeholder="0.00">
 				</mat-form-field>
 
 				<mat-form-field appearance="fill" floatLabel="always">
@@ -210,13 +217,13 @@
 				<mat-form-field appearance="fill">
 					<mat-label>Memo Number</mat-label>
 					<input matInput>
-				  </mat-form-field>
+				</mat-form-field>
 
 				<mat-form-field appearance="fill" floatLabel="always">
 					<mat-label>Date</mat-label>
 					<input matInput type="date" class="example-right-align" placeholder="0.00">
 				</mat-form-field>
-				
+
 				<div id="upload">
 					<h6>Upload Img</h6>
 					<input type="file">
@@ -227,6 +234,6 @@
 		</ng-template>
 	</li>
 </ul>
-<button  mat-raised-button class="bill_btn">Bill- Ref- NO.</button>
+<button mat-raised-button class="bill_btn">Bill- Ref- NO.</button>
 
 <div [ngbNavOutlet]="nav" class="mt-2"></div>

@@ -22,6 +22,14 @@
       </mat-form-field>
     </div>
 
+      
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>GST No.</mat-label>
+        <input  matInput placeholder="GST No.">
+      </mat-form-field>
+    </div>
+
     <mat-form-field appearance="fill">
       <mat-label>Whatsapp Number</mat-label>
       <input type="number" formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
@@ -46,7 +54,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Distric</mat-label>
+      <mat-label>District</mat-label>
       <mat-select>
         <mat-option value="one">Vaishali</mat-option>
         <mat-option value="two">Chapra</mat-option>
@@ -55,32 +63,9 @@
       </mat-select>
     </mat-form-field>
 
-    <div class="example-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input formControlName="Address" matInput placeholder="Address">
-      </mat-form-field>
-    </div>
-
-    <div id="upload">
-      <h6>Upload Img</h6>
-      <input type="file">
-    </div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Shop Category</mat-label>
-    <mat-select>
-      <input formControlName="Shop_category" matInput placeholder="Shop_category">
-      <mat-option value="one">Grocerry</mat-option>
-      <mat-option value="two">Ashu Electronics</mat-option>
-      <mat-option value="three">Om Computer</mat-option>
-      <mat-option value="four">Ajad Mobile</mat-option>
-    </mat-select>
-  </mat-form-field>
-
     <mat-form-field class="add_form" appearance="fill">
-      <mat-label>Description</mat-label>
-      <input formControlName="Description" matInput placeholder="Description">
+      <mat-label>Address</mat-label>
+      <input formControlName="Address" matInput placeholder="Address">
     </mat-form-field>
   </div>
 </form>

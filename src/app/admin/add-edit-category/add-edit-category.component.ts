@@ -23,7 +23,8 @@ export class AddEditCategoryComponent implements OnInit {
     })
   }
   onsubmit(){
-    console.log(this.Category_Form.value)
+    console.log(this.Category_Form.get('Category')?.value)
+    console.log(this.Category_Form.get('Description')?.value)
   }
   category_form_reset(){
     this.Category_Form.controls['Category'].reset()

@@ -25,7 +25,8 @@ export class AddEditDiscountComponent implements OnInit {
   }
   
   onsubmit(){
-    console.log(this.Discount_Form.value)
+    console.log(this.Discount_Form.get('Discount')?.value)
+    console.log(this.Discount_Form.get('Description')?.value)
   }
 
   discount_form_reset(){

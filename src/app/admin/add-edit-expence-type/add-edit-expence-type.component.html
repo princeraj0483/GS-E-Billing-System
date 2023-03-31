@@ -7,7 +7,7 @@
    
 <form [formGroup]="Expence_Form">
         <mat-form-field appearance="fill">
-            <mat-label>Expence Type</mat-label>
+            <mat-label formArrayName="Expence_type">Expence Type</mat-label>
             <mat-select>
                 <mat-option value="one">rent</mat-option>
                 <mat-option value="two">Bijli bill</mat-option>

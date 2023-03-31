@@ -25,7 +25,8 @@ export class AddEditWeightComponent implements OnInit {
     })
   }
   onsubmit(){
-    console.log(this.Weight_Form.value)
+    console.log(this.Weight_Form.get('Weight')?.value)
+    console.log(this.Weight_Form.get('Description')?.value)
   }
   weight_data_reset(){
     // this.Weight_Form.reset()

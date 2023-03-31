@@ -7,6 +7,39 @@
   </div>
   
   <form [formGroup]="Product_Form">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select>
+          <mat-option value="one">Kg</mat-option>
+          <mat-option value="two">Litter</mat-option>
+          <mat-option value="three">Inch</mat-option>
+          <mat-option value="four">Packet</mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input formControlName="Quantity" matInput placeholder="Name">
+    </mat-form-field>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>HSN Code</mat-label>
+      <input formControlName="Quantity" matInput placeholder="HSN Code">
+    </mat-form-field>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Weight</mat-label>
+      <input formControlName="Quantity" matInput placeholder="Weight">
+    </mat-form-field>
+  </div>
+
+
     <mat-form-field appearance="fill">
         <mat-label>Unit</mat-label>
         <mat-select>
@@ -16,23 +49,21 @@
             <mat-option value="four">Packet</mat-option>
         </mat-select>
     </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Size</mat-label>
+      <mat-select>
+          <mat-option value="one">Kg</mat-option>
+          <mat-option value="two">Litter</mat-option>
+          <mat-option value="three">Inch</mat-option>
+          <mat-option value="four">Packet</mat-option>
+      </mat-select>
+  </mat-form-field>
       
       <div class="example-container">
         <mat-form-field appearance="fill">
-          <mat-label>Quantity</mat-label>
-          <input formControlName="Quantity" matInput placeholder="Quantity">
-        </mat-form-field>
-      </div>
-  
-        <mat-form-field appearance="fill" >
-            <mat-label>Address</mat-label>
-            <input formControlName="address" matInput placeholder="Address" >
-        </mat-form-field>           
-  
-      <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>GST No.</mat-label>
-          <input formControlName="Gst_No" matInput placeholder="GST No">
+          <mat-label>Rate</mat-label>
+          <input formControlName="Quantity" matInput placeholder="Rate">
         </mat-form-field>
       </div>
   
