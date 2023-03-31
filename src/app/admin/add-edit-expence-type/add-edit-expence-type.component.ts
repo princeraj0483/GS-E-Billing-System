@@ -18,13 +18,15 @@ export class AddEditExpenceTypeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.Expence_Form = this.fb.group({
+      Expence_type:['', Validators.required],
       Description:['',Validators.required]
         
     })
  
   }
   onsubmit(){
-    console.log(this.Expence_Form.value)
+    console.log(this.Expence_Form.get('Expence_type')?.value)
+    console.log(this.Expence_Form.get('Description')?.value)
   }
   expence_reset_form(){
     this.Expence_Form.controls['Description'].reset()

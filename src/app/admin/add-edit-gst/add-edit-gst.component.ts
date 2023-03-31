@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import { GsbillingService } from 'src/app/gsbilling.service';
 
 @Component({
   selector: 'app-add-edit-gst',
@@ -11,7 +12,8 @@ export class AddEditGstComponent implements OnInit {
   FromBuilder: any;
   Gst_Form: any;
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private service:GsbillingService
   ){
 
   }
@@ -23,7 +25,14 @@ export class AddEditGstComponent implements OnInit {
     })
   }
   onsubmit(){
-    console.log(this.Gst_Form.value)
+    this.service.post_gst(this.Gst_Form.value).subscribe(
+      (res:any)=>{
+        alert('data successfully...')
+      },
+      (error)=>{
+        alert('data not insert')
+      }
+    )
   }
   gst_form_reset(){
     this.Gst_Form.controls['Gst'].reset()

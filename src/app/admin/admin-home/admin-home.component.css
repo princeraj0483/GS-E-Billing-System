@@ -98,3 +98,13 @@ button img{
         top: 10px;
     }
 }
+@media(min-width: 1240px) and (max-width: 1920px){
+    button{
+        margin-right: 10px;
+    }
+    .icon{
+        position: fixed;
+        right: -1%;
+        top: 10px;
+    } 
+}

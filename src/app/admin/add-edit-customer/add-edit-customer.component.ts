@@ -28,7 +28,12 @@ export class AddEditCustomerComponent implements OnInit {
     })
   }
   onsubmit(){
-    console.log(this.Customer_Form. value)
+    console.log(this.Customer_Form.get('Customer_name')?.value)
+    console.log(this.Customer_Form.get('State')?.value)
+    console.log(this.Customer_Form.get('Whatsapp_No')?.value)
+    console.log(this.Customer_Form.get('Email_Id')?.value)
+    console.log(this.Customer_Form.get('Address')?.value)
+    console.log(this.Customer_Form.get('Description')?.value)
   }
   Category_Form_reset(){
     this.Customer_Form.controls['Customer_name'].reset()

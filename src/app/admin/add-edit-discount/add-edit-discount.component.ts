@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import { GsbillingService } from 'src/app/gsbilling.service';
 
 
 @Component({
@@ -11,26 +12,33 @@ export class AddEditDiscountComponent implements OnInit {
   hide = true;
   FromBuilder: any;
   Discount_Form: any;
+  discount_name: any;
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private service:GsbillingService,
   ){
 
   }
   ngOnInit(): void {
     this.Discount_Form = this.fb.group({
-      Discount:['',Validators.required],
-      Description:[],
+      discount_name:['',Validators.required],
+      description:[],
+      admin_id_fk:[]
         
     })
   }
   
   onsubmit(){
-    console.log(this.Discount_Form.value)
+    this.service.post_discount(this.discount_name.value).subscribe(
+      (res:any)=>{
+        console.log(res)
+      }
+    )
   }
+  
 
   discount_form_reset(){
-    this.Discount_Form.controls['Discount'].reset()
-    this.Discount_Form.controls['Description'].reset()
+    this.discount_name.controls['discount'].reset()
+    this.discount_name.controls['Description'].reset()
   }
- 
 }

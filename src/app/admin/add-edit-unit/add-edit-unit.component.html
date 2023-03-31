@@ -8,14 +8,15 @@
 <form [formGroup]="Unit_Form">
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
-        <input formControlName="Name" matInput placeholder="Name">
+        <input formControlName="name" matInput placeholder="Name">
     </mat-form-field>
 
-   
+    <input formControlName="admin_id_fk" type="number" hidden>
+
         <div class="column_1">
             <mat-form-field appearance="fill">
               <mat-label>Description</mat-label>
-              <textarea formControlName="Description" matInput placeholder="Description"></textarea>
+              <textarea formControlName="description" matInput placeholder="Description"></textarea>
             </mat-form-field>
           </div>
     

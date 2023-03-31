@@ -30,35 +30,57 @@ const ELEMENT_DATA:PeriodicElement [] = [
 })
 export class AddEditSaleComponent implements OnInit {
 	active = 1;
-  Customer_Form: any;
-  Product_Form: any;
+  customer_form!:any
+  product_form! :any
+  // Product_Form: any;
   displayedColumns: string[] = ['dis_SL_No', 'cust_name', 'Product_name', 'Product_rate', 'Product_quan',  'Action' ];
   dataSource = ELEMENT_DATA;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private fb1:FormBuilder
   ){
 
   }
   ngOnInit(): void {
-    this.Customer_Form = this.fb.group({
+    this.customer_form = this.fb.group({
       Party_Id:['',Validators.required],
-      mobile_number:['',Validators.required],
-      party_address:['', Validators.required],
+      // mobile_number:['',Validators.required],
+      // party_address:['', Validators.required],
+      // party_name:['',Validators.required],
+      // party_category:['', Validators.required],
+      // weight:['', Validators.required],
+      // size:['', Validators.required],
+      // unit:['',Validators.required],
+      // Rate:['', Validators.required],
+      // Total_amount:['', Validators.required],
+      // Basic_amount:['', Validators.required]
+     
+        
+    })
+
+    this.product_form = this.fb1.group({
       party_name:['',Validators.required],
-      party_category:['', Validators.required],
-      weight:['', Validators.required],
-      size:['', Validators.required],
-      unit:['',Validators.required],
-      Rate:['', Validators.required],
-      Total_amount:['', Validators.required],
-      Basic_amount:['', Validators.required]
+      // mobile_number:['',Validators.required],
+      // party_address:['', Validators.required],
+      // party_name:['',Validators.required],
+      // party_category:['', Validators.required],
+      // weight:['', Validators.required],
+      // size:['', Validators.required],
+      // unit:['',Validators.required],
+      // Rate:['', Validators.required],
+      // Total_amount:['', Validators.required],
+      // Basic_amount:['', Validators.required]
      
         
     })
   }
+  
   onsubmit(){
-    console.log(this.Customer_Form.value)
+    console.log(this.customer_form.value),
+    console.log(this.product_form.value)
+
   }
+
 }
