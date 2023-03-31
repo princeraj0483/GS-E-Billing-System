@@ -1,16 +1,16 @@
 <div class="add_head">
-    <span>Add Discount</span>
+    <span>Add Size</span>
     <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
         <mat-icon>close</mat-icon>
     </button>
-</div>
+</div> 
 
-<form [formGroup]="Discount_Form">
+<form [formGroup]="size_Form">
     <div mat-dialog-content>
         <div class="examplcontainere">
           <mat-form-field appearance="fill">
-            <mat-label>Discount (%)</mat-label>
-           <input formControlName="discount_name" matInput placeholder="Discount">
+            <mat-label>Size</mat-label>
+           <input formControlName="size" matInput placeholder="size">
           </mat-form-field>
         </div>
 
@@ -23,8 +23,8 @@
       </div>
       <input formControlName="admin_id_fk" type="number" hidden>
       </form>
-      
+
 <span class="btn_box">
-    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="discount_form_reset()">Reset</button>
+    <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="weight_data_reset()">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">Save</button>
-</span>
+    </span>

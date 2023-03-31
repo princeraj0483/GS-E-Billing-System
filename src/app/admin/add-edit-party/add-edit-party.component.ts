@@ -24,19 +24,20 @@ export class AddEditPartyComponent implements OnInit {
       contact_persion:[''],
       mobile_no:['', Validators.required],
       email_Id:['',],
-      ac_holder_name:['',],
-      account_number:['',],
-      ifsc:['',],
-      gst_No:['',],
+      ac_holder_name:[''],
+      account_number:[''],
+      ifsc:[''],
+      gst_No:[''],
       address:['', Validators.required],
-      whatsapp:['',],
-     
-        
+      whatsapp:['']   
     })
   }
   onsubmit(){
     this.service.post_party(this.Party_Form.value).subscribe(
       (res:any)=>{
+        if(res.success){
+          console.log(res.message);
+        }
         console.log(res)
       }
     )

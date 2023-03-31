@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import { GsbillingService } from 'src/app/gsbilling.service';
 
 @Component({
   selector: 'app-add-edit-category',
@@ -11,23 +12,30 @@ export class AddEditCategoryComponent implements OnInit {
   FromBuilder: any;
   Category_Form: any;
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private service:GsbillingService,
   ){
 
   }
   ngOnInit(): void {
     this.Category_Form = this.fb.group({
-      Category:['',Validators.required],
-      Description:[],
+      category_name:['',Validators.required],
+      description:[],
+      admin_id_fk:[]
         
     })
   }
   onsubmit(){
-    console.log(this.Category_Form.get('Category')?.value)
-    console.log(this.Category_Form.get('Description')?.value)
+    this.service.post_categoryt(this.Category_Form.value).subscribe(
+      (res:any)=>{
+        console.log(res)
+      }
+      
+    )
   }
+  
   category_form_reset(){
-    this.Category_Form.controls['Category'].reset()
+    this.Category_Form.controls['category'].reset()
     this.Category_Form.controls['Description'].reset()
   }
   

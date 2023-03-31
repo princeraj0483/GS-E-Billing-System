@@ -33,6 +33,7 @@ import { AccountComponent } from './admin/account/account.component';
 import { ProfitComponent } from './admin/profit/profit.component';
 import { LedgerComponent } from './ledger/ledger.component';
 import { LossComponent } from './loss/loss.component';
+import { SizeComponent } from './size/size.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -55,6 +56,7 @@ const routes: Routes = [
       { path: 'unit', component: UnitComponent},
       { path: 'discount', component: DiscountComponent},
       { path: 'weight', component: WeightComponent},
+      {path: 'size', component: SizeComponent},
       { path: 'gst', component: GstComponent},
       { path: 'employe', component: EmployeComponent},
       { path: 'expence', component: ExpenceComponent},

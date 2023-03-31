@@ -13,32 +13,27 @@ export class AddEditUnitComponent implements OnInit {
   Unit_Form: any;
   constructor(
     private fb:FormBuilder,
-    private service:GsbillingService,
+    private service:GsbillingService
   ){
 
   }
   ngOnInit(): void {
     this.Unit_Form = this.fb.group({
-      admin_id_fk:[''],
+      admin_id_fk:['1'],
       name:['',Validators.required],
       description:[''],
         
     })
   } 
   onsubmit(){
-    this.service.post_gst(this.Unit_Form.value).subscribe(
+    this.service.post_unit(this.Unit_Form.value).subscribe(
       (res:any)=>{
-        alert('data successfully...')
-      },
-      (error)=>{
-        alert('data not insert')
+        console.log(res)
       }
     )
   }
   
   unit_form_reset(){
-    this.Unit_Form.controls['Name'].reset()
-    this.Unit_Form.controls['Description'].reset()
-    
+    this.Unit_Form.reset()
   } 
 }

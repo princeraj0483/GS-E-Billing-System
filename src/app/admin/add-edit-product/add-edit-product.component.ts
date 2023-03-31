@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import { GsbillingService } from 'src/app/gsbilling.service';
 
 @Component({
   selector: 'app-add-edit-product',
@@ -11,29 +12,36 @@ export class AddEditProductComponent implements OnInit {
   FromBuilder: any;
   Product_Form: any;
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private service:GsbillingService,
   ){
 
   }
   ngOnInit(): void {
     this.Product_Form = this.fb.group({
-      Unit:['',Validators.required],
-      Quantity:['',Validators.required],
-      address:['', Validators.required],
-      Description:['', Validators.required],
-      Gst_No:['',]
+      category:[''],
+      quantity:['',Validators.required],
+      hsn_code:['',Validators.required],
+      weight:['', Validators.required],
+      unit:['', Validators.required],
+      size:[''],
+      rate:[''],
+      Description:[''],
+      admin_id_fk:['1']
         
     })
    
   }
   onsubmit(){
-    console.log(this.Product_Form.get('Unit')?.value)
-    console.log(this.Product_Form.get('Quantity')?.value)
-    console.log(this.Product_Form.get('address')?.value)
-    console.log(this.Product_Form.get('Description')?.value)
-    console.log(this.Product_Form.get('Gst_No')?.value)
+    this.service.post_product(this.Product_Form.value).subscribe(
+      (res:any)=>{
+        console.log(res)
+      }
+      
+    )
   }
-  product_form_rese(){
+  
+  product_form_reset(){
     this.Product_Form.controls['Unit'].reset()
     this.Product_Form.controls['Quantity'].reset()
     this.Product_Form.controls['address'].reset()

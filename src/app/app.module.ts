@@ -75,7 +75,9 @@ import { AddEditLossComponent } from './admin/add-edit-loss/add-edit-loss.compon
 import { NgxUiLoaderHttpModule,NgxUiLoaderModule,NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { SizeComponent } from './size/size.component';
-import { AddEditSizeComponent } from './home/add-edit-size/add-edit-size.component';
+import { AddEditSizeComponent } from './admin/add-edit-size/add-edit-size.component';
+// import { SizeComponent } from './size/size.component';
+// import { AddEditSizeComponent } from './home/add-edit-size/add-edit-size.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -132,6 +134,8 @@ import { AddEditSizeComponent } from './home/add-edit-size/add-edit-size.compone
     AddEditLossComponent,
     SizeComponent,
     AddEditSizeComponent,
+    // SizeComponent,
+    // AddEditSizeComponent,
   
   ],
   imports: [

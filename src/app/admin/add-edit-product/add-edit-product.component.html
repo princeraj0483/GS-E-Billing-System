@@ -7,63 +7,62 @@
   </div>
   
   <form [formGroup]="Product_Form">
-
     <mat-form-field appearance="fill">
-      <mat-label>Category</mat-label>
+      <mat-label formControlName="category">Category</mat-label>
       <mat-select>
-          <mat-option value="one">Kg</mat-option>
-          <mat-option value="two">Litter</mat-option>
-          <mat-option value="three">Inch</mat-option>
-          <mat-option value="four">Packet</mat-option>
+          <mat-option value="Kg">Kg</mat-option>
+          <mat-option value="Litter">Litter</mat-option>
+          <mat-option value="Inch">Inch</mat-option>
+          <mat-option value="Packet">Packet</mat-option>
       </mat-select>
   </mat-form-field>
 
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
-      <input formControlName="Quantity" matInput placeholder="Name">
+      <input formControlName="quantity" matInput placeholder="Name">
     </mat-form-field>
   </div>
 
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>HSN Code</mat-label>
-      <input formControlName="Quantity" matInput placeholder="HSN Code">
+      <input formControlName="hsn_code" matInput placeholder="HSN Code">
     </mat-form-field>
   </div>
 
   <div class="example-container">
     <mat-form-field appearance="fill">
       <mat-label>Weight</mat-label>
-      <input formControlName="Quantity" matInput placeholder="Weight">
+      <input formControlName="weight" matInput placeholder="Weight">
     </mat-form-field>
   </div>
 
 
     <mat-form-field appearance="fill">
-        <mat-label>Unit</mat-label>
+        <mat-label formControlName="unit">Unit</mat-label>
         <mat-select>
-            <mat-option value="one">Kg</mat-option>
-            <mat-option value="two">Litter</mat-option>
-            <mat-option value="three">Inch</mat-option>
-            <mat-option value="four">Packet</mat-option>
+            <mat-option value="Kg">Kg</mat-option>
+            <mat-option value="Litter">Litter</mat-option>
+            <mat-option value="Inch">Inch</mat-option>
+            <mat-option value="Packet">Packet</mat-option>
         </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Size</mat-label>
+      <mat-label formControlName="size">Size</mat-label>
       <mat-select>
-          <mat-option value="one">Kg</mat-option>
-          <mat-option value="two">Litter</mat-option>
-          <mat-option value="three">Inch</mat-option>
-          <mat-option value="four">Packet</mat-option>
+          <mat-option value="Kg">Kg</mat-option>
+          <mat-option value="Litter">Litter</mat-option>
+          <mat-option value="Inch">Inch</mat-option>
+          <mat-option value="Packet">Packet</mat-option>
       </mat-select>
   </mat-form-field>
       
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>Rate</mat-label>
-          <input formControlName="Quantity" matInput placeholder="Rate">
+          <input formControlName="rate" matInput placeholder="Rate">
         </mat-form-field>
       </div>
   
@@ -73,9 +72,12 @@
           <textarea formControlName="Description" matInput placeholder="Description"></textarea>
         </mat-form-field>
       </div>
+
+      <input formControlName="admin_id_fk" type="number" hidden>
+
   </form>
   
   <span class="btn_box">
-    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="product_form_rese()">Reset</button>
+    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="product_form_reset()">Reset</button>
     <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">Save</button>
   </span>
