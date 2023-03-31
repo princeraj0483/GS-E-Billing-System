@@ -22,15 +22,18 @@ export class AddEditDiscountComponent implements OnInit {
   ngOnInit(): void {
     this.Discount_Form = this.fb.group({
       discount_name:['',Validators.required],
-      description:[],
-      admin_id_fk:[]
+      description:[''],
+      admin_id_fk:['']
         
     })
   }
   
   onsubmit(){
-    this.service.post_discount(this.discount_name.value).subscribe(
+    this.service.post_discount(this.Discount_Form.value).subscribe(
       (res:any)=>{
+        if(res.success){
+          console.log(res.message);
+        }
         console.log(res)
       }
     )

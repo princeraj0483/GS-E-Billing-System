@@ -1,16 +1,16 @@
-<div class="add_head">
-    <span>Add Size</span>
+ <div class="add_head">
+    <span>Add Weight</span>
     <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
         <mat-icon>close</mat-icon>
     </button>
 </div> 
 
-<form [formGroup]="size_Form">
+
     <div mat-dialog-content>
         <div class="examplcontainere">
           <mat-form-field appearance="fill">
-            <mat-label>Size</mat-label>
-           <input formControlName="size" matInput placeholder="size">
+            <mat-label>Weight (Kg)</mat-label>
+           <input formControlName="weight" matInput placeholder="Weight">
           </mat-form-field>
         </div>
 
@@ -22,7 +22,7 @@
       </div>
       </div>
       <input formControlName="admin_id_fk" type="number" hidden>
-      </form>
+  
 
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="weight_data_reset()">Reset</button>

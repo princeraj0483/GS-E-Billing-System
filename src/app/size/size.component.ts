@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditSizeComponent } from '../admin/add-edit-size/add-edit-size.component';
+import { GsbillingService } from '../gsbilling.service';
 
 export interface PeriodicElement {
   size_id: number;
@@ -13,12 +14,12 @@ export interface PeriodicElement {
   action: string;
   
 }
-const ELEMENT_DATA:PeriodicElement [] = [
-  {size_id: 1, size: 10, weight: 10, description: 'gold', action: 'bca'},
-  {size_id: 2, size: 21, weight: 12, description: 'pen', action: 'mca'},
-  {size_id: 3, size: 30, weight: 13, description: 'Rice', action: 'mba'},
+// const ELEMENT_DATA:PeriodicElement [] = [
+//   {size_id: 1, size: 10, weight: 10, description: 'gold', action: 'bca'},
+//   {size_id: 2, size: 21, weight: 12, description: 'pen', action: 'mca'},
+//   {size_id: 3, size: 30, weight: 13, description: 'Rice', action: 'mba'},
 
-];
+// ];
 
 @Component({
   selector: 'app-size',
@@ -28,18 +29,26 @@ const ELEMENT_DATA:PeriodicElement [] = [
 export class SizeComponent implements OnInit {
 
   displayedColumns: string[] = ['size_id', 'size',  'description', 'action' ];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private matdialog:MatDialog
+    private matdialog:MatDialog,
+    private service: GsbillingService
+    
   ){
 
   }
   ngOnInit(): void {
-   
+    this.service.get_size().subscribe(
+      (result:any)=>{
+        this.dataSource.data = result.data
+      }
+    )
+
   }
-  add_shop(){
+  
+  add_size(){
    this.matdialog.open(AddEditSizeComponent) 
   }
 

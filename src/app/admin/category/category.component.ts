@@ -13,12 +13,12 @@ export interface PeriodicElement {
   action: string;
   
 }
-const ELEMENT_DATA:PeriodicElement [] = [
-  {category_id: 1, category_name: 'Grocery', category_des: 'Grocerry all electronic ',  action: 'bca'},
-  {category_id: 2, category_name: 'Mobile shop', category_des: 'Any mobile avilaible here',  action: 'mca'},
-  {category_id: 3, category_name: 'Electronic', category_des: 'Any electronic device',  action: 'mba'},
+// const ELEMENT_DATA:PeriodicElement [] = [
+//   {category_id: 1, category_name: 'Grocery', category_des: 'Grocerry all electronic ',  action: 'bca'},
+//   {category_id: 2, category_name: 'Mobile shop', category_des: 'Any mobile avilaible here',  action: 'mca'},
+//   {category_id: 3, category_name: 'Electronic', category_des: 'Any electronic device',  action: 'mba'},
 
-];
+// ];
 
 @Component({
   selector: 'app-category',
@@ -27,7 +27,7 @@ const ELEMENT_DATA:PeriodicElement [] = [
 })
 export class CategoryComponent implements OnInit {
   displayedColumns: string[] = ['category_id', 'category_name', 'category_des',  'action'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
