@@ -31,7 +31,7 @@ export class GsbillingService {
   }
 
   post_discount(data:any){
-    return this.http.post<any>('http://localhost/gsebillingapi/discount_tbl.php',data)
+    return this.http.post<any>('http://localhost/gsebillingapi/discount_insert.php',data)
   }
 
   post_categoryt(data:any){
@@ -47,4 +47,16 @@ export class GsbillingService {
 
   get_unit(){
     return this.http.get<[]> ('http://localhost/gsebillingapi/unit_view.php') }
+
+  get_weight(){
+    return this.http.get<[]> ('http://localhost/gsebillingapi/weight_view.php') }
+
+  get_size(){
+    return this.http.get<[]> ('http://localhost/gsebillingapi/size_view.php') }
+
+  get_discount(){
+    return this.http.get<[]> ('http://localhost/gsebillingapi/discount_view.php') }
+
+   get_gst(){
+     return this.http.get<[]> ('http://localhost/gsebillingapi/gst_view.php') }
 }

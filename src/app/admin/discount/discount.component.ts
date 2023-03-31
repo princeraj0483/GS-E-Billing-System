@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditDiscountComponent } from '../add-edit-discount/add-edit-discount.component';
+import { GsbillingService } from 'src/app/gsbilling.service';
 
 export interface PeriodicElement {
   dis_SL_No: number;
@@ -12,12 +13,12 @@ export interface PeriodicElement {
   action: string;
   
 }
-const ELEMENT_DATA:PeriodicElement [] = [
-  {dis_SL_No: 1, discount: '15%', discription: 'good',  action: 'munna'},
-  {dis_SL_No: 2, discount: '14%', discription: 'good',  action: 'maical'},
-  {dis_SL_No: 3, discount: '10%', discription: 'good',  action: 'mukesh'},
+// const ELEMENT_DATA:PeriodicElement [] = [
+//   {dis_SL_No: 1, discount: '15%', discription: 'good',  action: 'munna'},
+//   {dis_SL_No: 2, discount: '14%', discription: 'good',  action: 'maical'},
+//   {dis_SL_No: 3, discount: '10%', discription: 'good',  action: 'mukesh'},
 
-];
+// ];
 
 @Component({
   selector: 'app-discount',
@@ -27,17 +28,23 @@ const ELEMENT_DATA:PeriodicElement [] = [
 export class DiscountComponent implements OnInit {
 
   displayedColumns: string[] = ['dis_SL_No', 'discount', 'discription', 'action' ];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
-    private matdialog:MatDialog
+    private matdialog:MatDialog,
+    private service: GsbillingService
   ){
 
   }
   ngOnInit(): void {
-   
+    this.service.get_discount().subscribe(
+      (result:any)=>{
+        this.dataSource.data = result.data
+      }
+    )
   }
+  
   add_shop(){
    this.matdialog.open(AddEditDiscountComponent) 
   }
