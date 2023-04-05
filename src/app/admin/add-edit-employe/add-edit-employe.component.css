@@ -23,6 +23,23 @@
     height: 30px;
 }
 
+
+#upload{
+    background-color: rgba(0,0,0,.04);
+    width: 32.8%;
+    margin-left: 4px;
+    height: 51px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+#upload h6{
+    margin: 0px;
+    color: black;
+    padding-left: 3px;
+    font-size: 11px;
+}
+
+
 #close_btn mat-icon {
     position: relative;
     bottom: 6px;
@@ -36,7 +53,7 @@
 }
 
 .column_1 mat-form-field{
-    width: 99%;
+    width: 33%;
     margin-top: -1px;
   }
 

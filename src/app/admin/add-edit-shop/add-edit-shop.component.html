@@ -26,40 +26,40 @@
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>GST No.</mat-label>
-        <input  matInput placeholder="GST No.">
+        <input formControlName="gst_no" matInput placeholder="GST No.">
       </mat-form-field>
     </div>
 
     <mat-form-field appearance="fill">
       <mat-label>Whatsapp Number</mat-label>
-      <input type="number" formControlName="Whatsapp" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
+      <input type="number" formControlName="Whatsup_no" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
         oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field><br>
 
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>Email Id</mat-label>
-        <input formControlName="Email_Id" matInput placeholder="Email Id">
+        <input formControlName="email_id" matInput placeholder="Email Id">
       </mat-form-field>
     </div>
 
     <mat-form-field appearance="fill">
       <mat-label>State</mat-label>
-      <mat-select>
-        <mat-option value="one">Jharkhand</mat-option>
-        <mat-option value="two">Mumbai</mat-option>
-        <mat-option value="three">Bihar</mat-option>
-        <mat-option value="four">Tamilnadu</mat-option>
+      <mat-select formControlName="state">
+        <mat-option value="Jharkhand">Jharkhand</mat-option>
+        <mat-option value="Mumbai">Mumbai</mat-option>
+        <mat-option value="Bihar">Bihar</mat-option>
+        <mat-option value="Tamilnadu">Tamilnadu</mat-option>
       </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>District</mat-label>
-      <mat-select>
-        <mat-option value="one">Vaishali</mat-option>
-        <mat-option value="two">Chapra</mat-option>
-        <mat-option value="three">Sonepur</mat-option>
-        <mat-option value="four">Darbhanga</mat-option>
+      <mat-select formControlName="District">
+        <mat-option value="Vaishali">Vaishali</mat-option>
+        <mat-option value="Chapra">Chapra</mat-option>
+        <mat-option value="Sonepur">Sonepur</mat-option>
+        <mat-option value="Darbhanga">Darbhanga</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -68,9 +68,10 @@
       <input formControlName="Address" matInput placeholder="Address">
     </mat-form-field>
   </div>
+  <input formControlName="admin_id_fk" type="number" hidden>
 </form>
 
 <span class="btn_box">
   <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="Shop_Form_reset()">Reset</button>
-  <button class="save_btn" mat-raised-button color="primary" type="save" (click)="onsubmit()">Save</button>
+  <button class="save_btn" mat-raised-button color="primary" type="save" (click)="onsubmit()"[disabled]="!Shop_Form.valid">Save</button>
 </span>

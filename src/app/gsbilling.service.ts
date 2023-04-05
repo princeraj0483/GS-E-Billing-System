@@ -42,6 +42,15 @@ export class GsbillingService {
     return this.http.post<any>('http://localhost/gsebillingapi/product_insert.php',data)
   }
 
+  post_shop(data:any){
+    return this.http.post<any>('http://localhost/gsebillingapi/shop_insert',data)
+  }
+
+  
+  post_Employee(data:any){
+    return this.http.post<any>('http://localhost/gsebillingapi/employee_insert.php',data)
+  }
+  
   get_party(){
     return this.http.get<[]> ('http://localhost/gsebillingapi/party_view.php') }
 
@@ -56,6 +65,9 @@ export class GsbillingService {
 
   get_discount(){
     return this.http.get<[]> ('http://localhost/gsebillingapi/discount_view.php') }
+
+  get_shop(){
+    return this.http.get<[]> ('http://localhost/gsebillingapi/shop_view.php') }
 
    get_gst(){
      return this.http.get<[]> ('http://localhost/gsebillingapi/gst_view.php') }

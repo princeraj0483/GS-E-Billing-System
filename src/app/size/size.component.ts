@@ -27,7 +27,7 @@ export interface PeriodicElement {
   styleUrls: ['./size.component.css']
 })
 export class SizeComponent implements OnInit {
-
+  totalcount:any = 0
   displayedColumns: string[] = ['size_id', 'size',  'description', 'action' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -42,6 +42,8 @@ export class SizeComponent implements OnInit {
   ngOnInit(): void {
     this.service.get_size().subscribe(
       (result:any)=>{
+        this.dataSource.data = result.data
+        this.totalcount = result.data.length
         this.dataSource.data = result.data
       }
     )

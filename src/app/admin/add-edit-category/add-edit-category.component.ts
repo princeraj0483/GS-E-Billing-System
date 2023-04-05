@@ -20,17 +20,19 @@ export class AddEditCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.Category_Form = this.fb.group({
       category_name:['',Validators.required],
-      description:[],
-      admin_id_fk:[]
+      description:[''],
+      admin_id_fk:['']
         
     })
   }
   onsubmit(){
     this.service.post_categoryt(this.Category_Form.value).subscribe(
       (res:any)=>{
+        if(res.success){
+          console.log(res.message);
+        }
         console.log(res)
       }
-      
     )
   }
   

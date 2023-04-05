@@ -26,7 +26,7 @@ export interface PeriodicElement {
   styleUrls: ['./discount.component.css']
 })
 export class DiscountComponent implements OnInit {
-
+  totaldiscount: any = 0
   displayedColumns: string[] = ['dis_SL_No', 'discount', 'discription', 'action' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -40,6 +40,8 @@ export class DiscountComponent implements OnInit {
   ngOnInit(): void {
     this.service.get_discount().subscribe(
       (result:any)=>{
+        this.dataSource.data = result.data
+        this.totaldiscount = result.data.length
         this.dataSource.data = result.data
       }
     )

@@ -5,6 +5,7 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
+
 <form [formGroup]="Category_Form">
     <div mat-dialog-content>
         <div class="examplcontainere">
@@ -23,8 +24,9 @@
       </div>
       <input formControlName="admin_id_fk" type="number" hidden>
       </form>
+
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="category_form_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">Save</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()" [disabled]="!Category_Form.valid">Save</button>
     </span>
 

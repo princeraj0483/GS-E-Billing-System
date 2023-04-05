@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { GsbillingService } from 'src/app/gsbilling.service';
 
 @Component({
@@ -12,6 +14,7 @@ export class AddEditPartyComponent implements OnInit {
   FromBuilder: any;
   Party_Form: any;
   constructor(
+    private matDialog:MatDialog,
     private fb:FormBuilder,
     private service:GsbillingService,
   ){
@@ -20,7 +23,7 @@ export class AddEditPartyComponent implements OnInit {
   ngOnInit(): void {
     this.Party_Form = this.fb.group({
       admin_id_fk:[''],
-      name:['',Validators.required],
+      party_name:['',Validators.required],
       contact_persion:[''],
       mobile_no:['', Validators.required],
       email_Id:['',],
@@ -37,6 +40,7 @@ export class AddEditPartyComponent implements OnInit {
       (res:any)=>{
         if(res.success){
           console.log(res.message);
+          this.matDialog.closeAll();
         }
         console.log(res)
       }

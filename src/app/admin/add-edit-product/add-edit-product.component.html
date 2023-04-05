@@ -8,8 +8,8 @@
   
   <form [formGroup]="Product_Form">
     <mat-form-field appearance="fill">
-      <mat-label formControlName="category">Category</mat-label>
-      <mat-select>
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
           <mat-option value="Kg">Kg</mat-option>
           <mat-option value="Litter">Litter</mat-option>
           <mat-option value="Inch">Inch</mat-option>
@@ -38,20 +38,19 @@
     </mat-form-field>
   </div>
 
-
     <mat-form-field appearance="fill">
-        <mat-label formControlName="unit">Unit</mat-label>
-        <mat-select>
-            <mat-option value="Kg">Kg</mat-option>
-            <mat-option value="Litter">Litter</mat-option>
-            <mat-option value="Inch">Inch</mat-option>
-            <mat-option value="Packet">Packet</mat-option>
+        <mat-label >Unit</mat-label>
+        <mat-select formControlName="unit">
+            <mat-option value="5unit">5unit</mat-option>
+            <mat-option value="6unit">6unit</mat-option>
+            <mat-option value="7unit">7unit</mat-option>
+            <mat-option value="8unit">8unit</mat-option>
         </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label formControlName="size">Size</mat-label>
-      <mat-select>
+      <mat-label>Size</mat-label>
+      <mat-select formControlName="size">
           <mat-option value="Kg">Kg</mat-option>
           <mat-option value="Litter">Litter</mat-option>
           <mat-option value="Inch">Inch</mat-option>
@@ -72,12 +71,10 @@
           <textarea formControlName="Description" matInput placeholder="Description"></textarea>
         </mat-form-field>
       </div>
-
       <input formControlName="admin_id_fk" type="number" hidden>
-
   </form>
   
   <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="product_form_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">Save</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()" [disabled]="!Product_Form.valid">Save</button>
   </span>

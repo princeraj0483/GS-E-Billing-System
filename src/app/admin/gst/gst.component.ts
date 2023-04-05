@@ -26,7 +26,7 @@ export interface PeriodicElement {
   styleUrls: ['./gst.component.css']
 })
 export class GstComponent implements OnInit {
-
+  totolcount:any = 0
   displayedColumns: string[] = ['S_N_id', 'Gst_name', 'Sgst',  'action'];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -40,6 +40,8 @@ export class GstComponent implements OnInit {
   ngOnInit(): void {
     this.service.get_gst().subscribe(
       (result:any)=>{
+        this.dataSource.data = result.data
+        this.totolcount = result.data.length
         this.dataSource.data = result.data
       }
     )

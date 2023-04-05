@@ -1,106 +1,100 @@
+<div class="add_head">
+  <span>Add Employee</span>
+  <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
 
-  <div class="add_head">
-    <span>Add Employee</span>
-    <button mat-mini-fab color="#3B4259" id="close_btn" mat-dialog-close>
-      <mat-icon>close</mat-icon>
-    </button>
-  </div>
-  
-  <form [formGroup]="Employee_Form">
+<form [formGroup]="Employee_Form">
   <div mat-dialog-content>
-      <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-         <input formControlName="Name" matInput placeholder="Name">
-        </mat-form-field>
-      </div>
-      
-      <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>Email Id</mat-label>
-          <input formControlName="Email_Id" matInput placeholder="Email id">
-        </mat-form-field>
-      </div>
-  
+    <div class="example-container">
       <mat-form-field appearance="fill">
-        <mat-label>Mobile Number</mat-label>
-        <input type="number" formControlName="Mobile" matInput placeholder="Mobile Number" onkeypress="return this.value.length < 10;"
-          oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
-      </mat-form-field><br>
-        
-      <mat-form-field appearance="fill">
-        <mat-label>Whatsapp Number</mat-label>
-        <input type="number" formControlName="Whatsapp_number" matInput placeholder="Whatsapp Number" onkeypress="return this.value.length < 10;"
-          oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+        <mat-label>Name</mat-label>
+        <input formControlName="emp_name" matInput placeholder="Name">
       </mat-form-field>
+    </div>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Role</mat-label>
-        <mat-select>
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>A/C Holder Name</mat-label>
-          <input formControlName="Account_holder_name" matInput placeholder="A/C Holder Name">
-        </mat-form-field>
-      </div>
-  
-      <mat-form-field appearance="fill">
-        <mat-label>Account Number</mat-label>
-        <input type="number" formControlName="Account_number" matInput placeholder="Account Number" onkeypress="return this.value.length < 16;"
-          oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
-      </mat-form-field><br>
-  
-      <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>IFSC</mat-label>
-          <input formControlName="Ifsc" matInput placeholder="IFSC">
-        </mat-form-field>
-      </div>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Active Status</mat-label>
-        <mat-select disableRipple formControlName="Active Status">
-          <mat-option value="1">Aadhar</mat-option>
-          <mat-option value="2">Pan Card</mat-option>
-          <mat-option value="3">Driving Licence</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>Enter your email</mat-label>
-          <input formControlName="Email_id" matInput placeholder="Email Id" >
-        </mat-form-field>
-      </div> 
-      
-  <div class="example-container">
     <mat-form-field appearance="fill">
-      <mat-label>AdharFront</mat-label>
-      <input formControlName="Adharfront" matInput placeholder="AdharFront">
+      <mat-label>Mobile Number</mat-label>
+      <input type="number" formControlName="emp_mobile" matInput placeholder="Mobile Number"
+        onkeypress="return this.value.length < 10;"
+        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
     </mat-form-field>
-  </div> 
-  
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>AdharBack</mat-label>
-      <input formControlName="AdharBack" matInput placeholder="AdharBack">
-    </mat-form-field>
-  </div>
 
-  <div class="column_1">
     <mat-form-field appearance="fill">
+      <mat-label>Whatsapp Number</mat-label>
+      <input type="number" formControlName="emp_whatsapp_number" matInput placeholder="Whatsapp Number"
+        onkeypress="return this.value.length < 10;"
+        oninput="if(this.value.length>=10) { this.value = this.value.slice(0,10); }">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Role</mat-label>
+      <mat-select formControlName="role">
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>A/C Holder Name</mat-label>
+        <input formControlName="account_holder_name" matInput placeholder="A/C Holder Name">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Account Number</mat-label>
+      <input type="number" formControlName="account_number" matInput placeholder="Account Number"
+        onkeypress="return this.value.length < 16;"
+        oninput="if(this.value.length>=16) { this.value = this.value.slice(0,16); }">
+    </mat-form-field><br>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>IFSC</mat-label>
+        <input formControlName="ifsc" matInput placeholder="IFSC">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Active Status</mat-label>
+      <mat-select disableRipple formControlName="active_status">
+        <mat-option value="1">Aadhar</mat-option>
+        <mat-option value="2">Pan Card</mat-option>
+        <mat-option value="3">Driving Licence</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input formControlName="email_id" matInput placeholder="Email Id">
+      </mat-form-field>
+    </div>
+
+    <div id="upload" formControlName="adharfront">
+      <h6>Aadhar Back</h6>
+      <input type="file">
+    </div>
+
+    <div id="upload" formControlName="adharBack">
+      <h6>Aadhar Front</h6>
+      <input type="file">
+    </div> 
+
+    <mat-form-field class="add_form" appearance="fill">
       <mat-label>Description</mat-label>
-      <textarea formControlName="Description" matInput placeholder="Description"></textarea>
+      <input formControlName="description" matInput placeholder="Address">
     </mat-form-field>
   </div>
 
-<span class="btn_box">
-    <button class="reset_btn" mat-raised-button color="warn" type="reset"(click)="employee_form_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">Save</button>
+
+  <input formControlName="admin_id_fk" type="number" hidden>
+
+  <span class="btn_box">
+    <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="employee_form_reset()">Reset</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save" (click)="onsubmit()"
+      [disabled]="!Employee_Form.valid">Save</button>
   </span>
