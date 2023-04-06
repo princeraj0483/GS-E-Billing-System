@@ -25,6 +25,7 @@ export interface PeriodicElement {
   styleUrls: ['./unit.component.css']
 })
 export class UnitComponent implements OnInit {
+  totolcount:any = 0
   displayedColumns: string[] = ['category_id', 'Name', 'unit_des', 'action'];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -38,6 +39,8 @@ export class UnitComponent implements OnInit {
   ngOnInit(): void {
     this.service.get_unit().subscribe(
       (result:any)=>{
+        this.dataSource.data = result.data
+        this.totolcount = result.data.length
         this.dataSource.data = result.data
       }
     )

@@ -3,12 +3,12 @@
   <mat-icon (click)="add_shop()">add_circle</mat-icon>
 </div>
 <div class="count_area">
-  <span class="notice_text">Total : 10</span>
+  <span class="notice_text">Total : {{totolcount}}
+  </span>
   <div class="search">
     <input type="text" placeholder="Search" matInput (keyup)="($event)" #input>
   </div>
 </div>
-
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 
@@ -19,28 +19,49 @@
 
     <ng-container matColumnDef="shop_name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Shop Name</th>
-      <td mat-cell *matCellDef="let row"> {{row.shop_name}} </td>
+      <td mat-cell *matCellDef="let row"> {{row.Shop_Name}} </td>
     </ng-container>
 
     <ng-container matColumnDef="shop_owner">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Owner Name</th>
-      <td mat-cell *matCellDef="let row"> {{row.shop_owner}} </td>
+      <td mat-cell *matCellDef="let row"> {{row.Owner_name}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="shop_number">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Whatsapp Number</th>
-      <td mat-cell *matCellDef="let row"> {{row.shop_number}} </td>
+    <ng-container matColumnDef="gst_no">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>GST No.</th>
+      <td mat-cell *matCellDef="let row"> {{row.gst_no}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="shop_email">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
-      <td mat-cell *matCellDef="let row"> {{row.shop_email}} </td>
+    <ng-container matColumnDef="Whatsup_no">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Whatsup No.</th>
+      <td mat-cell *matCellDef="let row"> {{row.Whatsup_no}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="shop_add">
+    <ng-container matColumnDef="email_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Id</th>
+      <td mat-cell *matCellDef="let row"> {{row.email_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+      <td mat-cell *matCellDef="let row"> {{row.state}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Address">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
+      <td mat-cell *matCellDef="let row"> {{row.Address}} </td>
+    </ng-container>
+
+<!-- 
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>District<th>
+      <td mat-cell *matCellDef="let row"> {{row.District}} </td>
+    </ng-container> -->
+
+    <!-- <ng-container matColumnDef="shop_add">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
       <td mat-cell *matCellDef="let row"> {{row.shop_add}} </td>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="Action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>

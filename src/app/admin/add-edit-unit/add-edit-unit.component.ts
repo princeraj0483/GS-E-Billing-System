@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { GsbillingService } from 'src/app/gsbilling.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class AddEditUnitComponent implements OnInit {
   FromBuilder: any;
   Unit_Form: any;
   constructor(
+    private matDialog:MatDialog,
     private fb:FormBuilder,
     private service:GsbillingService
   ){
@@ -29,6 +31,7 @@ export class AddEditUnitComponent implements OnInit {
     this.service.post_unit(this.Unit_Form.value).subscribe(
       (res:any)=>{
         console.log(res)
+        this.matDialog.closeAll();
       }
     )
   }

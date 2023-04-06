@@ -25,6 +25,7 @@ export interface PeriodicElement {
   styleUrls: ['./weight.component.css']
 })
 export class WeightComponent implements OnInit {
+  totolcount: any = 0
   displayedColumns: string[] = ['weight_id', 'weight', 'weight_des', 'action' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -38,6 +39,8 @@ export class WeightComponent implements OnInit {
   ngOnInit(): void {
     this.service.get_weight().subscribe(
       (result:any)=>{
+        this.dataSource.data = result.data
+        this.totolcount = result.data.length
         this.dataSource.data = result.data
       }
     )

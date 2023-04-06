@@ -35,18 +35,14 @@ export class AddEditProductComponent implements OnInit {
   onsubmit(){
     this.service.post_product(this.Product_Form.value).subscribe(
       (res:any)=>{
+        if(res.success){
+          console.log(res.message);
+        }
         console.log(res)
       }
-      
     )
   }
-  
   product_form_reset(){
-    this.Product_Form.controls['Unit'].reset()
-    this.Product_Form.controls['Quantity'].reset()
-    this.Product_Form.controls['address'].reset()
-    this.Product_Form.controls['Description'].reset()
-    this.Product_Form.controls['Gst_No'].reset()
-
+    this.Product_Form.reset()
   }
 }

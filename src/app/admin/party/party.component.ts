@@ -32,11 +32,12 @@ import { DataSource } from '@angular/cdk/collections';
   styleUrls: ['./party.component.css']
 })
 export class PartyComponent implements OnInit {
-  
+  totolcount:any = 0
   displayedColumns: string[] = ['S_N_id', 'party_name', 'mob_no', 'party_add', 'party_contact', 'email_id', 'action']; 
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  
   constructor(
     private matdialog:MatDialog,
     private service:GsbillingService
@@ -48,6 +49,9 @@ export class PartyComponent implements OnInit {
       (result:any)=>{
         console.log(result)
         this.dataSource = result.data
+        this.totolcount = result.data.length
+        this.dataSource.data = result.data
+
       }
     )
   }

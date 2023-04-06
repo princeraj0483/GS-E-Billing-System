@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, Validators} from '@angular/forms';
-import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import {FormBuilder, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { GsbillingService } from 'src/app/gsbilling.service';
 
 @Component({
   selector: 'app-add-edit-shop',
@@ -11,8 +12,12 @@ export class AddEditShopComponent implements OnInit {
   hide = true;
   FromBuilder: any;
   Shop_Form: any;
+  
+  
   constructor(
-    private fb:FormBuilder
+    private matDialog:MatDialog,
+    private fb:FormBuilder,
+    private service:GsbillingService
   ){
 
   }
@@ -20,30 +25,29 @@ export class AddEditShopComponent implements OnInit {
     this.Shop_Form = this.fb.group({
       Shop_Name:['',Validators.required],
       Owner_name:['',Validators.required],
-      Email_Id:['',],
-      State:['',],
-      Distric:['',],
-      Shop_category:['',],
+      gst_no:[''],
+      email_id:[''],
+      state:[''],
+      District:[''],
       Address:['', Validators.required],
-      Whatsapp:['', Validators.required],
-      mobile_number:['', Validators.required],
-      Description:['', Validators.required]
-        
+      Whatsup_no:['', Validators.required],
+      mobile_number:[''],
+      admin_id_fk:['']
     })
-   
   }
   onsubmit(){
-    console.log(this.Shop_Form.value)
-  }
+    this.service.post_shop(this.Shop_Form.value).subscribe(
+      (res:any)=>{
+        if(res.success){
+          console.log(res.message);
+          this.matDialog.closeAll();
+        }
+        console.log(res)
+      }
+    )
+     
+  } 
   Shop_Form_reset(){
-    this.Shop_Form.controls['Shop_Name'].reset()
-    this.Shop_Form.controls['Owner_name'].reset()
-    this.Shop_Form.controls['Email_Id'].reset()
-    this.Shop_Form.controls['state'].reset()
-    this.Shop_Form.controls['Address'].reset()
-    this.Shop_Form.controls['Whatsapp'].reset()
-    this.Shop_Form.controls['mobile_number'].reset()
-    this.Shop_Form.controls['Description'].reset()
-    
+    this.Shop_Form.reset()    
   }
 }

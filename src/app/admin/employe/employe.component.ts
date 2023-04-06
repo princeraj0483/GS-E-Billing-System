@@ -14,12 +14,7 @@ export interface PeriodicElement {
   emp_action: string;
   
 }
-const ELEMENT_DATA:PeriodicElement [] = [
-  {emp_SL_No: 1,  emp_name: 'Rana Singh', emp_mob: 9508510028, emp_add: 'Hajipur', emp_photo: 'image.jpg', emp_action: 'view',},
-  {emp_SL_No: 2, emp_name: 'Mukesh Jha',emp_mob: 9508512028, emp_add: 'Hajipur' , emp_photo: 'image.jpg', emp_action: 'view', },
-  {emp_SL_No: 3, emp_name: 'Amit Raz', emp_mob: 9508510028, emp_add:'Hajipur', emp_photo: 'image.jpg', emp_action: 'view',},
 
-];
 
 @Component({
   selector: 'app-employe',
@@ -28,7 +23,7 @@ const ELEMENT_DATA:PeriodicElement [] = [
 })
 export class EmployeComponent implements OnInit {
   displayedColumns: string[] = ['emp_SL_No', 'emp_name', 'emp_mob', 'emp_add', 'emp_photo', 'emp_action', ];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
