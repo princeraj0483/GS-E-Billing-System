@@ -5,11 +5,12 @@
     </button>
 </div> 
 
+<form [formGroup]="size_form">
     <div mat-dialog-content>
         <div class="examplcontainere">
           <mat-form-field appearance="fill">
             <mat-label>Weight (Kg)</mat-label>
-           <input formControlName="weight" matInput placeholder="Weight">
+           <input formControlName="size" matInput placeholder="Weight">
           </mat-form-field>
         </div>
 
@@ -20,10 +21,13 @@
         </mat-form-field>
       </div>
       </div>
+
       <input formControlName="admin_id_fk" type="number" hidden>
-  
+      <input formControlName="size_id" type="number" hidden>
+      
+      
 
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="weight_data_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">Save</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()">{{actionBtn}}</button>
     </span>

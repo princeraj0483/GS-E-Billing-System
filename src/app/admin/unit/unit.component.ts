@@ -51,8 +51,10 @@ export class UnitComponent implements OnInit {
      disableClose:true
     })
    }
-  edit_unit(){
-    this.matdialog.open(AddEditUnitComponent)
+  edit_unit(row:any){
+    this.matdialog.open(AddEditUnitComponent,{
+      data:row
+    })
   }
  
 }

@@ -8,7 +8,7 @@ import { GsbillingService } from '../gsbilling.service';
 
 export interface PeriodicElement {
   size_id: number;
-  size: number;
+  size_name: number;
   weight: number;
   description: string;
   action: string;
@@ -28,7 +28,7 @@ export interface PeriodicElement {
 })
 export class SizeComponent implements OnInit {
   totalcount:any = 0
-  displayedColumns: string[] = ['size_id', 'size',  'description', 'action' ];
+  displayedColumns: string[] = ['size_id', 'size_name',  'description', 'action' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -54,8 +54,10 @@ export class SizeComponent implements OnInit {
    this.matdialog.open(AddEditSizeComponent) 
   }
 
-  edit_size(){
-    this.matdialog.open(AddEditSizeComponent)
+  edit_size(row:any){
+    this.matdialog.open(AddEditSizeComponent,{
+      data: row
+    })
   }
  
 }

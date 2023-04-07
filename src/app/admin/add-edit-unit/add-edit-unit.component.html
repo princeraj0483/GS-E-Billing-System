@@ -21,7 +21,7 @@
           </div>
     
     </form>
-<span class="btn_box">
+    <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="unit_form_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()"[disabled]="!Unit_Form.valid">Save</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()"[disabled]="!Unit_Form.valid">{{actionBtn}}</button>
     </span>
