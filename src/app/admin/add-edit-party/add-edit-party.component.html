@@ -14,8 +14,6 @@
         </mat-form-field>
       </div>
 
-      <input formControlName="admin_id_fk" type="number" hidden>
-
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>Contact Persion</mat-label>
@@ -77,9 +75,14 @@
         <input formControlName="address" matInput placeholder="Address">
       </mat-form-field>
     </div>
+
+    <input formControlName="admin_id_fk" type="number" hidden>
+    <input formControlName="party_id" type="number" hidden>
+
+
   </form>
   
   <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="party_data_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save" (click)="onsubmit()" [disabled]="!Party_Form.valid">Save</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save" (click)="onsubmit()" [disabled]="!Party_Form.valid">{{actionBtn}}</button>
   </span>

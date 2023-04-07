@@ -30,6 +30,10 @@ export class GsbillingService {
     return this.http.post<any>('http://localhost/gsebillingapi/size_insert.php',data)
   }
 
+  put_size(data:any){
+    return this.http.put<any>('http://localhost/gsebillingapi/size_update.php',data)
+  }
+
   post_discount(data:any){
     return this.http.post<any>('http://localhost/gsebillingapi/discount_insert.php',data)
   }
@@ -46,13 +50,23 @@ export class GsbillingService {
     return this.http.post<any>('http://localhost/gsebillingapi/shop_insert',data)
   }
 
-  
   post_Employee(data:any){
     return this.http.post<any>('http://localhost/gsebillingapi/employee_insert.php',data)
+  }
+
+  put_party(data:any){
+    return this.http.put<any>('http://localhost/gsebillingapi/party_update.php',data)
+  }
+
+  put_weight(data:any){
+    return this.http.post<any>('http://localhost/gsebillingapi/weight_insert.php',data)
   }
   
   get_party(){
     return this.http.get<[]> ('http://localhost/gsebillingapi/party_view.php') }
+
+ get_category(){
+      return this.http.get<[]> ('http://localhost/gsebillingapi/category_view.php') }
 
   get_unit(){
     return this.http.get<[]> ('http://localhost/gsebillingapi/unit_view.php') }

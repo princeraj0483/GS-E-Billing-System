@@ -28,10 +28,10 @@ export class AddEditCategoryComponent implements OnInit {
   onsubmit(){
     this.service.post_categoryt(this.Category_Form.value).subscribe(
       (res:any)=>{
-        if(res.success){
-          console.log(res.message);
-        }
-        console.log(res)
+        alert('data successfully...')
+      },
+      (error)=>{
+        alert('data not insert')
       }
     )
   }

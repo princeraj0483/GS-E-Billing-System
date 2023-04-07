@@ -7,25 +7,6 @@ import { AddEditPartyComponent } from '../add-edit-party/add-edit-party.componen
 import { GsbillingService } from 'src/app/gsbilling.service';
 import { DataSource } from '@angular/cdk/collections';
 
-
-// export interface PeriodicElement {
-//   S_N_id: number;
-//   party_name: string;
-//   mob_no: number;
-//   party_add: string;
-//   email_id: string;
-//   party_contact: string;
-//   action: string;
-  
-// }
-// const ELEMENT_DATA:PeriodicElement [] = [
-// {S_N_id: 1, party_name: 'Aakash', mob_no: 8877817816, party_add: 'hajipur', party_contact: 'munna', email_id: '@Aakashgmail.com', action: ''},
-// {S_N_id: 2, party_name: 'Raja', mob_no: 7876543277, party_add: 'hajipur', party_contact: 'munna', email_id: '@Rajagmail.com', action: ''},
-// {S_N_id: 3, party_name: 'Amit', mob_no: 986436454, party_add: 'hajipur', party_contact: 'munna', email_id: '@Amitgmail.com', action: ''},
-
-// ];
-
-
 @Component({
   selector: 'app-party',
   templateUrl: './party.component.html',
@@ -63,8 +44,19 @@ export class PartyComponent implements OnInit {
   get_party(){
 
   }
-  edit_party(){
-    this.matdialog.open(AddEditPartyComponent)
+  edit_party(row:any){
+    this.matdialog.open(AddEditPartyComponent,{
+      data:row
+    })
   }
  
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
 }
