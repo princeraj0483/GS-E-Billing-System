@@ -6,19 +6,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddEditWeightComponent } from '../add-edit-weight/add-edit-weight.component';
 import { GsbillingService } from 'src/app/gsbilling.service';
 
-export interface PeriodicElement {
-  weight_id: number;
-  weight: number;
-  weight_des: string;
-  action: string;
-  
-}
-// const ELEMENT_DATA:PeriodicElement [] = [
-//   {weight_id: 1, weight: 10, weight_des: 'gold', action: 'bca'},
-//   {weight_id: 2, weight: 12, weight_des: 'pen', action: 'mca'},
-//   {weight_id: 3, weight: 13, weight_des: 'Rice', action: 'mba'},
-
-// ];
 @Component({
   selector: 'app-weight',
   templateUrl: './weight.component.html',
@@ -51,9 +38,19 @@ export class WeightComponent implements OnInit {
       disableClose:true
      })
   }
+  edit_weight(row:any){
+    this.matdialog.open(AddEditWeightComponent,{
+      data:row
+    })
+  }
 
-  edit_weight(){
-    this.matdialog.open(AddEditWeightComponent)
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
  
 }

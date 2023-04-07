@@ -21,10 +21,12 @@
         </mat-form-field>
       </div>
       </div>
+      
       <input formControlName="admin_id_fk" type="number" hidden>
+      <input formControlName="weight_id" type="number" hidden>
       </form>
 
 <span class="btn_box">
     <button class="reset_btn" mat-raised-button color="warn" type="reset" (click)="weight_data_reset()">Reset</button>
-    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()"[disabled]="!Weight_Form.valid">Save</button>
+    <button class="save_btn" mat-raised-button color="primary" type="save"(click)="onsubmit()"[disabled]="!Weight_Form.valid">{{actionBtn}}</button>
     </span>
